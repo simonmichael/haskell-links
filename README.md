@@ -6,7 +6,7 @@ There have been many attempts to gather them, haskell.org/documentation being th
 but none of them have fully succeeded. We could really do with some more systematic, scalable (crowd-sourced, lightweight) approach.*
 ([discussion](https://www.reddit.com/r/haskell/comments/um43bz/most_current_materials_for_learning_haskell/i80f40x/))
 
-Here is a small exploratory project aimed at this problem.
+Here is one more small attempt. 
 Right now it's just me, myself and I.
 
 ## Goals
@@ -56,7 +56,7 @@ for durability, manageability and maximum readability/tool compatibility.
 The CSV uses lazy quoting - values are double-quoted only if needed (eg if a comma must be used in the description).
 
 Later, secondary data may be added to enrich the above, particularly votes.
-This will be semiprivate data, likely be stored in a sqlite DB by a web app, 
+This will be semiprivate data, likely stored in a sqlite DB by a web app, 
 backed up and accessible to current/future admins and perhaps the Haskell Foundation 
 for durability.
 
@@ -83,10 +83,14 @@ Links are to be collected by some combination of:
 ## Timeline / Roadmap
 
 - 2022-05-10 project start
-- 2022Q2 start gathering CSV data; develop import scripts:
-  - @where
-  - haskell.org
-  - planet haskell
-  - /r/haskell
-- ? set up web UI
-- ? chat UI
+- [ ] **2022Q2 develop import scripts and start gathering CSV data**  *<- we are here*
+  - [ ] @where
+  - [ ] haskell.org
+  - [ ] planet haskell
+  - [ ] /r/haskell
+- set up web UI
+- chat UI
+
+## Related projects
+
+- https://github.com/simonmichael/lambdabot-where
