@@ -89,9 +89,9 @@ without creating duplicates or conflicts.
 
 ## Related projects / link sources
 
-- https://github.com/simonmichael/lambdabot-where archive of lambdabot's @where db
-- https://www.extrema.is/articles/haskell-books filterable haskell book list
-- https://guide.aelve.com retired haskell docs/links wiki-db
+- https://github.com/simonmichael/lambdabot-where archive of lambdabot's @where db (int-e)
+- https://www.extrema.is/articles/haskell-books filterable haskell book list (tcard, Travis Cardwell)
+- https://guide.aelve.com retired haskell docs/links wiki-db (peargreen, Artyom Kazak)
 - https://haskell.org/documentation official starting point
 - https://planet.haskell.org many (not all) haskell blog posts pass through here
 - https://reddit.com/r/haskell or here
@@ -99,8 +99,8 @@ without creating duplicates or conflicts.
 - http://dev.stephendiehl.com/hask epic practical haskell reference tome
 - https://www.fpcomplete.com/haskell/learn good practical tutorials and library overviews
 - https://serokell.io/blog/haskell good introductory and general posts
-- http://www.vex.net/~trebla/haskell/learn-sources.html reviews of some classic docs
+- http://www.vex.net/~trebla/haskell/learn-sources.html reviews of some classic docs (monochrom)
 - https://en.wikibooks.org/wiki/Haskell a well-written textbook
-- https://github.com/krispo/awesome-haskell
-- https://github.com/uhub/awesome-haskell
+- https://github.com/krispo/awesome-haskell (@krispo, Konstantin Skipor)
+- https://github.com/uhub/awesome-haskell (@uhub)
 - http://jackkelly.name/wiki/haskell.html
