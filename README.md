@@ -14,7 +14,7 @@ Right now it's just me, myself and I.
 - A comprehensive, up to date, maintained collection of links to Haskell resources (docs, sites, services..),
 - that is scalable, durable, cost-effective and community-owned
 - searchable and with the best content emphasised (eg by voting)
-- which all kinds of Haskellers find useful and time-saving
+- which all kinds of Haskellers find useful, time-saving, and enjoyable
 - and which accelerates Haskell learning and adoption.
 
 ## How will we recognise success ?
@@ -25,11 +25,10 @@ Right now it's just me, myself and I.
   and easily discoverable by newcomers.
 - High quality content is not forgotten or perpetually undiscovered.
 - The community's most popular resources are featured prominently.
-- Maintenance is easy and enjoyable.
+- Using, contributing to, and managing the service is easy and fun.
 
 ## Some principles
 
-- Fun to use, contribute and manage.
 - Avoid unnecessary software dev/ops work - this aims to fill a need, not to generate work or a hobby.
   Existing, good enough, cheap beats pending, perfect, costly.
 - Ruthless efficiency - think Craigslist. Less is more.
