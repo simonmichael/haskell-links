@@ -5,10 +5,6 @@ import: \
 	import-where \
 	sort
 
-redo:
-	rm -f $(DB)
-	make -s import
-
 create:
 	[[ -e $(DB) ]] || echo 'URL, ID, TAGS, "DESCRIPTION"' >$(DB)
 
@@ -17,4 +13,13 @@ import-where:
 
 sort:
 	sort $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
+
+commit:
+	@( git commit -qm "update" -- $(DB) | grep -E '(^\[|file changed)' ) || echo "no changes"
+
+update: import commit
+
+redo:
+	rm -f $(DB)
+	make -s import
 
