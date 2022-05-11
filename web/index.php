@@ -51,6 +51,7 @@ $(document).ready( function () {
 <style>
 body {
   font-family: sans-serif;
+  /* font-size:small; */
   /* padding: 1em 0; */
 }
 .dataTables_wrapper .dataTables_filter {
@@ -66,6 +67,7 @@ body {
 table#links {
   width: 100%;
   max-width: 100%;
+  /* font-size:small; */
 }
 th {
   text-align: left;
@@ -78,6 +80,7 @@ td.url {
   overflow-x:hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
+  font-size:small;
 }
 /* td.desc {
   font-style:italic;
@@ -97,9 +100,9 @@ td.tags {
 	  Search my collected Haskell links: currently
 	  lambdabot's @where database
 	  plus a few manually gathered links.
-	  Where links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
+	  <small>where</small> links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
     (<tt>@where ID</tt>, <tt>@where+ ID NEWTEXT</tt>).
-    Manual links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
+    <small>manual</small> links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
 	  Read more about
 	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
 	  and
