@@ -79,7 +79,7 @@ Links are to be collected by some combination of:
 There is an import/reconcile process which adds/updates existing data 
 without creating duplicates or conflicts.
 
-## Timeline / Roadmap
+## Timeline / roadmap
 
 - 2022-05-10 project start
 - gather some link sources, develop some import scripts/procedures
@@ -87,7 +87,7 @@ without creating duplicates or conflicts.
 - a simple web UI
 - a simple chat UI
 
-## Related projects / lists
+## Related projects / link sources
 
 - https://github.com/simonmichael/lambdabot-where archive of lambdabot's @where db
 - https://www.extrema.is/articles/haskell-books filterable haskell book list
@@ -103,3 +103,4 @@ without creating duplicates or conflicts.
 - https://en.wikibooks.org/wiki/Haskell a well-written textbook
 - https://github.com/krispo/awesome-haskell
 - https://github.com/uhub/awesome-haskell
+- http://jackkelly.name/wiki/haskell.html
