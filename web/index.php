@@ -97,8 +97,9 @@ td.tags {
 	  Search my collected Haskell links: currently
 	  lambdabot's @where database
 	  plus a few manually gathered links.
-	  @where links can be viewed (<tt>@where ID</tt>) or updated (<tt>@where+ ID NEWTEXT</tt>)
-	  in any Haskell IRC channel where lambdabot is present.
+	  Where links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
+    (<tt>@where ID</tt>, <tt>@where+ ID NEWTEXT</tt>).
+    Manual links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
 	  Read more about
 	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
 	  and
