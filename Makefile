@@ -2,11 +2,15 @@ DB=links.csv
 
 import: \
 	create \
+	import-manual \
 	import-where \
 	sort
 
 create:
 	[[ -e $(DB) ]] || echo 'URL, ID, TAGS, "DESCRIPTION"' >$(DB)
+
+import-manual:
+	cat in/manual.csv | bin/import
 
 import-where:
 	cat in/where.tsv | bin/read-where | bin/import
