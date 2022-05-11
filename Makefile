@@ -27,3 +27,20 @@ redo:
 	rm -f $(DB)
 	make -s import
 
+# push to github only, optionally with -f
+publish%:
+	git push $* github
+
+# push to production only, optionally with -f
+deploy%:
+	git push $* joyful
+	ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
+
+# normal push to github and production
+pubdep:
+	git push github
+	ssh joyful.com "cd src/haskell-links && git pull github"
+
+# forced push to github and production
+pubdep-f: publish-f deploy-f
+
