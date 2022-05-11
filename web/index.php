@@ -14,7 +14,6 @@ function readLinks() {
 
 <html>
   <head>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script>
@@ -47,10 +46,12 @@ $(document).ready( function () {
 });
 </script>
 
+<link rel="icon" type="image/png" href="/HaskellLogoGrey.png">
 <link rel=stylesheet href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
 <style>
 body {
   font-family: sans-serif;
+  /* padding: 1em 0; */
 }
 .dataTables_wrapper .dataTables_filter {
   float:left;
@@ -89,10 +90,11 @@ td.tags {
   </head>
 
   <body>
-	<h1>Haskell Links Library</h1>
+  
+	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
 
 	<p>
-	  Search my collected Haskell links: currently just
+	  Search my collected Haskell links: currently
 	  lambdabot's @where database
 	  plus a few manually gathered links.
 	  @where links can be viewed (<tt>@where ID</tt>) or updated (<tt>@where+ ID NEWTEXT</tt>)
