@@ -29,18 +29,14 @@ Right now it's just me, myself and I.
 
 ## Some principles
 
-Avoid unnecessary software dev/ops work - this aims to fill a need, not to generate work or a hobby.
-Existing, good enough, cheap beats pending, perfect, costly.
-
-Ruthlessly efficient - think Craigslist. Less is more.
-
-Chat ops, at some point - think lambdabot's @where.
-
-Good web presence and SEO.
-
-High [bus factor](https://en.wikipedia.org/wiki/Bus_factor), low [toil](https://sre.google/sre-book/eliminating-toil).
-
-Make it fun.
+- Fun to use, contribute and manage.
+- Avoid unnecessary software dev/ops work - this aims to fill a need, not to generate work or a hobby.
+  Existing, good enough, cheap beats pending, perfect, costly.
+- Ruthless efficiency - think Craigslist. Less is more.
+- Chat ops, at some point - think lambdabot's @where.
+- Good web presence and SEO.
+- High [bus factor](https://en.wikipedia.org/wiki/Bus_factor), low [toil](https://sre.google/sre-book/eliminating-toil).
+- Solo or community operated, but always ultimately community-owned.
 
 ## Data
 
@@ -56,7 +52,7 @@ for durability, manageability and maximum readability/tool compatibility.
 The CSV uses lazy quoting - values are double-quoted only if needed (eg if a comma must be used in the description).
 
 Later, secondary data may be added to enrich the above, particularly votes.
-This will be semiprivate data, likely stored in a sqlite DB by a web app, 
+This will likely be semiprivate data, stored in a sqlite DB by a web app, 
 backed up and accessible to current/future admins and perhaps the Haskell Foundation 
 for durability.
 
@@ -80,17 +76,30 @@ Links are to be collected by some combination of:
 - the web UI
 - the chat UI
 
+There is an import/reconcile process which adds/updates existing data 
+without creating duplicates or conflicts.
+
 ## Timeline / Roadmap
 
 - 2022-05-10 project start
-- [ ] **2022Q2 develop import scripts and start gathering CSV data**  *<- we are here*
-  - [ ] @where
-  - [ ] haskell.org
-  - [ ] planet haskell
-  - [ ] /r/haskell
-- set up web UI
-- chat UI
+- gather some link sources, develop some import scripts/procedures
+- start gathering links
+- a simple web UI
+- a simple chat UI
 
-## Related projects
+## Related projects / lists
 
-- https://github.com/simonmichael/lambdabot-where
+- https://github.com/simonmichael/lambdabot-where archive of lambdabot's @where db
+- https://www.extrema.is/articles/haskell-books filterable haskell book list
+- https://guide.aelve.com retired haskell docs/links wiki-db
+- https://haskell.org/documentation official starting point
+- https://planet.haskell.org many (not all) haskell blog posts pass through here
+- https://reddit.com/r/haskell or here
+- https://github.com/cohomolo-gy/haskell-resources foundational haskell papers
+- http://dev.stephendiehl.com/hask epic practical haskell reference tome
+- https://www.fpcomplete.com/haskell/learn good practical tutorials and library overviews
+- https://serokell.io/blog/haskell good introductory and general posts
+- http://www.vex.net/~trebla/haskell/learn-sources.html reviews of some classic docs
+- https://en.wikibooks.org/wiki/Haskell a well-written textbook
+- https://github.com/krispo/awesome-haskell
+- https://github.com/uhub/awesome-haskell
