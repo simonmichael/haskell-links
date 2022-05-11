@@ -89,7 +89,7 @@ td.tags {
   </head>
 
   <body>
-	<h1>Haskell links</h1>
+	<h1>Haskell Links Library</h1>
 
 	<p>
 	  Search my collected Haskell links: currently just
@@ -103,6 +103,7 @@ td.tags {
 	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>.
 	  Would you like to
 	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>.
 	  <!-- in <a href="https://github.com/simonmichael/haskell-links">the repo</a>. -->
 	</p>
 
