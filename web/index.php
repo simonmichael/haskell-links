@@ -65,6 +65,7 @@ body {
 
 } */
 table#links {
+  table-layout: fixed;
   width: 100%;
   max-width: 100%;
   /* font-size:small; */
@@ -83,7 +84,6 @@ td.url {
   font-size:small;
 }
 /* td.desc {
-  font-style:italic;
 } */
 td.tags {
   font-size:small;
