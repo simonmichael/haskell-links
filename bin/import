@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# import [URL [ID ["TAGS" ["DESC"]]]] - adds a URL to the links db if missing
+# or
+# import  # expects one or more valid URL,ID,TAGS,"DESC" CSV records on stdin
+#
+# ID should be a unique possibly non-hyphenated word, usually lowercase or an uppercase acronym.
+# TAGS should be zero or more space-separated possibly-hyphenated lowercase words.
+# DESC should be a single line of plain text or unlinked markdown, not containing double quotes.
+# When a URL is already in the db, does nothing.
+
+DB=links.csv
+
+# Given a valid link record, add it to the links db if its URL is not already there.
+import_link() {
+    REC="$1"
+    URL=$(echo "$REC" | cut -d, -f1)
+    if ! grep -q "^$URL," $DB; then  # no -E, hopefully nothing in URL confuses it
+	echo "$REC" >>$DB
+	echo "added $URL"
+    fi
+}
+
+if [[ -n "$1" ]]; then
+    import_link "$1, $2, $3, \"$4\""
+else
+    while IFS= read -r rec; do
+	import_link "$rec"
+    done
+fi
