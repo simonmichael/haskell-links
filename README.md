@@ -82,15 +82,16 @@ without creating duplicates or conflicts.
 
 ## Web presence
 
-A custom domain for now: http://haskell-links.org . Currently redirects to this repo.
+A custom domain for now: http://haskell-links.org , serving the web UI.
+Currently trying the slightly stickier title "Haskell Links Library".
 
 ## Timeline / roadmap
 
-- 2022-05-10 project start
-- gather some link sources
-- develop some import scripts/procedures
-- start gathering links
-- set up a simple web UI
+- [x] 2022-05-10 project start
+- [x] gather some link sources
+- [x] develop some import scripts/procedures
+- [x] start gathering links
+- [x] set up a simple web UI
 - set up a simple chat UI
 
 ## Related projects / link sources
