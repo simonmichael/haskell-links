@@ -64,7 +64,7 @@ for durability.
 
 ## Web presence
 
-Initially a custom domain, https://haskell-links.org, redirecting to this repo.
+Initially a custom domain, haskell-links.org, redirecting to this repo: http://haskell-links.org
 
 ## Capture
 
