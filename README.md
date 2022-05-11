@@ -1,13 +1,12 @@
 # haskell-links
 
+I [wrote](https://www.reddit.com/r/haskell/comments/um43bz/most_current_materials_for_learning_haskell/i80f40x/):
 > *There's no way these very frequent reddit and chat requests for learning materials can capture all the existing resources. 
 There are too many, and folks who know where they are get burned out reposting them. 
 There have been many attempts to gather them, haskell.org/documentation being the most obvious, 
 but none of them have fully succeeded. We could really do with some more systematic, scalable (crowd-sourced, lightweight) approach.*
-([discussion](https://www.reddit.com/r/haskell/comments/um43bz/most_current_materials_for_learning_haskell/i80f40x/))
 
-Here is one more small attempt. 
-Right now it's just me, myself and I.
+Here comes another attempt! Right now it's just me, myself and I and this is just getting started.
 
 ## Goals
 
@@ -32,59 +31,67 @@ Right now it's just me, myself and I.
 - Avoid unnecessary software dev/ops work - this aims to fill a need, not to generate work or a hobby.
   Existing, good enough, cheap beats pending, perfect, costly.
 - Ruthless efficiency - think Craigslist. Less is more.
+- High reliability.
 - Chat ops, at some point - think lambdabot's @where.
 - Good web presence and SEO.
 - High [bus factor](https://en.wikipedia.org/wiki/Bus_factor), low [toil](https://sre.google/sre-book/eliminating-toil).
-- Solo or community operated, but always ultimately community-owned.
+- Can be solo or community operated, but always ultimately community-owned.
 
 ## Data
 
-The primary data to be gathered is a link, consisting of
+The primary data to be gathered is a link record, consisting of
 
 - the URL. The unique primary key.
-- an optional short id, useful for chat ops. This too should be unique.
+- an optional short id, a unique possibly-hypenated word, useful for chat ops
 - optional tags, a spaced list of possibly-hyphenated lowercase words, used for categorisation
-- an optional description. Plain text or perhaps link-free markdown.
+- an optional description. Plain text or perhaps link-free markdown, always enclosed in double quotes.
+  (The other fields don't need quotes.) This and the other fields are always UTF8-encoded. 
 
-These will be public data, stored in a single CSV file in this git repository,
-for durability, manageability and maximum readability/tool compatibility.
-The CSV uses lazy quoting - values are double-quoted only if needed (eg if a comma must be used in the description).
+These link records will be public data, stored in a single CSV file in this git repository,
+for durability, manageability and maximum readability/compatibility.
 
 Later, secondary data may be added to enrich the above, particularly votes.
 This will likely be semiprivate data, stored in a sqlite DB by a web app, 
 backed up and accessible to current/future admins and perhaps the Haskell Foundation 
 for durability.
 
-## UI
+## Tags
 
-- The first UI will be viewing/editing the CSV file via git/github.
-- Later there should be a web app providing filtering/sorting/voting/permalinks/feeds/discoverability/management.
-- And a chat bot interface running in #haskell and/or wherever it's wanted.
-
-## Web presence
-
-Initially a custom domain, haskell-links.org, redirecting to this repo: http://haskell-links.org
+All records have one tag indicating their source, such as:\
+`manual`\
+`where`
 
 ## Capture
 
 Links are to be collected by some combination of:
 
-- manual edits to the master CSV file
+- manual edits to the CSV
 - scripts/cron jobs, also in this repo, collecting links from existing sources:
   haskell.org, planet.haskell.org, /r/haskell, etc.
 - the web UI
 - the chat UI
 
-There is an import/reconcile process which adds/updates existing data 
+There should always be an import/reconcile procedure which adds/updates 
 without creating duplicates or conflicts.
+
+## UI
+
+1. The CSV can be edited manually via git/github.
+2. A web app will provide filtering, sorting, updating, voting, permalinks, feeds, discoverability.
+3. A chat bot running in #haskell or wherever it's wanted will allow searching and updating.
+
+## Web presence
+
+A custom domain for now: http://haskell-links.org . Currently redirects to this repo.
 
 ## Timeline / roadmap
 
 - 2022-05-10 project start
-- gather some link sources, develop some import scripts/procedures
+- gather some link sources
+- develop some import scripts/procedures
 - start gathering links
-- a simple web UI
-- a simple chat UI
+- set up a simple web UI
+- set up a simple chat UI
 
 ## Related projects / link sources
 
@@ -103,3 +110,10 @@ without creating duplicates or conflicts.
 - https://github.com/krispo/awesome-haskell (@krispo, Konstantin Skipor)
 - https://github.com/uhub/awesome-haskell (@uhub)
 - http://jackkelly.name/wiki/haskell.html
+
+## Discuss / contribute
+
+- Chat `sm` in #haskell, via
+  <a href="https://web.libera.chat/#haskell">Libera</a> or
+  <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>
+øø
