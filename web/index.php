@@ -179,14 +179,22 @@ td.tags {
       <a href="?q=game">game</a>.
       <br>
       See also:
-      <a href="https://www.extrema.is/articles/haskell-books">Haskell Books</a> |
-      <a href="https://hackage.haskell.org/packages/browse">Hackage search</a> |
-      <a href="https://www.reddit.com/r/haskell/">Reddit search</a> |
-      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
-      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-      <a href="https://www.haskell.org/irc/">some IRC channels</a> |
-      <a href="https://view.matrix.org/?query=haskell">some Matrix rooms</a> |
-      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">Other lists</a>
+      <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
+      <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
+      <a href="https://packdeps.haskellers.com">Hackage deps</a> |
+      <a href="https://hoogle.haskell.org">Hoogle</a> |
+      <a href="https://www.stackage.org/lts">Stackage LTS</a> |
+      <a href="https://github.com/search/advanced">Github</a> |
+      <a href="https://www.reddit.com/r/haskell/">Reddit</a> |
+      <a href="https://discourse.haskell.org/search?expanded=true">Discourse</a> |
+      <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
+      <a href="https://wiki.haskell.org/index.php?search">Haskell Wiki</a> |
+      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew...</a> |
+      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the ecosystem...</a> |
+      <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
+      <a href="https://www.haskell.org/irc/">IRC channels</a> |
+      <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
+      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
 <!--
       <a href=""></a> |
       <a href=""></a> |
