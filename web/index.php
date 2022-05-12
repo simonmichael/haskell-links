@@ -153,9 +153,8 @@ td.tags {
   <body>
   
 	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
-
 	<p id="about">
-	  A collection of Haskell links, currently gathered
+	  A collection of <a href="https://haskell.org">Haskell</a> links, currently gathered
 	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
 	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
       (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
@@ -198,9 +197,12 @@ td.tags {
       <a href="https://www.stackage.org/lts">Stackage LTS</a> |
       <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
       <a href="https://github.com/search/advanced">Github</a> |
-      <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">GIthub top starred</a> |
+      <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">Github top starred</a> |
       <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
       <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC/libs gitlab</a> |
+      <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
+      <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
+      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF Tech proposals</a> |
       <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
 <!--
       <a href=""></a> |
