@@ -49,6 +49,7 @@ D:
 pd:
 	git push github
 	ssh joyful.com "cd src/haskell-links && git pull github"
+	git fetch joyful
 
 # forcibly
 PD: P D
