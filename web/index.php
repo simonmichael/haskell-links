@@ -71,10 +71,9 @@ $(document).ready( function () {
   //   if (!search.val()) updateLocationFromSearch();   // update location on clearing the search
   // });
   
-  if (params.q)
-    table.search(params.q).draw();  // search for the q parameter if any
-  else
-    $('input[type=search]').focus();  // otherwise show all and await input
+  if (params.q) table.search(params.q).draw();  // search for the q parameter if any
+
+  $('input[type=search]').focus();  // await input
 
 });
 </script>
