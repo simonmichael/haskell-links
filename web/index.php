@@ -1,4 +1,8 @@
 <?php
+// * haskell-links.org/index.php
+
+// ** PHP /////////////////////////////////////////////////////////////////////
+
 function readLinks() {
   $recs = [];
   if (($h = fopen("../links.csv", "r")) !== FALSE) {
@@ -10,6 +14,9 @@ function readLinks() {
   }
   return $recs;
 }
+
+// ** JS //////////////////////////////////////////////////////////////////////
+
 ?>
 
 <html>
@@ -76,7 +83,12 @@ $(document).ready( function () {
   $('input[type=search]').focus();  // await input
 
 });
+
 </script>
+
+<?php
+// ** CSS /////////////////////////////////////////////////////////////////////
+?>
 
 <link rel="icon" type="image/png" href="/HaskellLogoGrey.png">
 <link rel=stylesheet href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
@@ -134,6 +146,10 @@ td.tags {
 </style>
   </head>
 
+<?php
+// ** ABOUT ///////////////////////////////////////////////////////////////////
+?>
+
   <body>
   
 	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
@@ -161,6 +177,10 @@ td.tags {
 	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
     <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
 	</p>
+
+<?php
+// ** TABLE ///////////////////////////////////////////////////////////////////
+?>
 
 	<!-- https://datatables.net/examples/basic_init/index.html -->
 	<table id="links">
