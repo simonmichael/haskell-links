@@ -66,10 +66,11 @@ $(document).ready( function () {
     if (e.which == 13) updateLocationFromSearch();  // update location on enter
   });
 
-  table.on('search.dt', function () {
-    if (!search.val()) updateLocationFromSearch();  // update location on clearing the search
-  });
-
+  // problematic, also triggers on column sort
+  // table.on('search.dt', function (e) {
+  //   if (!search.val()) updateLocationFromSearch();   // update location on clearing the search
+  // });
+  
   if (params.q)
     table.search(params.q).draw();  // search for the q parameter if any
   else
@@ -139,7 +140,7 @@ td.tags {
 	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
 
 	<p id="about">
-	  Search Haskell links, which currently are gathered
+	  A searchable collection of Haskell links, currently gathered
 	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
 	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
     (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
