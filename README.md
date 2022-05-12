@@ -118,4 +118,6 @@ Currently trying the slightly stickier title "Haskell Links Library".
 
 - Chat `sm` in #haskell, via
   <a href="https://web.libera.chat/#haskell">Libera</a> or
-  <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>
+  <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>.
+- PRs fixing bugs are especially welcome.
+- More link sources are needed.
