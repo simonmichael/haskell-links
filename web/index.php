@@ -6,11 +6,11 @@
 function readLinks() {
   $recs = [];
   if (($h = fopen("../links.csv", "r")) !== FALSE) {
-	fgetcsv($h);
-	while (($r = fgetcsv($h)) !== FALSE) {
-	  $recs[] = [$r[1], $r[0], $r[3], $r[2]];
-	}
-	fclose($h);
+    fgetcsv($h);
+    while (($r = fgetcsv($h)) !== FALSE) {
+      $recs[] = [$r[1], $r[0], $r[3], $r[2]];
+    }
+    fclose($h);
   }
   return $recs;
 }
@@ -152,18 +152,18 @@ td.tags {
 
   <body>
   
-	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
-	<p id="about">
-	  A collection of <a href="https://haskell.org">Haskell</a> links, currently gathered
-	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
-	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
+    <h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
+    <p id="about">
+      A collection of <a href="https://haskell.org">Haskell</a> links, gathered
+      1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
+      2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
       (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
       Here's more about the
-  	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
-  	  and
-  	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
-  	  would you like to
-  	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+      <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
+      and
+      <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>;
+      would you like to
+      <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
       <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
       <br>
       <!-- Shift-click column headings for multi-sort. -->
@@ -177,7 +177,7 @@ td.tags {
       <a href="?q=cabal">cabal</a>,
       <a href="?q=stack">stack</a>,
       <a href="?q=paste">paste</a>,
-      <a href="?q=game">game</a>.
+      <a href="?q=game">game</a>
       <br>
       And Haskell search tools:
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
@@ -209,21 +209,21 @@ td.tags {
       <a href=""></a> |
       <a href=""></a> |
 -->
-	</p>
+    </p>
 <?php
 // ** TABLE ///////////////////////////////////////////////////////////////////
 ?>
 
-	<table id="links">
-		<thead>
-		  <tr>
-		  <th>ID</th>
-		  <th>URL</th>
-		  <th>DESCRIPTION</th>
-		  <th>TAGS</th>
-		</tr>
-	  </thead>
-	</table>
+    <table id="links">
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>URL</th>
+          <th>DESCRIPTION</th>
+          <th>TAGS</th>
+        </tr>
+      </thead>
+    </table>
 
   </body>
 </html>
