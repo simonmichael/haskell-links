@@ -57,12 +57,6 @@ This will likely be semiprivate data, stored in a sqlite DB by a web app,
 backed up and accessible to current/future admins and perhaps the Haskell Foundation 
 for durability.
 
-## Tags
-
-All records have one tag indicating their source, such as:\
-`manual`\
-`where`
-
 ## Capture
 
 Links are to be collected by some combination of:
@@ -75,6 +69,12 @@ Links are to be collected by some combination of:
 
 There should always be an import/reconcile procedure which adds/updates 
 without creating duplicates or conflicts.
+
+## Tags
+
+All records have one tag indicating their source, such as:\
+`manual`\
+`where`
 
 ## UI
 
