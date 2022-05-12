@@ -158,31 +158,44 @@ td.tags {
 	  A searchable collection of Haskell links, currently gathered
 	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
 	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
-    (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
-    Press enter for a permalink. Examples:
-    <a href="?q=book">book</a>,
-    <a href="?q=paper">paper</a>,
-    <a href="?q=learn">learn</a>,
-    <a href="?q=tutorial">tutorial</a>,
-    <a href="?q=ghc">ghc</a>,
-    <a href="?q=cabal">cabal</a>,
-    <a href="?q=stack">stack</a>,
-    <a href="?q=paste">paste</a>,
-    <a href="?q=game">game</a>.
-    Here's more about the
-	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
-	  and
-	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
-	  would you like to
-	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
+      (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
+      Here's more about the
+  	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
+  	  and
+  	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
+  	  would you like to
+  	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+      <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
+      <br>
+      Press enter for a permalink. Example searches:
+      <a href="?q=book">book</a>,
+      <a href="?q=paper">paper</a>,
+      <a href="?q=learn">learn</a>,
+      <a href="?q=tutorial">tutorial</a>,
+      <a href="?q=ghc">ghc</a>,
+      <a href="?q=cabal">cabal</a>,
+      <a href="?q=stack">stack</a>,
+      <a href="?q=paste">paste</a>,
+      <a href="?q=game">game</a>.
+      <br>
+      See also:
+      <a href="https://www.extrema.is/articles/haskell-books">Haskell Books</a> |
+      <a href="https://hackage.haskell.org/packages/browse">Hackage search</a> |
+      <a href="https://www.reddit.com/r/haskell/">Reddit search</a> |
+      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
+      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
+      <a href="https://www.haskell.org/irc/">some IRC channels</a> |
+      <a href="https://view.matrix.org/?query=haskell">some Matrix rooms</a> |
+      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">Other lists</a>
+<!--
+      <a href=""></a> |
+      <a href=""></a> |
+-->
 	</p>
-
 <?php
 // ** TABLE ///////////////////////////////////////////////////////////////////
 ?>
 
-	<!-- https://datatables.net/examples/basic_init/index.html -->
 	<table id="links">
 		<thead>
 		  <tr>
