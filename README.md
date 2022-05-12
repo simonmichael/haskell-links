@@ -104,7 +104,17 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - https://planet.haskell.org                                  many haskell blog posts pass through here
 - https://reddit.com/r/haskell                                or here
 - https://hackage.haskell.org/packages/browse                 hackage package search                (#hackage)
-- https://en.wikibooks.org/wiki/Haskell                       a well-written textbook
+- https://packdeps.haskellers.com                             hackage dependency monitor / reverse deps
+- https://hoogle.haskell.org                                  hackage package API search
+- https://www.stackage.org/lts                                stackage LTS package/API search
+- https://www.haskell.org/mailing-lists                       mail lists
+- https://discourse.haskell.org                               discussions forum
+- https://stackoverflow.com/questions/tagged/haskell          haskell questions on Stack Overflow
+- https://www.haskell.org/irc                                 some IRC channels
+- https://view.matrix.org/?query=haskell                      some Matrix rooms
+- https://wiki.haskell.org/                                   haskell wiki
+- https://en.wikibooks.org/wiki/Haskell                       haskell wikibook
+- https://wiki.haskell.org/Language_and_library_specification  language specs
 
 ### Link databases
 
@@ -113,6 +123,7 @@ Currently trying the slightly stickier title "Haskell Links Library".
 
 ### Link lists
 
+- https://wiki.haskell.org/Learning_Haskell                   
 - http://jackkelly.name/wiki/haskell.html                     annotated links							(Jack Kelly)
 - http://www.vex.net/~trebla/haskell/learn-sources.html       reviews of some classic docs				(monochrom, Albert Y.C. Lai)
 - https://github.com/cohomolo-gy/haskell-resources            A List of Foundational Haskell Papers		(@cohomolo-gy)
@@ -123,12 +134,20 @@ Currently trying the slightly stickier title "Haskell Links Library".
 
 - http://dev.stephendiehl.com/hask                            What I Wish I Knew When Learning Haskell	(Stephen Diehl)
 - https://github.com/Gabriella439/post-rfc/blob/main/sotu.md  State of the Haskell ecosystem			(@Gabriella439, Gabriella Gonzalez)
+- https://wiki.haskell.org/Typeclassopedia                    reference for the standard type classes   (Brent Yorgey)
 
 ### Doc collections
 
 - https://guide.aelve.com                                     retired haskell docs/links wiki-db		(peargreen, Artyom Kazak)
 - https://www.fpcomplete.com/haskell/learn                    good practical tutorials and library overviews
+- https://www.schoolofhaskell.com                             more FP Complete docs
 - https://serokell.io/blog/haskell                            good introductory and general posts
+
+### Other
+
+- https://www.fosskers.ca/en/blog/base                        GHC/base/etc. compatibility
+- https://gitlab.haskell.org/ghc/ghc/-/wikis/commentary/libraries/version-history  GHC/boot library versions
+- https://github.com/search/advanced                          search for haskell repos on github
 
 
 ## Discuss / contribute
