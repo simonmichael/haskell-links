@@ -182,9 +182,9 @@ td.tags {
       And more search tools:
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
+      <a href="https://wiki.haskell.org/index.php?search">Haskell Wiki</a> |
       <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
       <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
-      <a href="https://wiki.haskell.org/index.php?search">Haskell Wiki</a> |
       <a href="https://discourse.haskell.org/search?expanded=true">Discourse</a> |
       <a href="https://www.reddit.com/r/haskell/">Reddit</a> |
       <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
