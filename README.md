@@ -124,6 +124,9 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - https://wiki.haskell.org/                                   haskell wiki
 - https://en.wikibooks.org/wiki/Haskell                       haskell wikibook
 - https://wiki.haskell.org/Language_and_library_specification  language specs
+- https://github.com/ghc-proposals/ghc-proposals               ghc proposals
+- https://github.com/haskell/core-libraries-committee          core libraries proposals
+- https://github.com/haskellfoundation/tech-proposals          HF tech proposals
 
 ### Link databases
 
