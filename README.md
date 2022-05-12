@@ -98,21 +98,38 @@ Currently trying the slightly stickier title "Haskell Links Library".
 
 ## Related projects / link sources
 
-- https://github.com/simonmichael/lambdabot-where archive of lambdabot's @where db (int-e)
-- https://www.extrema.is/articles/haskell-books filterable haskell book list (tcard, Travis Cardwell)
-- https://guide.aelve.com retired haskell docs/links wiki-db (peargreen, Artyom Kazak)
-- https://haskell.org/documentation official starting point
-- https://planet.haskell.org many (not all) haskell blog posts pass through here
-- https://reddit.com/r/haskell or here
-- https://github.com/cohomolo-gy/haskell-resources foundational haskell papers
-- http://dev.stephendiehl.com/hask epic practical haskell reference tome
-- https://www.fpcomplete.com/haskell/learn good practical tutorials and library overviews
-- https://serokell.io/blog/haskell good introductory and general posts
-- http://www.vex.net/~trebla/haskell/learn-sources.html reviews of some classic docs (monochrom)
-- https://en.wikibooks.org/wiki/Haskell a well-written textbook
-- https://github.com/krispo/awesome-haskell (@krispo, Konstantin Skipor)
-- https://github.com/uhub/awesome-haskell (@uhub)
-- http://jackkelly.name/wiki/haskell.html
+### Official-ish
+
+- https://haskell.org/documentation                           official starting point
+- https://planet.haskell.org                                  many haskell blog posts pass through here
+- https://reddit.com/r/haskell                                or here
+- https://hackage.haskell.org/packages/browse                 hackage package search                (#hackage)
+- https://en.wikibooks.org/wiki/Haskell                       a well-written textbook
+
+### Link databases
+
+- https://github.com/simonmichael/lambdabot-where             archive of lambdabot's @where db			(int-e)
+- https://www.extrema.is/articles/haskell-books               filterable haskell book list				(tcard, Travis Cardwell)
+
+### Link lists
+
+- http://jackkelly.name/wiki/haskell.html                     annotated links							(Jack Kelly)
+- http://www.vex.net/~trebla/haskell/learn-sources.html       reviews of some classic docs				(monochrom, Albert Y.C. Lai)
+- https://github.com/cohomolo-gy/haskell-resources            A List of Foundational Haskell Papers		(@cohomolo-gy)
+- https://github.com/krispo/awesome-haskell                   Awesome Haskell							(@krispo, Konstantin Skipor)
+- https://github.com/uhub/awesome-haskell                     awesome-haskell							(@uhub)
+
+### Link-heavy docs
+
+- http://dev.stephendiehl.com/hask                            What I Wish I Knew When Learning Haskell	(Stephen Diehl)
+- https://github.com/Gabriella439/post-rfc/blob/main/sotu.md  State of the Haskell ecosystem			(@Gabriella439, Gabriella Gonzalez)
+
+### Doc collections
+
+- https://guide.aelve.com                                     retired haskell docs/links wiki-db		(peargreen, Artyom Kazak)
+- https://www.fpcomplete.com/haskell/learn                    good practical tutorials and library overviews
+- https://serokell.io/blog/haskell                            good introductory and general posts
+
 
 ## Discuss / contribute
 
