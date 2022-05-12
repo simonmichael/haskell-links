@@ -179,7 +179,7 @@ td.tags {
       <a href="?q=paste">paste</a>,
       <a href="?q=game">game</a>.
       <br>
-      And more search tools:
+      And Haskell search tools:
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
       <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
