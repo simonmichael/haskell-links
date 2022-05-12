@@ -196,6 +196,7 @@ td.tags {
       <a href="https://www.stackage.org/lts">Stackage LTS</a> |
       <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
       <a href="https://github.com/search/advanced">Github</a> |
+      <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">GIthub top starred</a> |
       <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
 <!--
       <a href=""></a> |
