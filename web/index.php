@@ -17,32 +17,64 @@ function readLinks() {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script>
+
+// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
 $(document).ready( function () {
-  $('table#links').DataTable({
-	// https://datatables.net/manual/options
-	data: <?php echo json_encode(readLinks()) ?>,
-	order: [[1,'asc']],
-	fixedHeader: true,
-	columns: [
-	  {
-		className: 'id',
-	  },
-	  {
-		className: 'url',
-		"render": function(data ) { return '<a href="'+data+'">'+data+'</a>'; },
-	  },
-	  {
-		className: 'desc',
-	  },
-	  {
-		className: 'tags',
-	  },
-	],
-	paging: false,
-	// pageLength: -1,
-	// lengthMenu: [100,200,500,'All'],
+  // https://datatables.net/manual
+  var table = $('table#links').DataTable({
+    // https://datatables.net/manual/options
+    data: <?php echo json_encode(readLinks()) ?>,
+    order: [[1,'asc']],
+    fixedHeader: true,
+    columns: [
+      {
+      className: 'id',
+      },
+      {
+      className: 'url',
+      "render": function(data ) { return '<a href="'+data+'">'+data+'</a>'; },
+      },
+      {
+      className: 'desc',
+      },
+      {
+      className: 'tags',
+      },
+    ],
+    paging: false,
+    // pageLength: -1,
+    // lengthMenu: [100,200,500,'All'],
   });
-  $('input[type=search]').focus();
+
+  var search = $('#links_filter input[type=search]');
+
+  function updateLocationFromSearch() {
+    var url = new URL(window.location.href);
+    var currentsearchterm = search.val();
+    if (currentsearchterm)
+      url.searchParams.set('q', currentsearchterm);
+    else
+      url.searchParams.delete('q');
+    window.location = url;
+  }
+
+  $(search).on('keypress', function(e) {
+    if (e.which == 13) updateLocationFromSearch();  // update location on enter
+  });
+
+  table.on('search.dt', function () {
+    if (!search.val()) updateLocationFromSearch();  // update location on clearing the search
+  });
+
+  if (params.q)
+    table.search(params.q).draw();  // search for the q parameter if any
+  else
+    $('input[type=search]').focus();  // otherwise show all and await input
+
 });
 </script>
 
@@ -100,17 +132,26 @@ td.tags {
 	  Search my collected Haskell links: currently
 	  lambdabot's @where database
 	  plus a few manually gathered links.
-	  <small>where</small> links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
-    (<tt>@where ID</tt>, <tt>@where+ ID NEWTEXT</tt>).
-    <small>manual</small> links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
-	  Read more about
+	  More about
 	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
 	  and
-	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>.
-	  Would you like to
+	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
+	  would you like to
 	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>.
-	  <!-- in <a href="https://github.com/simonmichael/haskell-links">the repo</a>. -->
+    <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
+    <small>where</small> links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
+    (<tt>@where ID</tt>, <tt>@where+ ID NEWTEXT</tt>).
+    <small>manual</small> links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
+    Press enter for a permalink, eg 
+    <a href="?q=book">book</a>,
+    <a href="?q=paper">paper</a>,
+    <a href="?q=learn">learn</a>,
+    <a href="?q=tutorial">tutorial</a>,
+    <a href="?q=ghc">ghc</a>,
+    <a href="?q=cabal">cabal</a>,
+    <a href="?q=stack">stack</a>,
+    <a href="?q=paste">paste</a>,
+    ..
 	</p>
 
 	<!-- https://datatables.net/examples/basic_init/index.html -->
