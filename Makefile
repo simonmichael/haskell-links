@@ -19,7 +19,7 @@ sort:
 	sort $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
 
 commit:
-	@( git commit -qm "update" -- $(DB) | grep -E '(^\[|file changed)' ) || echo "no changes"
+	@( git commit -m "update" -- $(DB) 2>&1 | grep -E '(^\[|file changed)' ) || echo "no changes"
 
 update: import commit
 
@@ -27,20 +27,28 @@ redo:
 	rm -f $(DB)
 	make -s import
 
-# push to github only, optionally with -f
-publish%:
-	git push $* github
+# publish to github only
+p:
+	git push github
 
-# push to production only, optionally with -f
-deploy%:
-	git push $* joyful
+# forcibly
+P:
+	git push -f github
+
+# deploy to production only
+d:
+	git push joyful
 	ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
 
-# normal push to github and production
-pubdep:
+# forcibly
+D:
+	git push -f joyful
+	ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
+
+# publish and deploy
+pd:
 	git push github
 	ssh joyful.com "cd src/haskell-links && git pull github"
 
-# forced push to github and production
-pubdep-f: publish-f deploy-f
-
+# forcibly
+PD: P D
