@@ -79,7 +79,7 @@ All records have one tag indicating their source, such as:\
 ## UI
 
 1. The CSV can be edited manually via git/github.
-2. A web app will provide filtering, sorting, updating, voting, permalinks, feeds, discoverability.
+2. A web app will provide filtering, sorting, updating, voting, permalinks, ~~feeds~~, discoverability.
 3. A chat bot running in #haskell or wherever it's wanted will allow searching and updating.
 
 ## Web presence
@@ -102,7 +102,10 @@ Currently trying the slightly stickier title "Haskell Links Library".
   <a href="https://web.libera.chat/#haskell">Libera</a> or
   <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>.
 - PRs fixing bugs are especially welcome.
-- More link sources need to be hooked up.
+- More link sources should be imported / interoperated with. (?)
+- Enhance lambdabot or use another bot ?
+- Some workflow permitting web edits, and ideally multiple edit sources, is desirable.
+- A specification for voting is needed. How are votes tracked ?
 
 
 ## Related projects / link sources
@@ -121,7 +124,9 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - https://stackoverflow.com/questions/tagged/haskell          haskell questions on Stack Overflow
 - https://www.haskell.org/irc                                 some IRC channels
 - https://view.matrix.org/?query=haskell                      some Matrix rooms
-- https://wiki.haskell.org/                                   haskell wiki
+- https://wiki.haskell.org                                    haskell wiki
+- https://wiki.haskell.org/Special:RecentChanges              haskell wiki recent changes
+- https://wiki.haskell.org/index.php?title=Special:AllPages   haskell wiki all pages
 - https://en.wikibooks.org/wiki/Haskell                       haskell wikibook
 - https://wiki.haskell.org/Language_and_library_specification  language specs
 - https://github.com/ghc-proposals/ghc-proposals               ghc proposals
