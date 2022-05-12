@@ -96,6 +96,16 @@ body {
 /* .even {
 
 } */
+/* #about {
+  font-size:small;
+} */
+#links_filter input[type=search] {
+  margin-left:8px;
+  width: 20em;
+  font-size:medium;
+  /* font-weight:bold; */
+  /* font-style:italic; */
+}
 table#links {
   table-layout: fixed;
   width: 100%;
@@ -128,21 +138,12 @@ td.tags {
   
 	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
 
-	<p>
-	  Search my collected Haskell links: currently
-	  lambdabot's @where database
-	  plus a few manually gathered links.
-	  More about
-	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
-	  and
-	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
-	  would you like to
-	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
-    <small>where</small> links can be accessed in the <a href="https://web.libera.chat/#haskell">#haskell</a> IRC channel
-    (<tt>@where ID</tt>, <tt>@where+ ID NEWTEXT</tt>).
-    <small>manual</small> links can be updated <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">here</a>.
-    Press enter for a permalink, eg 
+	<p id="about">
+	  Search Haskell links, which currently are gathered
+	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
+	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
+    (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
+    Press enter for a permalink. Examples:
     <a href="?q=book">book</a>,
     <a href="?q=paper">paper</a>,
     <a href="?q=learn">learn</a>,
@@ -151,7 +152,14 @@ td.tags {
     <a href="?q=cabal">cabal</a>,
     <a href="?q=stack">stack</a>,
     <a href="?q=paste">paste</a>,
-    ..
+    <a href="?q=game">game</a>.
+    Here's more about the
+	  <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
+	  and
+	  <a href="https://github.com/simonmichael/haskell-links#some-principles">implementation</a>;
+	  would you like to
+	  <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
 	</p>
 
 	<!-- https://datatables.net/examples/basic_init/index.html -->
