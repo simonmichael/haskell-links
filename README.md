@@ -94,7 +94,16 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - [x] develop some import scripts/procedures
 - [x] start gathering links
 - [x] set up a simple web UI
-- set up a simple chat UI
+- set up (more of) a chat UI
+
+## Discuss / contribute
+
+- Chat `sm` in #haskell, via
+  <a href="https://web.libera.chat/#haskell">Libera</a> or
+  <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>.
+- PRs fixing bugs are especially welcome.
+- More link sources need to be hooked up.
+
 
 ## Related projects / link sources
 
@@ -148,12 +157,3 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - https://www.fosskers.ca/en/blog/base                        GHC/base/etc. compatibility
 - https://gitlab.haskell.org/ghc/ghc/-/wikis/commentary/libraries/version-history  GHC/boot library versions
 - https://github.com/search/advanced                          search for haskell repos on github
-
-
-## Discuss / contribute
-
-- Chat `sm` in #haskell, via
-  <a href="https://web.libera.chat/#haskell">Libera</a> or
-  <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>.
-- PRs fixing bugs are especially welcome.
-- More link sources are needed.
