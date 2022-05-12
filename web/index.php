@@ -155,7 +155,7 @@ td.tags {
 	<h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
 
 	<p id="about">
-	  A searchable collection of Haskell links, currently gathered
+	  A collection of Haskell links, currently gathered
 	  1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
 	  2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
       (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
@@ -178,7 +178,7 @@ td.tags {
       <a href="?q=paste">paste</a>,
       <a href="?q=game">game</a>.
       <br>
-      See also:
+      And more search tools:
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
       <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
       <a href="https://packdeps.haskellers.com">Hackage deps</a> |
@@ -189,11 +189,11 @@ td.tags {
       <a href="https://discourse.haskell.org/search?expanded=true">Discourse</a> |
       <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
       <a href="https://wiki.haskell.org/index.php?search">Haskell Wiki</a> |
-      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew...</a> |
-      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the ecosystem...</a> |
       <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
       <a href="https://www.haskell.org/irc/">IRC channels</a> |
       <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
+      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
+      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
       <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
 <!--
       <a href=""></a> |
