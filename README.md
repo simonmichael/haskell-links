@@ -6,7 +6,9 @@ There are too many, and folks who know where they are get burned out reposting t
 There have been many attempts to gather them, haskell.org/documentation being the most obvious, 
 but none of them have fully succeeded. We could really do with some more systematic, scalable (crowd-sourced, lightweight) approach.*
 
-Here comes another attempt! Right now it's just me, myself and I and this is just getting started.
+Here comes another attempt! https://haskell-links.org is the web UI.
+
+Right now it's just me, myself and I and this is just getting started.
 
 ## Goals
 
