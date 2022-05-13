@@ -153,9 +153,13 @@ td.tags {
 ?>
 
   <body>
-  
+
     <div id="about">
-      <h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" /> Haskell Links Library</h1>
+      <h1>
+        <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
+        <a href="https://haskell-links.org"
+           style="text-decoration:none; color:black;">Haskell Links Library</a>
+      </h1>
       <p>
         A collection of <a href="https://haskell.org">Haskell</a> links, gathered
         1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
