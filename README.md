@@ -113,22 +113,24 @@ Currently trying the slightly stickier title "Haskell Links Library".
 ### Official-ish
 
 - https://haskell.org/documentation                           official starting point
-- https://planet.haskell.org                                  many haskell blog posts pass through here
+- https://wiki.haskell.org                                    haskell wiki
+- https://wiki.haskell.org/Special:RecentChanges              haskell wiki recent changes
+- https://wiki.haskell.org/index.php?title=Special:AllPages   haskell wiki all pages
+- https://en.wikibooks.org/wiki/Haskell                       haskell wikibook
 - https://haskell.pl-a.net                                    aggregates most discussion sites/feeds
+- https://planet.haskell.org                                  many haskell blog posts pass through here
 - https://reddit.com/r/haskell                                or here
-- https://hackage.haskell.org/packages/browse                 hackage package search                (#hackage)
-- https://packdeps.haskellers.com                             hackage dependency monitor / reverse deps
-- https://hoogle.haskell.org                                  hackage package API search
-- https://www.stackage.org/lts                                stackage LTS package/API search
 - https://www.haskell.org/mailing-lists                       mail lists
 - https://discourse.haskell.org                               discussions forum
 - https://stackoverflow.com/questions/tagged/haskell          haskell questions on Stack Overflow
 - https://www.haskell.org/irc                                 some IRC channels
 - https://view.matrix.org/?query=haskell                      some Matrix rooms
-- https://wiki.haskell.org                                    haskell wiki
-- https://wiki.haskell.org/Special:RecentChanges              haskell wiki recent changes
-- https://wiki.haskell.org/index.php?title=Special:AllPages   haskell wiki all pages
-- https://en.wikibooks.org/wiki/Haskell                       haskell wikibook
+- https://haskell.foundation/podcast                          HF podcast
+- https://hackage.haskell.org/packages/browse                 hackage package search                (#hackage)
+- https://packdeps.haskellers.com                             hackage dependency monitor / reverse deps
+- https://hoogle.haskell.org                                  hackage package API search
+- https://www.stackage.org/lts                                stackage LTS package/API search
+- https://www.stackage.org/nightly                            stackage Nightly package/API search
 - https://wiki.haskell.org/Language_and_library_specification  language specs
 - https://github.com/ghc-proposals/ghc-proposals               ghc proposals
 - https://github.com/haskell/core-libraries-committee          core libraries proposals
