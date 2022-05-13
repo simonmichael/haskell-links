@@ -189,13 +189,14 @@ td.tags {
         <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">Wiki pages</a> |
         <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
         <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
-		<a href="https://haskell.pl-a.net">Discussions</a> |
+		<a href="https://haskell.pl-a.net">Discussion feeds</a> |
         <a href="https://discourse.haskell.org">Discourse</a> |
         <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
         <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
         <a href="https://www.haskell.org/irc/">IRC channels</a> |
         <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
         <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
+        <a href="https://haskell.foundation/podcast">HF podcast</a> |
         <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
         <a href="https://packdeps.haskellers.com">Hackage deps</a> |
         <a href="https://hoogle.haskell.org">Hoogle</a> |
