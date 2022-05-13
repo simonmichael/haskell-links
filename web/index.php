@@ -94,6 +94,7 @@ $(document).ready( function () {
 <link rel=stylesheet href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
 <style>
 body {
+  background-color:#e0e0e0;
   font-family: sans-serif;
   /* font-size:small; */
   /* padding: 1em 0; */
@@ -108,14 +109,15 @@ body {
 /* .even {
 
 } */
-/* #about {
+div#about {
   font-size:small;
-} */
+}
 #links_filter input[type=search] {
   margin-left:8px;
   width: 20em;
   font-size:medium;
-  /* font-weight:bold; */
+  background-color: white;
+  font-weight:bold;
   /* font-style:italic; */
 }
 table#links {
@@ -152,64 +154,67 @@ td.tags {
 
   <body>
   
-    <h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:4px;" /> Haskell Links Library</h1>
-    <p id="about">
-      A collection of <a href="https://haskell.org">Haskell</a> links, gathered
-      1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
-      2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
-      (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
-      Here's more about the
-      <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
-      and
-      <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>;
-      would you like to
-      <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-      <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
-      <br>
-      <!-- Shift-click column headings for multi-sort. -->
-      Press enter for a permalink.
-      Example searches:
-      <a href="?q=book">book</a>,
-      <a href="?q=paper">paper</a>,
-      <a href="?q=learn">learn</a>,
-      <a href="?q=tutorial">tutorial</a>,
-      <a href="?q=ghc">ghc</a>,
-      <a href="?q=cabal">cabal</a>,
-      <a href="?q=stack">stack</a>,
-      <a href="?q=paste">paste</a>,
-      <a href="?q=game">game</a>
-      <br>
-      And Haskell search tools:
-      <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
-      <a href="https://www.haskell.org/documentation">Official docs list</a> |
-      <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
-      <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">Wiki pages</a> |
-      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
-      <a href="https://discourse.haskell.org/search?expanded=true">Discourse</a> |
-      <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
-      <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
-      <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
-      <a href="https://www.haskell.org/irc/">IRC channels</a> |
-      <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
-      <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
-      <a href="https://packdeps.haskellers.com">Hackage deps</a> |
-      <a href="https://hoogle.haskell.org">Hoogle</a> |
-      <a href="https://www.stackage.org/lts">Stackage LTS</a> |
-      <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
-      <a href="https://github.com/search/advanced">Github</a> |
-      <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">Github top starred</a> |
-      <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
-      <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC/libs gitlab</a> |
-      <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
-      <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
-      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
-      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
-<!--
-      <a href=""></a> |
-      <a href=""></a> |
--->
-    </p>
+    <div id="about">
+      <h1><img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" /> Haskell Links Library</h1>
+      <p>
+        A collection of <a href="https://haskell.org">Haskell</a> links, gathered
+        1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
+        2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
+        (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
+        Here's more about the   <!-- help emacs highlighter: ' -->
+        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
+        and
+        <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>;
+        would you like to
+        <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+        <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
+        <br>
+        <!-- Shift-click column headings for multi-sort. -->
+        Press enter for a permalink.
+        Example searches:
+        <a href="?q=book">book</a>,
+        <a href="?q=paper">paper</a>,
+        <a href="?q=learn">learn</a>,
+        <a href="?q=tutorial">tutorial</a>,
+        <a href="?q=ghc">ghc</a>,
+        <a href="?q=cabal">cabal</a>,
+        <a href="?q=stack">stack</a>,
+        <a href="?q=paste">paste</a>,
+        <a href="?q=game">game</a>
+        <br>
+        And Haskell search tools:
+        <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
+        <a href="https://www.haskell.org/documentation">Official docs list</a> |
+        <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
+        <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">Wiki pages</a> |
+        <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
+        <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
+        <a href="https://discourse.haskell.org">Discourse</a> |
+        <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
+        <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
+        <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
+        <a href="https://www.haskell.org/irc/">IRC channels</a> |
+        <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
+        <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
+        <a href="https://packdeps.haskellers.com">Hackage deps</a> |
+        <a href="https://hoogle.haskell.org">Hoogle</a> |
+        <a href="https://www.stackage.org/lts">Stackage LTS</a> |
+        <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
+        <a href="https://github.com/search/advanced">Github</a> |
+        <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">Github top starred</a> |
+        <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
+        <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC/libs gitlab</a> |
+        <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
+        <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
+        <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
+        <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
+  <!--
+        <a href=""></a> |
+        <a href=""></a> |
+  -->
+      </p>
+    </div>
+
 <?php
 // ** TABLE ///////////////////////////////////////////////////////////////////
 ?>
@@ -219,8 +224,8 @@ td.tags {
           <tr>
           <th>ID</th>
           <th>URL</th>
-          <th>DESCRIPTION</th>
-          <th>TAGS</th>
+          <th>Description</th>
+          <th>Tags</th>
         </tr>
       </thead>
     </table>
