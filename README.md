@@ -114,6 +114,7 @@ Currently trying the slightly stickier title "Haskell Links Library".
 
 - https://haskell.org/documentation                           official starting point
 - https://planet.haskell.org                                  many haskell blog posts pass through here
+- https://haskell.pl-a.net                                    aggregates most discussion sites/feeds
 - https://reddit.com/r/haskell                                or here
 - https://hackage.haskell.org/packages/browse                 hackage package search                (#hackage)
 - https://packdeps.haskellers.com                             hackage dependency monitor / reverse deps
