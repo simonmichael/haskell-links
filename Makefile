@@ -29,27 +29,27 @@ redo:
 
 # publish to github only
 p:
-	git push github
+	@git push github
 
 # forcibly
 P:
-	git push -f github
+	@git push -f github
 
 # deploy to production only
 d:
-	git push joyful
-	ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
+	@git push joyful
+	@ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
 
 # forcibly
 D:
-	git push -f joyful
-	ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
+	@git push -f joyful
+	@ssh joyful.com 'cd src/haskell-links && git reset --hard && git fetch github'
 
 # publish and deploy
 pd:
-	git push github
-	ssh joyful.com "cd src/haskell-links && git pull github"
-	git fetch joyful
+	@git push github
+	@ssh joyful.com "cd src/haskell-links && git pull github"
+	@git fetch joyful
 
 # forcibly
 PD: P D
