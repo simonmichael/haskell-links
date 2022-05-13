@@ -165,10 +165,10 @@ td.tags {
         1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
         2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
         (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
-        Here's more about the   <!-- help emacs highlighter: ' -->
-        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>
-        and
-        <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>;
+        About the
+        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+        <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
+        <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
         would you like to
         <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
         <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
