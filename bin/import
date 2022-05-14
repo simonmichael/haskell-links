@@ -15,8 +15,8 @@ import_link() {
     REC="$1"
     URL=$(echo "$REC" | cut -d, -f1)
     if ! grep -q "^$URL," $DB; then  # no -E, hopefully nothing in URL confuses it
-	echo "$REC" >>$DB
-	echo "added $URL"
+        echo "$REC" >>$DB
+        echo "added $URL"
     fi
 }
 
@@ -24,6 +24,6 @@ if [[ -n "$1" ]]; then
     import_link "$1, $2, $3, \"$4\""
 else
     while IFS= read -r rec; do
-	import_link "$rec"
+        import_link "$rec"
     done
 fi
