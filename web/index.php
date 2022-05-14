@@ -119,6 +119,13 @@ body {
   font-weight:bold;
   /* font-style:italic; */
 }
+#links_filter > label::after {
+  content: "(for a permalink, press enter)";
+  margin-left:1em;
+  font-size:small;
+  font-weight:normal;
+  font-style:italic;
+}
 table#links {
   table-layout: fixed;
   width: 100%;
@@ -191,6 +198,7 @@ $(document).ready( function () {
   });
 
   var search = $('#links_filter input[type=search]');
+  // search.attr('title','press enter for a permalink');
 
   function updateLocationFromSearch() {
     var url = new URL(window.location.href);
@@ -252,8 +260,7 @@ $(document).ready( function () {
     <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
     <br>
     <!-- Shift-click column headings for multi-sort. -->
-    Press enter for a permalink.
-    Example searches:
+    Example link searches:
     <a href="?q=book">book</a>,
     <a href="?q=paper">paper</a>,
     <a href="?q=learn">learn</a>,
@@ -264,7 +271,7 @@ $(document).ready( function () {
     <a href="?q=paste">paste</a>,
     <a href="?q=game">game</a>
     <br>
-    And Haskell search tools:
+    And other Haskell search tools:
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
