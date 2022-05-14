@@ -46,6 +46,8 @@ p:
 P:
 	@git push -f github
 
+# XXX these could interfere with hourly db-updating cron job on the server - try to avoid deploying on the hour
+
 # deploy to production only
 d:
 	@git push joyful
