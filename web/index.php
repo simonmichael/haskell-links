@@ -81,6 +81,7 @@ function index() {
 /* undo some skeleton css */
 pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
 a { color: revert; }
+a:hover { color: revert; }
 body { line-height: revert; }
 h1 {
   font-size:3rem;
