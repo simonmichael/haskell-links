@@ -75,7 +75,7 @@ function index() {
 -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/datatables.min.css"/>
   <style>
 
 /* undo some skeletonisms */
@@ -101,9 +101,9 @@ body {
 .odd td {
   background-color:#f8f8f8;
 }
-/* .even {
-
-} */
+.even {
+  background-color:white !important;
+}
 #about {
   font-size:small;
   padding:1em 1em 0;
@@ -159,8 +159,7 @@ td.tags {
 ?>
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="js/datatables.min.js"></script>
   <!-- <script src="js/htmx.min.js" defer></script> -->
   <script>
 
