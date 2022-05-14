@@ -83,7 +83,7 @@ body {
   font-size:small;
   padding:1em 1em 0;
 }
-#links_filter {
+#links_filter, #links_info {
   margin-left: 1em;
 }
 #links_filter input[type=search] {
@@ -129,7 +129,7 @@ td.tags {
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-  <script type="application/javascript">
+  <script>
 
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -158,6 +158,7 @@ $(document).ready( function () {
       className: 'tags',
       },
     ],
+    bAutoWidth: false,  // avoid width change when empty
     paging: false,
     // pageLength: -1,
     // lengthMenu: [100,200,500,'All'],
@@ -183,7 +184,7 @@ $(document).ready( function () {
   // table.on('search.dt', function (e) {
   //   if (!search.val()) updateLocationFromSearch();   // update location on clearing the search
   // });
-  
+
   if (params.q) table.search(params.q).draw();  // search for the q parameter if any
 
   $('input[type=search]').focus();  // await input
@@ -202,7 +203,7 @@ $(document).ready( function () {
 <?php
 // ** ABOUT *****************************************************************
 ?>
-<div class="row" id="about">
+<div class="section row" id="about">
   <h1>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
     <a href="https://haskell-links.org"
@@ -272,8 +273,8 @@ $(document).ready( function () {
 <?php
 // ** TABLE *******************************************************************
 ?>
-<div class="row" id="table">
-  <table id="links">
+<div class="section row" id="table">
+  <table id="links" class="u-full-width u-max-full-width">
       <thead>
         <tr>
         <th>ID</th>
