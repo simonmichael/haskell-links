@@ -13,19 +13,21 @@ import-manual:
 	cat in/manual.csv | bin/import
 
 import-where:
+	make -C ../lambdabot-where
 	cat in/where.tsv | bin/read-where | bin/import
 
 sort:
 	sort $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
 
+regen:
+	rm -f $(DB)
+	make import
+
 commit:
 	@( git commit -m "update" -- $(DB) 2>&1 | grep -E '(^\[|file changed)' ) || echo "no changes"
 
-update: import commit
-
-redo:
-	rm -f $(DB)
-	make -s import
+#update: import commit   # does not see changes/removals
+update: regen commit   # more destructive, check make regen first
 
 # publish to github only
 p:
