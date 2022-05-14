@@ -194,7 +194,7 @@ $(document).ready( function () {
       className: 'tags',
       },
     ],
-    bAutoWidth: false,  // avoid width change when empty
+    bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
     order: [[1,'asc']],
     fixedHeader: true,
     searchPanes:{
