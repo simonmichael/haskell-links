@@ -78,7 +78,7 @@ function index() {
   <link rel="stylesheet" href="css/datatables.min.css"/>
   <style>
 
-/* undo some skeletonisms */
+/* undo some skeleton css */
 pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
 a { color: revert; }
 body { line-height: revert; }
@@ -86,6 +86,11 @@ h1 {
   font-size:3rem;
   font-weight:bold;
   margin-bottom:1rem;
+}
+
+/* modify some datatables css */
+.dtsp-disabledButton {
+  color: #aaa !important;   // #7c7c7c
 }
 
 body {
@@ -108,7 +113,7 @@ body {
   font-size:small;
   padding:1em 1em 0;
 }
-#links_filter, #links_info {
+#links_filter, #links_info, .dtsp-panesContainer .dtsp-title {
   margin-left: 1em;
 }
 #links_filter input[type=search] {
@@ -173,7 +178,6 @@ $(document).ready( function () {
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
     data: <?php echo json_encode(readLinks()) ?>,
-    order: [[1,'asc']],
     fixedHeader: true,
     columns: [
       {
@@ -191,6 +195,13 @@ $(document).ready( function () {
       },
     ],
     bAutoWidth: false,  // avoid width change when empty
+    order: [[1,'asc']],
+    fixedHeader: true,
+    searchPanes:{
+      initCollapsed: true,
+      threshold: 1,
+    },
+    // dom: 'Plfrtip',
     paging: false,
     // pageLength: -1,
     // lengthMenu: [100,200,500,'All'],
@@ -231,7 +242,10 @@ $(document).ready( function () {
 // ** BODY *****************************************************************
 ?>
 <body>
-<div class="container u-full-width u-max-full-width">
+<!-- <div class="container"> <!-- not full width -->
+<!--<div class="container u-max-full-width">  <!-- a little wider -->
+<div class="container u-full-width u-max-full-width"> <!-- full width but disturbs search pane titles -->
+<!-- <div class="container" style="width:98% !important;"> --> <!-- no effect -->
 
 <?php
 // ** ABOUT *****************************************************************
