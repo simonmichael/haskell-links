@@ -12,6 +12,7 @@ create:
 import-manual:
 	cat in/manual.csv | bin/import
 
+# NB if a url appears multiple times, the one with alphabetically-first id wins
 import-where:
 	make -C ../lambdabot-where
 	cat in/where.tsv | bin/read-where | bin/import
