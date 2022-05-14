@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# read-where WHEREDB.tsv - convert a lambdabot @where db to link records
+# read-where - convert lambdabot's @where db as TSV on stdin to link records
 
 grep -E 'https?:' - \
     | perl -p -e 's/"/""/g' \
-    | perl -p -e 's/(.*?)\t<?(https?:.*?)([>, ] *(.*)|$)/$2, $1, where, "$4"/' \
-    | perl -p -e 's/(.*?)\t([^<]+?)<?(https?:.*?)([>, ] *(.*)|$)/$3, $1, where, "$2 ... $5"/'
+    | perl -p -e 's/(.*?)\t<?(https?:.*?)([>, ] *(.*)|$)/$2, $1, lambdabot, "$4"/' \
+    | perl -p -e 's/(.*?)\t([^<]+?)<?(https?:.*?)([>, ] *(.*)|$)/$3, $1, lambdabot, "$2 ... $5"/'
