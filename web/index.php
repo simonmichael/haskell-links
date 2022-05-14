@@ -1,7 +1,31 @@
+<?php // echo '<small><pre>'; var_export($_SERVER); echo '</pre></small>'; ?>
 <?php
 // * haskell-links.org/index.php
 // ** PHP *****************************************************************
 
+// router
+$uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
+switch ($uri) {
+  case '' :
+  case '/' :
+    index();
+    break;
+
+  // case '/clickme' :
+  //   echo '<a href="#" hx-post="/clicked" hx-swap="outerHTML">Clicked!</a>';
+  //   break;
+  // case '/clicked' :
+  //   echo '<a href="#" hx-post="/clickme" hx-swap="outerHTML">Click me!</a>';
+  //   break;
+
+  default:
+    http_response_code(404);
+    echo "<h1>Not found</h1>";
+    // require __DIR__ . '404.php';
+    break;
+}
+
+// links db
 function readLinks() {
   $recs = [];
   if (($h = fopen("../links.csv", "r")) !== FALSE) {
@@ -14,8 +38,9 @@ function readLinks() {
   return $recs;
 }
 
+function index() {
+
 // ** HEAD *****************************************************************
-// http://www.getskeleton.com docs
 ?>
 
 <!DOCTYPE html>
@@ -210,6 +235,9 @@ $(document).ready( function () {
     <a href="https://haskell-links.org"
        style="text-decoration:none; color:black;">Haskell Links Library</a>
   </h1>
+
+  <!-- <p><a href="#" hx-post="/clickme" hx-swap="outerHTML">Click Me!</a></p> -->
+
   <p>
     A collection of <a href="https://haskell.org">Haskell</a> links, gathered
     1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
@@ -290,3 +318,7 @@ $(document).ready( function () {
 </div>
 </body>
 </html>
+
+<?php
+}
+?>
