@@ -22,8 +22,11 @@ in/where.tsv:
 	curl -s  http://silicon.int-e.eu/lambdabot/State/where \
 	 | zcat | iconv -c $< | paste -s -d '\t\n' - >$@
 
+# ensure case-sensitive sort
+SORT:=LC_COLLATE=C sort
+
 sort:
-	sort $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
+	$(SORT) $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
 
 regen:
 	rm -f $(DB)
