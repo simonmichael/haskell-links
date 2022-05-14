@@ -247,19 +247,21 @@ $(document).ready( function () {
   <!-- <p><a href="#" hx-post="/clickme" hx-swap="outerHTML">Click Me!</a></p> -->
 
   <p>
-    A collection of <a href="https://haskell.org">Haskell</a> links, gathered
-    1. <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">manually</a>
-    2. <a href="https://github.com/simonmichael/lambdabot-where">from lambdabot</a>
-    (accessible with <tt>@where ID</tt> or <tt>@where+ ID NEWTEXT</tt> in <a href="https://web.libera.chat/#haskell">#haskell</a>).
-    About the
+    A collection of <a href="https://haskell.org">Haskell</a> links,
+    currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a>
+    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
+    plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a>.
+    <!-- Shift-click column headings for multi-sort. -->
+
+    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
+    <span id="about-text" style="display:none;">:
     <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
     <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
     <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
     would you like to
     <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    <!-- Recent <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>. -->
-    <br>
-    <!-- Shift-click column headings for multi-sort. -->
+    </span>).
+
     Example link searches:
     <a href="?q=book">book</a>,
     <a href="?q=paper">paper</a>,
@@ -269,9 +271,10 @@ $(document).ready( function () {
     <a href="?q=cabal">cabal</a>,
     <a href="?q=stack">stack</a>,
     <a href="?q=paste">paste</a>,
-    <a href="?q=game">game</a>
+    <a href="?q=game">game</a>.
+
     <br>
-    And other Haskell search tools:
+    And more Haskell search tools:<br>
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
@@ -321,6 +324,9 @@ $(document).ready( function () {
     </thead>
   </table>
 </div>
+<noscript style="font-style:italic;">
+  Sorry, the link search currently requires javascript.
+</noscript>
 
 </div>
 </body>
