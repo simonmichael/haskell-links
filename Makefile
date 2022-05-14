@@ -3,7 +3,7 @@ DB=links.csv
 import: \
 	create \
 	import-manual \
-	import-where \
+	import-lambdabot \
 	sort
 
 create:
@@ -12,10 +12,15 @@ create:
 import-manual:
 	cat in/manual.csv | bin/import
 
-# NB if a url appears multiple times, the one with alphabetically-first id wins
-import-where:
-	make -C ../lambdabot-where
+# import LB's @where db. If a url appears multiple times, the one with alphabetically-first id wins.
+import-lambdabot: in/where.tsv
 	cat in/where.tsv | bin/read-where | bin/import
+
+# download and convert LB's @where db. https://wiki.haskell.org/IRC_channel#lambdabot
+.PHONY: in/where.tsv
+in/where.tsv:
+	curl -s  http://silicon.int-e.eu/lambdabot/State/where \
+	 | zcat | iconv -c $< | paste -s -d '\t\n' - >$@
 
 sort:
 	sort $(DB) >$(DB).tmp && mv $(DB).tmp $(DB) || rm -f $(DB).tmp
