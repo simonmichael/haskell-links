@@ -7,7 +7,7 @@ import: \
 	sort
 
 create:
-	[[ -e $(DB) ]] || echo 'URL, ID, TAGS, "DESCRIPTION"' >$(DB)
+	[ -e $(DB) ] || echo 'URL, ID, TAGS, "DESCRIPTION"' >$(DB)
 
 import-manual:
 	cat in/manual.csv | bin/import
