@@ -260,7 +260,7 @@ $(document).ready( function () {
   <!-- <p><a href="#" hx-post="/clickme" hx-swap="outerHTML">Click Me!</a></p> -->
 
   <p>
-    A collection of <a href="https://haskell.org">Haskell</a> links,
+    A searchable collection of <a href="https://haskell.org">Haskell</a> links,
     currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a>
     <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
     plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a>.
