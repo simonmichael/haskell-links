@@ -283,19 +283,18 @@ $(document).ready( function () {
 
   <div>
     - A searchable collection of <a href="https://haskell.org">Haskell</a> links
-    (currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a>, updated hourly).
+    (from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>, synced regularly).
     <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
     <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
     <!-- Shift-click column headings for multi-sort. -->
 
-    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
-    <span id="about-text" style="display:none;">:
+    (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
+    ><span id="about-text" style="display:none;">:
     <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
     <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
     <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
     would you like to
-    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    </span>).
+    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?</span>).
 
     Example searches:
     <a href="?q=book">book</a>,
@@ -311,7 +310,7 @@ $(document).ready( function () {
   </div>
 
   <div>
-    - Also, a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
+    - Also a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
       Examples:
       <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
       <a href="https://haskell-links.org/books">/books</a>,
@@ -321,7 +320,7 @@ $(document).ready( function () {
   </div>
 
   <div>
-    - And, more Haskell search tools:
+    - More Haskell search tools:
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
