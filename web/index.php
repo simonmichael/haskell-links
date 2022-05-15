@@ -3,6 +3,30 @@
 // * haskell-links.org/index.php
 // ** PHP *****************************************************************
 
+// links db
+
+function readLinks() {
+  $recs = [];
+  if (($h = fopen("../links.csv", "r")) !== FALSE) {
+    fgetcsv($h);
+    while (($r = fgetcsv($h)) !== FALSE) {
+      $recs[] = [$r[1], $r[0], $r[3], $r[2]];
+    }
+    fclose($h);
+  }
+  return $recs;
+}
+
+$links = readLinks();
+
+function findUrlById($id) {
+  global $links;
+  foreach ($links as $l) {
+    if ($l[0] === $id) return $l[1];
+  }
+  return null;
+}
+
 // router
 $uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
 switch ($uri) {
@@ -19,26 +43,21 @@ switch ($uri) {
   //   break;
 
   default:
-    http_response_code(404);
-    echo "<h1>Not found</h1>";
-    // require __DIR__ . '404.php';
+    $id = preg_replace('/^\//','', $uri);
+    $url = findUrlById($id);
+    if ($url) {
+      header("Location: $url");
+    }
+    else {
+      echo "<h1>Not found</h1>";
+      // require __DIR__ . '404.php';
+      http_response_code(404);
+    }
     break;
 }
 
-// links db
-function readLinks() {
-  $recs = [];
-  if (($h = fopen("../links.csv", "r")) !== FALSE) {
-    fgetcsv($h);
-    while (($r = fgetcsv($h)) !== FALSE) {
-      $recs[] = [$r[1], $r[0], $r[3], $r[2]];
-    }
-    fclose($h);
-  }
-  return $recs;
-}
-
 function index() {
+  global $links;
 
 // ** HEAD *****************************************************************
 ?>
@@ -112,7 +131,7 @@ body {
 }
 #about {
   font-size:small;
-  padding:1em 1em 0;
+  padding:1em;
 }
 #links_filter, #links_info, .dtsp-panesContainer .dtsp-title {
   margin-left: 1em;
@@ -178,7 +197,7 @@ $(document).ready( function () {
   // https://datatables.net/manual
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
-    data: <?php echo json_encode(readLinks()) ?>,
+    data: <?php echo json_encode($links) ?>,
     fixedHeader: true,
     columns: [
       {
@@ -252,6 +271,7 @@ $(document).ready( function () {
 // ** ABOUT *****************************************************************
 ?>
 <div class="section row" id="about">
+
   <h1>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
     <a href="https://haskell-links.org"
@@ -260,35 +280,8 @@ $(document).ready( function () {
 
   <!-- <p><a href="#" hx-post="/clickme" hx-swap="outerHTML">Click Me!</a></p> -->
 
-  <p>
-    A searchable collection of <a href="https://haskell.org">Haskell</a> links,
-    currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a> (updated hourly)
-    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
-    <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->.
-    <!-- Shift-click column headings for multi-sort. -->
-
-    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
-    <span id="about-text" style="display:none;">:
-    <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-    <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
-    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
-    would you like to
-    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    </span>).
-
-    Example link searches:
-    <a href="?q=book">book</a>,
-    <a href="?q=paper">paper</a>,
-    <a href="?q=learn">learn</a>,
-    <a href="?q=tutorial">tutorial</a>,
-    <a href="?q=ghc">ghc</a>,
-    <a href="?q=cabal">cabal</a>,
-    <a href="?q=stack">stack</a>,
-    <a href="?q=paste">paste</a>,
-    <a href="?q=game">game</a>.
-
-    <br>
-    And more Haskell search tools:<br>
+  <div>
+    1. Links to Haskell search tools:
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
@@ -320,7 +313,40 @@ $(document).ready( function () {
     <a href=""></a> |
     <a href=""></a> |
 -->
-  </p>
+  </div>
+
+  <div>
+    2. A searchable collection of <a href="https://haskell.org">Haskell</a> links,
+    currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a> (updated hourly)
+    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
+    <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->.
+    <!-- Shift-click column headings for multi-sort. -->
+
+    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
+    <span id="about-text" style="display:none;">:
+    <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+    <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
+    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
+    would you like to
+    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    </span>).
+
+    Example link searches:
+    <a href="?q=book">book</a>,
+    <a href="?q=paper">paper</a>,
+    <a href="?q=learn">learn</a>,
+    <a href="?q=tutorial">tutorial</a>,
+    <a href="?q=ghc">ghc</a>,
+    <a href="?q=cabal">cabal</a>,
+    <a href="?q=stack">stack</a>,
+    <a href="?q=paste">paste</a>,
+    <a href="?q=game">game</a>.
+  </div>
+
+  <div>
+    3. A handy redirector: jump to any of these via <b><tt>haskell-links.org/ID</tt></b>
+  </div>
+
 </div>
 
 <?php
