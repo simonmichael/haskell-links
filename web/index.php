@@ -284,6 +284,11 @@ $(document).ready( function () {
     paging: false,
     // pageLength: -1,
     // lengthMenu: [100,200,500,'All'],
+    // colReorder: true,
+    // rowGroup: {
+    //   dataSrc: 'tags',
+    // },
+    // stateSave: true,
   });
 
   var search = $('#links_filter input[type=search]');
