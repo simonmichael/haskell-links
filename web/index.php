@@ -133,6 +133,9 @@ body {
   font-size:small;
   padding:1em;
 }
+#about > div {
+  margin-top:.2em;
+}
 #links_filter, #links_info, .dtsp-panesContainer .dtsp-title {
   margin-left: 1em;
 }
@@ -278,10 +281,46 @@ $(document).ready( function () {
        style="text-decoration:none; color:black;">Haskell Links Library</a>
   </h1>
 
-  <!-- <p><a href="#" hx-post="/clickme" hx-swap="outerHTML">Click Me!</a></p> -->
+  <div>
+    - A searchable collection of <a href="https://haskell.org">Haskell</a> links
+    (currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a>, updated hourly).
+    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
+    <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
+    <!-- Shift-click column headings for multi-sort. -->
+
+    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
+    <span id="about-text" style="display:none;">:
+    <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+    <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
+    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
+    would you like to
+    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    </span>).
+
+    Example searches:
+    <a href="?q=book">book</a>,
+    <a href="?q=paper">paper</a>,
+    <a href="?q=learn">learn</a>,
+    <a href="?q=tutorial">tutorial</a>,
+    <a href="?q=ghc">ghc</a>,
+    <a href="?q=cabal">cabal</a>,
+    <a href="?q=stack">stack</a>,
+    <a href="?q=paste">paste</a>,
+    <a href="?q=game">game</a>
+  </div>
 
   <div>
-    1. Links to Haskell search tools:
+    - Also, a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
+      Examples:
+      <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
+      <a href="https://haskell-links.org/books">/books</a>,
+      <a href="https://haskell-links.org/ghcguide">/ghcguide</a>,
+      <a href="https://haskell-links.org/cabalguide">/cabalguide</a>,
+      <a href="https://haskell-links.org/stackguide">/stackguide</a>
+  </div>
+
+  <div>
+    - And, more Haskell search tools:
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
@@ -309,42 +348,6 @@ $(document).ready( function () {
     <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
     <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
     <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists</a>
-<!--
-    <a href=""></a> |
-    <a href=""></a> |
--->
-  </div>
-
-  <div>
-    2. A searchable collection of <a href="https://haskell.org">Haskell</a> links,
-    currently <a href="https://github.com/simonmichael/lambdabot-where">lambdabot's</a> (updated hourly)
-    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
-    <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->.
-    <!-- Shift-click column headings for multi-sort. -->
-
-    ( <a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a>
-    <span id="about-text" style="display:none;">:
-    <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-    <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
-    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
-    would you like to
-    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    </span>).
-
-    Example link searches:
-    <a href="?q=book">book</a>,
-    <a href="?q=paper">paper</a>,
-    <a href="?q=learn">learn</a>,
-    <a href="?q=tutorial">tutorial</a>,
-    <a href="?q=ghc">ghc</a>,
-    <a href="?q=cabal">cabal</a>,
-    <a href="?q=stack">stack</a>,
-    <a href="?q=paste">paste</a>,
-    <a href="?q=game">game</a>.
-  </div>
-
-  <div>
-    3. A handy redirector: jump to any of these via <b><tt>haskell-links.org/ID</tt></b>
   </div>
 
 </div>
