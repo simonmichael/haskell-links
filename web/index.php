@@ -282,8 +282,8 @@ $(document).ready( function () {
   </h1>
 
   <div>
-    - A searchable collection of <a href="https://haskell.org">Haskell</a> links
-    (from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>, synced regularly).
+    - A searchable collection of <a href="https://haskell.org">Haskell</a> links,
+      synced regularly from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>.
     <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
     <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
     <!-- Shift-click column headings for multi-sort. -->
