@@ -101,6 +101,7 @@ function index() {
 pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
 a { color: revert; }
 a:hover { color: revert; }
+button, label { margin-bottom:revert; }
 body { line-height: revert; }
 h1 {
   font-size:3rem;
@@ -114,7 +115,7 @@ h1 {
 }
 
 body {
-  background-color:#e0e0e0;
+  /*background-color:#e0e0e0; */
   font-family: sans-serif;
   /* font-size:small; */
   /* padding: 1em 0; */
@@ -136,18 +137,46 @@ body {
 #about > div {
   margin-top:.2em;
 }
-#links_filter, #links_info, .dtsp-panesContainer .dtsp-title {
+.dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
   margin-left: 1em;
+  margin-right: 1em;
+  
+}
+.info-top {
+  text-align:center;
+}
+.dtsp-panesContainer {
+  display: none;
+}
+.dtsp-title {
+  display: inline-block;
+  font-weight: normal;
+  font-size: small;
+}
+div.dtsp-panesContainer button.dtsp-clearAll, div.dtsp-panesContainer button.dtsp-collapseAll, div.dtsp-panesContainer button.dtsp-showAll {
+  padding-top:0;
+}
+/* div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton, */
+div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-paneInputButton {
+  background-color:white;
+}
+.dataTables_wrapper .dataTables_info {
+  float:right;
+  font-size:small;
 }
 #links_filter input[type=search] {
-  margin-left:8px;
-  width: 20em;
+  margin-left:4px;
+  width: 15em;
   font-size:medium;
   background-color: white;
   font-weight:bold;
   /* font-style:italic; */
 }
-#links_filter > label::after {
+#column_filters {
+  display:inline-block;
+  white-space:nowrap;
+}
+#links_filterX > label::after {
   content: "(for a permalink, press enter)";
   margin-left:1em;
   font-size:small;
@@ -158,7 +187,7 @@ table#links {
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
-  /* font-size:small; */
+  padding-top: .5em;
 }
 th {
   text-align: left;
@@ -196,12 +225,28 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
+function searchPanesToggle() {
+  var searchpanes = $('.dtsp-panesContainer');
+  searchpanes.toggle();
+  localStorage.setItem('haskell-links.searchpanes.visible', searchpanes.is(":visible"));
+}
+
+function setUrlFromSearch() {
+  var search = $('#links_filter input[type=search]');
+  var url = new URL(window.location.href);
+  var currentsearchterm = search.val();
+  if (currentsearchterm)
+    url.searchParams.set('q', currentsearchterm);
+  else
+    url.searchParams.delete('q');
+  window.location = url;
+}
+
 $(document).ready( function () {
   // https://datatables.net/manual
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
     data: <?php echo json_encode($links) ?>,
-    fixedHeader: true,
     columns: [
       {
       className: 'id',
@@ -217,35 +262,50 @@ $(document).ready( function () {
       className: 'tags',
       },
     ],
+    language: {
+      zeroRecords: "No matching links",
+    },
+    fixedHeader: true,
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
     order: [[1,'asc']],
-    fixedHeader: true,
-    searchPanes:{
-      initCollapsed: true,
+    dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
+    searchPanes: {
+      //initCollapsed: true,
+      collapse: false,
+      clear: true,
+      controls: true,
       threshold: 1,
     },
-    // dom: 'Plfrtip',
+    buttons: [
+      // 'searchPanes',
+      // 'copy',
+    ],
     paging: false,
     // pageLength: -1,
     // lengthMenu: [100,200,500,'All'],
   });
 
   var search = $('#links_filter input[type=search]');
-  // search.attr('title','press enter for a permalink');
-
-  function updateLocationFromSearch() {
-    var url = new URL(window.location.href);
-    var currentsearchterm = search.val();
-    if (currentsearchterm)
-      url.searchParams.set('q', currentsearchterm);
-    else
-      url.searchParams.delete('q');
-    window.location = url;
-  }
-
+  // updateee url when enter is pressed
   $(search).on('keypress', function(e) {
-    if (e.which == 13) updateLocationFromSearch();  // update location on enter
+    if (e.which == 13) {
+      setUrlFromSearch();  // update location on enter
+    }
   });
+  // insert column filters toggle button
+  $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
+  // move filter count after it
+  $('#column_filters').append($('.dtsp-title'));
+  // insert "search" button that also updates url, just for clarity
+  $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
+
+  // show/hide search panes as they were last time
+  var searchpanes = $('.dtsp-panesContainer');
+  var searchpanesvisible = localStorage.getItem('haskell-links.searchpanes.visible');
+  if (searchpanesvisible != 'true')
+    searchpanes.hide();
+  else
+    searchpanes.show();
 
   // problematic, also triggers on column sort
   // table.on('search.dt', function (e) {
@@ -277,8 +337,7 @@ $(document).ready( function () {
 
   <h1>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
-    <a href="https://haskell-links.org"
-       style="text-decoration:none; color:black;">Haskell Links Library</a>
+    <a href="/" style="text-decoration:none; color:black;">Haskell Links Library</a>
   </h1>
 
   <div>
