@@ -872,7 +872,7 @@ https://www.reddit.com/r/haskell/comments/dwkehu/thoughts_on_hie/f7nj2e1/,ghcide
 https://www.reddit.com/r/haskell/comments/egc8d0/a_few_haskell_highlights_of_2019/fcjr4tv/,cabal-and-stack,lambdabot,""
 https://www.safaribooksonline.com/library/view/parallel-and-concurrent/9781449335939/,parconc,lambdabot,""
 https://www.seas.upenn.edu/~cis194/spring13/lectures.html,cis194,lambdabot,""
-https://www.stackage.org/lts,stackage-lts,lambdabot,"current stable (""Long Term Support"") Stackage snapshot of packages, using a non-cutting-edge GHC"
+https://www.stackage.org/lts,stackage-nightly,lambdabot,"latest nightly Stackage snapshot of packages, using a more recent GHC"
 https://www.tweag.io/blog/2022-05-12-strict-vs-lazy,strict-vs-lazy,lambdabot,"Comparing Strict and Lazy"
 https://www.vex.net/~trebla/haskell/IO.xhtml,iotut,lambdabot,""
 https://www.well-typed.com/blog/2014/10/quasi-quoting-dsls/,ski-links,lambdabot,",<http://www.medellin.unal.edu.co/~curmat/matdiscretas/doc/Epp.pdf>"
