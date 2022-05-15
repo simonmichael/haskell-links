@@ -268,7 +268,8 @@ $(document).ready( function () {
     fixedHeader: true,
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
     order: [[1,'asc']],
-    dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
+    //dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
+    dom: '<"info-top"i>fB<"#searchpanes">rtpl<"info-bottom"i>',
     searchPanes: {
       //initCollapsed: true,
       collapse: false,
@@ -292,10 +293,10 @@ $(document).ready( function () {
       setUrlFromSearch();  // update location on enter
     }
   });
-  // insert column filters toggle button
-  $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
-  // move filter count after it
-  $('#column_filters').append($('.dtsp-title'));
+  // // insert column filters toggle button
+  // $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
+  // // move filter count after it
+  // $('#column_filters').append($('.dtsp-title'));
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
 
