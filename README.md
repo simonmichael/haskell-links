@@ -6,9 +6,9 @@ There are too many, and folks who know where they are get burned out reposting t
 There have been many attempts to gather them, haskell.org/documentation being the most obvious, 
 but none of them have fully succeeded. We could really do with some more systematic, scalable (crowd-sourced, lightweight) approach.*
 
-Here comes another attempt! https://haskell-links.org is the web UI.
+Here comes another attempt! 
 
-Right now it's just me, myself and I and this is just getting started.
+https://haskell-links.org is the web UI, AKA the Haskell Links Library.
 
 ## Goals
 
@@ -30,7 +30,7 @@ Right now it's just me, myself and I and this is just getting started.
 
 ## Some principles
 
-- Avoid unnecessary software dev/ops work - this aims to fill a need, not to generate work or a hobby.
+- Avoid unnecessary work - this aims to fill a need, not to generate work or a hobby.
   Existing, good enough, cheap beats pending, perfect, costly.
 - Ruthless efficiency - think Craigslist. Less is more.
 - High reliability.
@@ -84,8 +84,9 @@ All records have one tag indicating their source, such as:\
 
 ## Web presence
 
-A custom domain for now: http://haskell-links.org , serving the web UI.
-Currently trying the slightly stickier title "Haskell Links Library".
+The web app runs at https://haskell-links.org, a custom domain for now.
+
+SEO is checked with google search console.
 
 ## Timeline / roadmap
 
@@ -93,8 +94,8 @@ Currently trying the slightly stickier title "Haskell Links Library".
 - [x] gather some link sources
 - [x] develop some import scripts/procedures
 - [x] start gathering links
-- [x] set up a simple web UI
-- set up (more of) a chat UI
+- [x] set up a simple web view
+- [x] set up a simple chat UI
 
 ## Discuss / contribute
 
