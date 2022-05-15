@@ -2,15 +2,15 @@ DB=links.csv
 
 import: \
 	create \
-	import-manual \
 	import-lambdabot \
 	sort
 
 create:
 	[ -e $(DB) ] || echo 'URL, ID, TAGS, "DESCRIPTION"' >$(DB)
 
-import-manual:
-	cat in/manual.csv | bin/import
+# unused
+# import-manual:
+# 	cat in/manual.csv | bin/import
 
 # import LB's @where db. If a url appears multiple times, the one with alphabetically-first id wins.
 import-lambdabot: in/where.tsv
