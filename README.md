@@ -44,10 +44,10 @@ https://haskell-links.org is the web UI, AKA the Haskell Links Library.
 The primary data to be gathered is a link record, consisting of
 
 - the URL. The unique primary key.
-- an optional short id, a unique possibly-hypenated word, useful for chat ops
-- optional tags, a spaced list of possibly-hyphenated lowercase words, used for categorisation
+- an optional (?) short id, a unique possibly-hypenated word, useful for chat ops
 - an optional description. Plain text or perhaps link-free markdown, always enclosed in double quotes.
   (The other fields don't need quotes.) This and the other fields are always UTF8-encoded. 
+- optional tags, a spaced list of possibly-hyphenated lowercase words, used for categorisation
 
 These link records will be public data, stored in a single CSV file in this git repository,
 for durability, manageability and maximum readability/compatibility.
@@ -72,14 +72,12 @@ without creating duplicates or conflicts.
 
 ## Tags
 
-All records have one tag indicating their source, such as:\
-`manual`\
-`where`
+All records have one tag indicating their source, such as `lambdabot`
 
 ## UI
 
-1. The CSV can be edited manually via git/github.
-2. A web app will provide filtering, sorting, updating, voting, permalinks, ~~feeds~~, discoverability.
+1. CSV can be edited manually via git/github (?)
+2. A web app will provide filtering, sorting, updating, voting, permalinks, appropriate feeds, discoverability.
 3. A chat bot running in #haskell or wherever it's wanted will allow searching and updating.
 
 ## Web presence
@@ -105,9 +103,9 @@ SEO is checked with google search console.
 - PRs fixing bugs are especially welcome.
 - More link sources should be imported / interoperated with. (?)
 - Enhance lambdabot or use another bot ?
-- Some workflow permitting web edits, and ideally multiple edit sources, is desirable.
-- A specification for voting is needed. How are votes tracked ?
-
+- Some workflow permitting web edits, and ideally multiple edit UIs, is desirable.
+- How are tags stored/edited ?
+- How are votes stored/edited ?
 
 ## Related projects / link sources
 
