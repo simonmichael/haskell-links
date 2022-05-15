@@ -92,9 +92,9 @@ function index() {
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--
 -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/datatables.min.css"/>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="datatables.min.css"/>
   <style>
 
 /* undo some skeleton css */
@@ -187,8 +187,8 @@ td.tags {
 ?>
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/datatables.min.js"></script>
-  <!-- <script src="js/htmx.min.js" defer></script> -->
+  <script src="datatables.min.js"></script>
+  <!-- <script src="htmx.min.js" defer></script> -->
   <script>
 
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
