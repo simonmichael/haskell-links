@@ -302,6 +302,7 @@ $(document).ready( function () {
     <a href="?q=paper">paper</a>,
     <a href="?q=learn">learn</a>,
     <a href="?q=tutorial">tutorial</a>,
+    <a href="?q=-guide">-guide</a>,
     <a href="?q=ghc">ghc</a>,
     <a href="?q=cabal">cabal</a>,
     <a href="?q=stack">stack</a>,
@@ -314,9 +315,9 @@ $(document).ready( function () {
       Examples:
       <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
       <a href="https://haskell-links.org/books">/books</a>,
-      <a href="https://haskell-links.org/ghcguide">/ghcguide</a>,
-      <a href="https://haskell-links.org/cabalguide">/cabalguide</a>,
-      <a href="https://haskell-links.org/stackguide">/stackguide</a>
+      <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
+      <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
+      <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
   </div>
 
   <div>
