@@ -8,7 +8,7 @@ but none of them have fully succeeded. We could really do with some more systema
 
 Here comes another attempt! 
 
-https://haskell-links.org is the web UI, AKA the Haskell Links Library.
+https://haskell-links.org, AKA the **Haskell Links Library**, is the web UI.
 
 ## Goals
 
