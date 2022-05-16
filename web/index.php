@@ -406,9 +406,10 @@ $(document).ready( function () {
     <a href="https://www.stackage.org/lts">Stackage LTS</a> |
     <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
     <a href="https://github.com/search/advanced">Github</a> |
-    <a href="https://github.com/search?o=desc&q=language%3AHaskell+stars%3A%3E=100&ref=searchresults&s=stars&type=Repositories">Github top starred</a> |
     <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
-    <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC/libs gitlab</a> |
+    <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
+    <a href="https://www.libhunt.com/l/haskell/posts">Recent project mentions</a> |
+    <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC & libs gitlab</a> |
     <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
     <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
     <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
