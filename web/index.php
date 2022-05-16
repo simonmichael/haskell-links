@@ -359,7 +359,12 @@ $(document).ready( function () {
     <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
     <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
     would you like to
-    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?</span>).
+    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    V1 announced 2022-05-16:
+    <a href="https://mail.haskell.org/pipermail/haskell-cafe/2022-May/135301.html">haskell-cafe</a>,
+    <a href="https://discourse.haskell.org/t/ann-haskell-links-org-searchable-links-db/4542">discourse</a>,
+    <a href="https://www.reddit.com/r/haskell/comments/ur8ffc/ann_haskelllinksorg_searchable_links_db/?">reddit</a>
+    </span>).
 
     Example searches:
     <a href="?q=book">book</a>,
