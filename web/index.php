@@ -111,7 +111,7 @@ h1 {
 
 /* modify some datatables css */
 .dtsp-disabledButton {
-  color: #aaa !important;   // #7c7c7c
+  color: #aaa !important;
 }
 
 body {
