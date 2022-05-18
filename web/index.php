@@ -129,7 +129,7 @@ function index() {
     </div>
 
     <div>
-      - Also a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
+      - A redirector: jump to links using <tt>haskell-links.org/ID</tt>.
         Examples:
         <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
         <a href="https://haskell-links.org/books">/books</a>,
@@ -139,14 +139,18 @@ function index() {
     </div>
 
     <div>
-      - More Haskell search tools:
+      - And more Haskell search tools:
+      <br>
+      &nbsp;
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
       <a href="https://wiki.haskell.org">Wiki</a>
       (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
       <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
       <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
+      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a>
+      <br>
+      &nbsp;
       <a href="https://haskell.pl-a.net">Discussion feeds</a> |
       <a href="https://discourse.haskell.org">Discourse</a> |
       <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
@@ -154,7 +158,9 @@ function index() {
       <a href="https://www.haskell.org/irc/">IRC channels</a> |
       <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
       <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
-      <a href="https://haskell.foundation/podcast">HF podcast</a> |
+      <a href="https://haskell.foundation/podcast">HF podcast</a>
+      <br>
+      &nbsp;
       <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
       <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
       <a href="https://packdeps.haskellers.com">Hackage deps</a> |
@@ -165,8 +171,10 @@ function index() {
       <a href="https://github.com/search/advanced">Github</a> |
       <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
       <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
-      <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a> |
-      <a href="https://www.haskell.org/ghc">GHC home</a> |
+      <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a>
+      <br>
+      &nbsp;
+      <a href="https://www.haskell.org/ghc">GHC</a> |
       <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
       <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
       (<a href="https://gitlab.haskell.org/ghc/ghc-wiki-mirror/-/commits/master">changes</a>,
@@ -174,8 +182,10 @@ function index() {
       <a href="https://gitlab.haskell.org/dashboard/projects?sort=stars_desc">GHC & core libs projects</a> |
       <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
       <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
-      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
-      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists...</a>
+      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a>
+      <br>
+      &nbsp;
+      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More...</a>
     </div>
   </div>
 </section>
