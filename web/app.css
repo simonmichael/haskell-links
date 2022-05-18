@@ -23,6 +23,9 @@ body {
   /* font-size:small; */
   /* padding: 1em 0; */
 }
+a {
+  text-decoration: none;
+}
 .dataTables_wrapper .dataTables_filter {
   float:left;
   text-align:left;
