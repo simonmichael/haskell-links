@@ -151,9 +151,11 @@ function index() {
     <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
     <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
     <a href="https://haskell.foundation/podcast">HF podcast</a> |
+    <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
     <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
     <a href="https://packdeps.haskellers.com">Hackage deps</a> |
     <a href="https://hoogle.haskell.org">Hoogle</a> |
+    <a href="https://docs.haskellstack.org/en/stable/GUIDE">Stack user guide</a> |
     <a href="https://www.stackage.org/lts">Stackage LTS</a> |
     <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
     <a href="https://github.com/search/advanced">Github</a> |
