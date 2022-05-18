@@ -97,24 +97,23 @@ function index() {
 </section>
 
 <section id="about">
-  <a id="aboutlink" onclick="aboutToggle();">About / search tools:</a>
+  <a id="aboutlink" onclick="aboutToggle();">About:</a>
   <div id="aboutcontent">
+
     <div>
-      - A searchable collection of <a href="https://haskell.org">Haskell</a> links,
-        synced regularly from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>.
+      - App
+        <a href="https://github.com/simonmichael/haskell-links">source</a>,
+        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
+        <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
+        would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
+    </div>
+
+    <div>
+      - Search <a href="https://haskell.org">Haskell</a> links
+        collected by <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a> users, below.
       <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
-      <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
       <!-- Shift-click column headings for multi-sort. -->
-
-      <!-- (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
-      ><span id="about-text" style="display:none;">: -->
-      (<a href="https://github.com/simonmichael/haskell-links">Source</a>,
-      <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-      <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-      <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
-      would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?)
-      <!-- </span>). -->
-
       Example searches:
       <a href="?q=book">book</a>,
       <a href="?q=paper">paper</a>,
@@ -129,7 +128,7 @@ function index() {
     </div>
 
     <div>
-      - A redirector: jump to links using <tt>haskell-links.org/ID</tt>.
+      - Jump to any link by typing <tt>haskell-links.org/ID</tt>.
         Examples:
         <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
         <a href="https://haskell-links.org/books">/books</a>,
@@ -139,7 +138,7 @@ function index() {
     </div>
 
     <div>
-      - And more Haskell search tools:
+      - Find more Haskell search tools & resources here:
       <br>
       &nbsp;
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
@@ -187,6 +186,7 @@ function index() {
       &nbsp;
       <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More...</a>
     </div>
+
   </div>
 </section>
 
