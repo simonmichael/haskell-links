@@ -136,8 +136,9 @@ function index() {
     - More Haskell search tools:
     <a href="https://www.haskell.org/documentation">Official docs list</a> |
     <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
-    <a href="https://wiki.haskell.org/Special:RecentChanges">Wiki changes</a> |
-    <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">Wiki pages</a> |
+    <a href="https://wiki.haskell.org">Wiki</a>
+    (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
+    <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
     <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
     <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
     <a href="https://haskell.pl-a.net">Discussion feeds</a> |
@@ -158,6 +159,10 @@ function index() {
     <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
     <a href="https://www.libhunt.com/l/haskell/posts">Recent project mentions</a> |
     <a href="https://www.haskell.org/ghc">GHC home</a> |
+    <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
+    <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
+    (<a href="https://gitlab.haskell.org/ghc/ghc-wiki-mirror/-/commits/master">changes</a>,
+    <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/index">pages</a>) |
     <a href="https://gitlab.haskell.org/?sort=stars_desc">GHC & libs gitlab</a> |
     <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
     <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
