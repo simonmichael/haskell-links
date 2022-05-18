@@ -2,7 +2,7 @@
 // echo '<small><pre>'; var_export($_SERVER); echo '</pre></small>';
 // * haskell-links.org/index.php
 
-require 'app.php';
+require 'lib.php';
 
 $links = readLinks();
 
@@ -71,12 +71,12 @@ function index() {
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="skeleton.css">
   <link rel="stylesheet" href="datatables.min.css"/>
-  <style><?php require 'app.css'; ?></style>
+  <style><?php require 'styles.css'; ?></style>
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="datatables.min.js"></script>
-  <script><?php require 'app.js'; ?></script>
+  <script><?php require 'scripts.js'; ?></script>
   <!-- <script src="htmx.min.js" defer></script> -->
 
 </head>
