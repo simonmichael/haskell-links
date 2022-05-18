@@ -1,0 +1,113 @@
+/* App-specific CSS, inlined into main page */
+
+/* undo some skeleton css */
+pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
+a { color: revert; }
+a:hover { color: revert; }
+button, label { margin-bottom:revert; }
+body { line-height: revert; }
+h1 {
+  font-size:3rem;
+  font-weight:bold;
+  margin-bottom:1rem;
+}
+
+/* modify some datatables css */
+.dtsp-disabledButton {
+  color: #aaa !important;
+}
+
+body {
+  /*background-color:#e0e0e0; */
+  font-family: sans-serif;
+  /* font-size:small; */
+  /* padding: 1em 0; */
+}
+.dataTables_wrapper .dataTables_filter {
+  float:left;
+  text-align:left;
+}
+.odd td {
+  background-color:#f8f8f8;
+}
+.even {
+  background-color:white !important;
+}
+#about {
+  font-size:small;
+  padding:1em;
+}
+#about > div {
+  margin-top:.2em;
+}
+.dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
+  margin-left: 1em;
+  margin-right: 1em;
+  
+}
+.info-top {
+  text-align:center;
+}
+.dtsp-panesContainer {
+  display: none;
+}
+.dtsp-title {
+  display: inline-block;
+  font-weight: normal;
+  font-size: small;
+}
+div.dtsp-panesContainer button.dtsp-clearAll, div.dtsp-panesContainer button.dtsp-collapseAll, div.dtsp-panesContainer button.dtsp-showAll {
+  padding-top:0;
+}
+/* div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton, */
+div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-paneInputButton {
+  background-color:white;
+}
+.dataTables_wrapper .dataTables_info {
+  float:right;
+  font-size:small;
+}
+#links_filter input[type=search] {
+  margin-left:4px;
+  width: 15em;
+  font-size:medium;
+  background-color: white;
+  font-weight:bold;
+  /* font-style:italic; */
+}
+#column_filters {
+  display:inline-block;
+  white-space:nowrap;
+}
+#links_filterX > label::after {
+  content: "(for a permalink, press enter)";
+  margin-left:1em;
+  font-size:small;
+  font-weight:normal;
+  font-style:italic;
+}
+table#links {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  padding-top: .5em;
+}
+th {
+  text-align: left;
+}
+td.id {
+  font-size:small;
+}
+td.url {
+  max-width:20em;
+  overflow-x:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  font-size:small;
+}
+/* td.desc {
+} */
+td.tags {
+  font-size:small;
+  /* font-family:monospace; */
+}
