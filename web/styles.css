@@ -1,4 +1,4 @@
-/* App-specific CSS, inlined into main page */
+/* App-specific CSS. Inlined into main page, php interpolation supported. */
 
 /* undo some skeleton css */
 pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
