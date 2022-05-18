@@ -1,5 +1,5 @@
 <?php
-// * App PHP helpers, included by main page
+// * App PHP support code. Inlined into main page.
 
 // ** DB
 
@@ -19,7 +19,7 @@ function findUrlById($id) {
   global $links;
   foreach ($links as $l) {
     if ($l[0] === $id) return $l[1];
-  }
+  } 
   return null;
 }
 
