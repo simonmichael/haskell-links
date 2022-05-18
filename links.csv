@@ -872,6 +872,7 @@ https://www.haskell.org/onlinereport/haskell2010/haskellch5.html#x11-1000005.2,e
 https://www.microsoft.com/en-us/research/publication/scrap-your-boilerplate-a-practical-approach-to-generic-programming/,syb-papers,lambdabot,",<https://www.microsoft.com/en-us/research/publication/scrap-your-boilerplate-with-class/>,<http://www.sigplan.org/Awards/ICFP/#2014_Ralf_L%C3%A4mmel_and_Simon_Peyton_Jones>"
 https://www.reddit.com/r/haskell/comments/dwkehu/thoughts_on_hie/f7nj2e1/,ghcide-emacs,lambdabot,""
 https://www.reddit.com/r/haskell/comments/egc8d0/a_few_haskell_highlights_of_2019/fcjr4tv/,cabal-and-stack,lambdabot,""
+https://www.reddit.com/r/haskell/comments/use5bt/what_are_the_rationales_of_the_functor,symbols-explain,lambdabot,"What are the rationales of the functor, applicative, monad operator symbols ?"
 https://www.safaribooksonline.com/library/view/parallel-and-concurrent/9781449335939/,parconc,lambdabot,""
 https://www.seas.upenn.edu/~cis194/spring13/lectures.html,cis194,lambdabot,""
 https://www.tweag.io/blog/2022-05-12-strict-vs-lazy,strict-vs-lazy,lambdabot,"Comparing Strict and Lazy"
