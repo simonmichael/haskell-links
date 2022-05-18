@@ -89,112 +89,119 @@ function index() {
 
 <!-- About
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="section row" id="about">
+<section id="heading">
   <h1>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
     <a href="/" style="text-decoration:none; color:black;">Haskell Links Library</a>
   </h1>
+</section>
 
-  <div>
-    - A searchable collection of <a href="https://haskell.org">Haskell</a> links,
-      synced regularly from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>.
-    <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
-    <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
-    <!-- Shift-click column headings for multi-sort. -->
+<section id="about">
+  <a id="aboutlink" onclick="aboutToggle();">About / search tools:</a>
+  <div id="aboutcontent">
+    <div>
+      - A searchable collection of <a href="https://haskell.org">Haskell</a> links,
+        synced regularly from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>.
+      <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
+      <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
+      <!-- Shift-click column headings for multi-sort. -->
 
-    <!-- (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
-    ><span id="about-text" style="display:none;">: -->
-    (<a href="https://github.com/simonmichael/haskell-links">Source</a>,
-    <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-    <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
-    would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?)
-    <!-- </span>). -->
+      <!-- (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
+      ><span id="about-text" style="display:none;">: -->
+      (<a href="https://github.com/simonmichael/haskell-links">Source</a>,
+      <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+      <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
+      <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
+      would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?)
+      <!-- </span>). -->
 
-    Example searches:
-    <a href="?q=book">book</a>,
-    <a href="?q=paper">paper</a>,
-    <a href="?q=learn">learn</a>,
-    <a href="?q=tutorial">tutorial</a>,
-    <a href="?q=-guide">-guide</a>,
-    <a href="?q=ghc">ghc</a>,
-    <a href="?q=cabal">cabal</a>,
-    <a href="?q=stack">stack</a>,
-    <a href="?q=paste">paste</a>,
-    <a href="?q=game">game</a>
+      Example searches:
+      <a href="?q=book">book</a>,
+      <a href="?q=paper">paper</a>,
+      <a href="?q=learn">learn</a>,
+      <a href="?q=tutorial">tutorial</a>,
+      <a href="?q=-guide">-guide</a>,
+      <a href="?q=ghc">ghc</a>,
+      <a href="?q=cabal">cabal</a>,
+      <a href="?q=stack">stack</a>,
+      <a href="?q=paste">paste</a>,
+      <a href="?q=game">game</a>
+    </div>
+
+    <div>
+      - Also a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
+        Examples:
+        <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
+        <a href="https://haskell-links.org/books">/books</a>,
+        <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
+        <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
+        <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
+    </div>
+
+    <div>
+      - More Haskell search tools:
+      <a href="https://www.haskell.org/documentation">Official docs list</a> |
+      <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
+      <a href="https://wiki.haskell.org">Wiki</a>
+      (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
+      <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
+      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
+      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
+      <a href="https://haskell.pl-a.net">Discussion feeds</a> |
+      <a href="https://discourse.haskell.org">Discourse</a> |
+      <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
+      <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
+      <a href="https://www.haskell.org/irc/">IRC channels</a> |
+      <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
+      <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
+      <a href="https://haskell.foundation/podcast">HF podcast</a> |
+      <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
+      <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
+      <a href="https://packdeps.haskellers.com">Hackage deps</a> |
+      <a href="https://hoogle.haskell.org">Hoogle</a> |
+      <a href="https://docs.haskellstack.org/en/stable/GUIDE">Stack user guide</a> |
+      <a href="https://www.stackage.org/lts">Stackage LTS</a> |
+      <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
+      <a href="https://github.com/search/advanced">Github</a> |
+      <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
+      <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
+      <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a> |
+      <a href="https://www.haskell.org/ghc">GHC home</a> |
+      <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
+      <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
+      (<a href="https://gitlab.haskell.org/ghc/ghc-wiki-mirror/-/commits/master">changes</a>,
+      <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/index">pages</a>) |
+      <a href="https://gitlab.haskell.org/dashboard/projects?sort=stars_desc">GHC & core libs projects</a> |
+      <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
+      <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
+      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
+      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists...</a>
+    </div>
   </div>
-
-  <div>
-    - Also a redirector: jump to any of these via <tt>haskell-links.org/ID</tt>.
-      Examples:
-      <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
-      <a href="https://haskell-links.org/books">/books</a>,
-      <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
-      <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
-      <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
-  </div>
-
-  <div>
-    - More Haskell search tools:
-    <a href="https://www.haskell.org/documentation">Official docs list</a> |
-    <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
-    <a href="https://wiki.haskell.org">Wiki</a>
-    (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
-    <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
-    <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-    <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a> |
-    <a href="https://haskell.pl-a.net">Discussion feeds</a> |
-    <a href="https://discourse.haskell.org">Discourse</a> |
-    <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
-    <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
-    <a href="https://www.haskell.org/irc/">IRC channels</a> |
-    <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
-    <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
-    <a href="https://haskell.foundation/podcast">HF podcast</a> |
-    <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
-    <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
-    <a href="https://packdeps.haskellers.com">Hackage deps</a> |
-    <a href="https://hoogle.haskell.org">Hoogle</a> |
-    <a href="https://docs.haskellstack.org/en/stable/GUIDE">Stack user guide</a> |
-    <a href="https://www.stackage.org/lts">Stackage LTS</a> |
-    <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
-    <a href="https://github.com/search/advanced">Github</a> |
-    <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
-    <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
-    <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a> |
-    <a href="https://www.haskell.org/ghc">GHC home</a> |
-    <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
-    <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
-    (<a href="https://gitlab.haskell.org/ghc/ghc-wiki-mirror/-/commits/master">changes</a>,
-    <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/index">pages</a>) |
-    <a href="https://gitlab.haskell.org/dashboard/projects?sort=stars_desc">GHC & core libs projects</a> |
-    <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
-    <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
-    <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a> |
-    <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More lists...</a>
-  </div>
-</div>
+</section>
 
 <!-- Data table
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!-- should work either with DataTables (JS) or with server-side HTML (no JS -->
 
-<div class="section row" id="table">
-  <table id="links" class="u-full-width u-max-full-width">
-      <thead>
-        <tr>
-        <th>ID</th>
-        <th>URL</th>
-        <th>Description</th>
-        <th>Tags</th>
-      </tr>
-    </thead>
-  </table>
-</div>
+<section id="search">
+  <div class="section row" id="table">
+    <table id="links" class="u-full-width u-max-full-width">
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>URL</th>
+          <th>Description</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
 
-<noscript style="font-style:italic;">
-  Sorry, the link search currently requires javascript.
-</noscript>
+  <noscript style="font-style:italic;">
+    Sorry, the link search currently requires javascript.
+  </noscript>
+</section>
 
 </div>
 </body>

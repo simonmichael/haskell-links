@@ -5,9 +5,26 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
+var animationSpeed = 'fast';
+
+function aboutToggle() {
+  var about = $('#aboutcontent');
+  var visible = !about.is(":visible");
+  localStorage.setItem('haskell-links.about.visible', visible);
+  aboutLinkUpdate(visible);
+  about.slideToggle(animationSpeed);
+}
+
+function aboutLinkUpdate(visible) {
+  var aboutlink = $('#aboutlink');
+  var newtext = aboutlink.text().replace(/(\.\.\.|:)$/, '') + (visible ? ':' : '...');
+  aboutlink.text(newtext);
+  aboutlink.attr('href','#');  // also make it look like a hyperlink when js is enabled
+}
+
 function searchPanesToggle() {
   var searchpanes = $('.dtsp-panesContainer');
-  searchpanes.toggle();
+  searchpanes.slideToggle(animationSpeed);
   localStorage.setItem('haskell-links.searchpanes.visible', searchpanes.is(":visible"));
 }
 
@@ -85,13 +102,21 @@ $(document).ready( function () {
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
 
-  // show/hide search panes as they were last time
-  var searchpanes = $('.dtsp-panesContainer');
-  var searchpanesvisible = localStorage.getItem('haskell-links.searchpanes.visible');
-  if (searchpanesvisible != 'true')
-    searchpanes.hide();
+  // show/hide things as they were last time
+  var aboutvisible = localStorage.getItem('haskell-links.about.visible') != 'false';
+  aboutLinkUpdate(aboutvisible);
+  var aboutcontent = $('#aboutcontent');
+  if (aboutvisible)
+    aboutcontent.show();
   else
+    aboutcontent.hide();
+
+  var searchpanes = $('.dtsp-panesContainer');
+  var searchpanesvisible = localStorage.getItem('haskell-links.searchpanes.visible') == 'true';
+  if (searchpanesvisible)
     searchpanes.show();
+  else
+    searchpanes.hide();
 
   // problematic, also triggers on column sort
   // table.on('search.dt', function (e) {

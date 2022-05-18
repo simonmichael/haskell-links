@@ -33,13 +33,20 @@ body {
 .even {
   background-color:white !important;
 }
+
 #about {
   font-size:small;
-  padding:1em;
+  margin-left:2em;
+  margin-right:1em;
+  margin-bottom:1em;
+}
+#aboutlink {
+  margin-left: -1em;
 }
 #about > div {
   margin-top:.2em;
 }
+
 .dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
   margin-left: 1em;
   margin-right: 1em;
