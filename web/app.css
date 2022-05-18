@@ -9,7 +9,7 @@ body { line-height: revert; }
 h1 {
   font-size:3rem;
   font-weight:bold;
-  margin-bottom:1rem;
+  margin-bottom:0;
 }
 
 /* modify some datatables css */
@@ -26,6 +26,7 @@ body {
 a {
   text-decoration: none;
 }
+
 .dataTables_wrapper .dataTables_filter {
   float:left;
   text-align:left;
@@ -37,6 +38,9 @@ a {
   background-color:white !important;
 }
 
+#heading {
+  padding: 1em;
+}
 #about {
   /* font-size:small; */
   margin-left:2em;
