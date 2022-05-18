@@ -4,9 +4,12 @@
 
 require 'app.php';
 
+$links = readLinks();
+
 // ** Router
 
 $uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
+
 switch ($uri) {
   case '' :
   case '/' :
@@ -37,8 +40,7 @@ switch ($uri) {
 // ** Index page
 
 function index() {
-  $links = readLinks();
-  // global $links;
+  global $links;
 ?>
 
 <!DOCTYPE html>
