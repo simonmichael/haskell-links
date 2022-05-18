@@ -100,18 +100,14 @@ function index() {
     <!-- plus a few <a href="https://github.com/simonmichael/haskell-links/blob/main/in/manual.csv">more</a> -->
     <!-- Shift-click column headings for multi-sort. -->
 
-    (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
-    ><span id="about-text" style="display:none;">:
+    <!-- (<a href="https://github.com/simonmichael/haskell-links" onclick="$('#about-text').toggle(); return false;">About</a
+    ><span id="about-text" style="display:none;">: -->
+    (<a href="https://github.com/simonmichael/haskell-links">Source</a>,
     <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-    <a href="https://github.com/simonmichael/haskell-links#data">implementation</a>,
-    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>;
-    would you like to
-    <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
-    V1 announced 2022-05-16:
-    <a href="https://mail.haskell.org/pipermail/haskell-cafe/2022-May/135301.html">haskell-cafe</a>,
-    <a href="https://discourse.haskell.org/t/ann-haskell-links-org-searchable-links-db/4542">discourse</a>,
-    <a href="https://www.reddit.com/r/haskell/comments/ur8ffc/ann_haskelllinksorg_searchable_links_db/?">reddit</a>
-    </span>).
+    <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
+    <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
+    would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?)
+    <!-- </span>). -->
 
     Example searches:
     <a href="?q=book">book</a>,
