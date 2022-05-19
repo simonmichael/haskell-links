@@ -60,17 +60,25 @@ $(document).ready( function () {
     data: <?php echo json_encode($links) ?>,
     columns: [
       {
-      className: 'id',
+        className: 'id',
       },
       {
-      className: 'url',
-      "render": function(data ) { return '<a href="'+data+'">'+data+'</a>'; },
+        className: 'url',
+        render: function(data, type, row) { 
+          if (type === 'display')
+            return '<a href="'+data+'">'+data+'</a>';
+          else  // sort, filter, type, sp
+            return data;
+        },
+        searchPanes: {
+          orthogonal: 'sp',
+        }
       },
       {
-      className: 'desc',
+        className: 'desc',
       },
       {
-      className: 'tags',
+        className: 'tags',
       },
     ],
     language: {
