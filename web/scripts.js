@@ -26,8 +26,9 @@ function aboutLinkUpdate(visible) {
 
 function searchPanesToggle() {
   var searchpanes = $('.dtsp-panesContainer');
+  var visible = searchpanes.is(":visible");
   searchpanes.slideToggle(animationSpeed);
-  localStorage.setItem('haskell-links.searchpanes.visible', searchpanes.is(":visible"));
+  localStorage.setItem('haskell-links.searchpanes.visible', !visible);
 }
 
 function setUrlFromSearch() {
@@ -42,7 +43,18 @@ function setUrlFromSearch() {
 }
 
 $(document).ready( function () {
-  // https://datatables.net/manual
+
+  // show/hide about as before
+  // XXX do this early, trying to minimise popping (about is visible by default, for no-js users)
+  var aboutvisible = localStorage.getItem('haskell-links.about.visible') != 'false';
+  aboutLinkUpdate(aboutvisible);
+  var aboutcontent = $('#aboutcontent');
+  if (aboutvisible)
+    aboutcontent.show();
+  else
+    aboutcontent.hide();
+  
+  // set up data table, https://datatables.net
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
     data: <?php echo json_encode($links) ?>,
@@ -68,9 +80,8 @@ $(document).ready( function () {
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
     order: [[1,'asc']],
     //dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
-    dom: '<"info-top"i>fB<"#searchpanes">rtpl<"info-bottom"i>',
+    dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
     searchPanes: {
-      //initCollapsed: true,
       collapse: false,
       clear: true,
       controls: true,
@@ -97,22 +108,18 @@ $(document).ready( function () {
       setUrlFromSearch();  // update location on enter
     }
   });
-  // // insert column filters toggle button
-  // $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
-  // // move filter count after it
-  // $('#column_filters').append($('.dtsp-title'));
+
+  if (params['advanced']) {
+    // insert column filters toggle button
+    $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
+    // move filter count after it
+    $('#column_filters').append($('.dtsp-title'));
+  }
+
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
 
-  // show/hide things as they were last time
-  var aboutvisible = localStorage.getItem('haskell-links.about.visible') != 'false';
-  aboutLinkUpdate(aboutvisible);
-  var aboutcontent = $('#aboutcontent');
-  if (aboutvisible)
-    aboutcontent.show();
-  else
-    aboutcontent.hide();
-
+  // show/hide column filters (searchpanes) as before
   var searchpanes = $('.dtsp-panesContainer');
   var searchpanesvisible = localStorage.getItem('haskell-links.searchpanes.visible') == 'true';
   if (searchpanesvisible)
