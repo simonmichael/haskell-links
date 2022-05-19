@@ -15,14 +15,6 @@ switch ($uri) {
   case '/' :
     index();
     break;
-
-  // case '/clickme' :
-  //   echo '<a href="#" hx-post="/clicked" hx-swap="outerHTML">Clicked!</a>';
-  //   break;
-  // case '/clicked' :
-  //   echo '<a href="#" hx-post="/clickme" hx-swap="outerHTML">Click me!</a>';
-  //   break;
-
   default:
     $id = preg_replace('/^\//','', $uri);
     $url = findUrlById($id);
@@ -30,13 +22,28 @@ switch ($uri) {
       header("Location: $url");
     }
     else {
-      echo "<h1>Not found</h1>";
-      // require __DIR__ . '404.php';
       http_response_code(404);
+      notfound();
     }
     break;
 }
 
+// ** 404 page
+
+function notfound() {
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<h1>Not found</h1>
+<a href="/" style="font-size:large;">Go back...</a>
+</body>
+</html>
+<?php
+}
+  
 // ** Index page
 
 function index() {
@@ -218,4 +225,5 @@ function index() {
 </html>
 
 <?php
-} // end of function index()
+}
+
