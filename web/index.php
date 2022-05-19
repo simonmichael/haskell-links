@@ -97,7 +97,7 @@ function index() {
 </section>
 
 <section id="about">
-  <a id="aboutlink" onclick="aboutToggle();">&#x25BC; About</a>
+  <a id="aboutlink" onclick="aboutToggle(); return false;">&#x25BC; About</a>
   <div id="aboutcontent">
 
     <div>

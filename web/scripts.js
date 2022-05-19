@@ -106,6 +106,7 @@ $(document).ready( function () {
   $(search).on('keypress', function(e) {
     if (e.which == 13) {
       setUrlFromSearch();  // update location on enter
+      return false;
     }
   });
 
