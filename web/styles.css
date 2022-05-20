@@ -50,8 +50,8 @@ a {
 #aboutlink {
   margin-left: -1em;
 }
-#about > div {
-  margin-top:.2em;
+#aboutcontent > div {
+  margin-top:.5em;
 }
 
 .dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
