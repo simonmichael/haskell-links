@@ -834,6 +834,7 @@ https://stackage.org/nightly,stackage-nightly,lambdabot,"latest nightly Stackage
 https://status.haskell.org,status,lambdabot,",<http://auto-status.haskell.org/>,<https://twitter.com/haskellstatus>"
 https://typeclasses.com/phrasebook,thp,lambdabot,"The Haskell Phrasebook - free quick-start guide by Julie Moronukie/Chris Martin, 2019 -  ... "
 https://ucsd-progsys.github.io/liquidhaskell-blog/,liquidhaskell,lambdabot,"""LiquidHaskell (LH) _refines_ Haskell's types with logical predicates that let you enforce critical properties at _compile time_.""  ... ,<https://github.com/ucsd-progsys/liquidhaskell>,<http://hackage.haskell.org/package/liquidhaskell>"
+https://view.matrix.org/?query=haskell,matrix-haskell-rooms,lambdabot,"Haskell-related matrix chat room logs (rooms matching ""haskell"" with public history)"
 https://view.matrix.org/alias/%23haskell:matrix.org,matrix-haskell-log,lambdabot,"log of the main Haskell matrix room, #haskell:matrix.org"
 https://web.archive.org/web/20010620042352/http://www.guild.uwa.edu.au/users/greg/,zen-tales,lambdabot,"""Tales of Zen Master Greg"" (in 2001 ??) at  ... "
 https://wiki.haskell.org/Applications_and_libraries/Generic_programming/Strafunski,strafunski,lambdabot,""
