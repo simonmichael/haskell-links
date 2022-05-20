@@ -52,6 +52,10 @@ a {
 }
 #aboutcontent > div {
   margin-top:.5em;
+  line-height: 1.5em;
+}
+#aboutcontent > div a {
+  white-space: nowrap;
 }
 
 .dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
