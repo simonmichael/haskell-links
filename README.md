@@ -86,14 +86,16 @@ The web app runs at https://haskell-links.org, a custom domain for now.
 
 SEO is checked with google search console.
 
-## Timeline / roadmap
+## Timeline
 
 - [x] 2022-05-10 project start
 - [x] gather some link sources
 - [x] develop some import scripts/procedures
 - [x] start gathering links
 - [x] set up a simple web view
-- [x] set up a simple chat UI
+- [x] set up a simple chat ui
+- [x] 2022-05-16 announced version 1
+- [x] ui/link updates
 
 ## Discuss / contribute
 
@@ -104,8 +106,10 @@ SEO is checked with google search console.
 - More link sources should be imported / interoperated with. (?)
 - Enhance lambdabot or use another bot ?
 - Some workflow permitting web edits, and ideally multiple edit UIs, is desirable.
+- Where and how is master data stored ?
+- Which other data sources are synced and how ?
 - How are tags stored/edited ?
-- How are votes stored/edited ?
+- How are votes tracked/stored/edited ?
 
 ## Related projects / link sources
 
