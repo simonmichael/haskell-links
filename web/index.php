@@ -97,10 +97,10 @@ function index() {
 <!-- About
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section id="heading">
-  <h1>
+  <h1><marquee>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
     <a href="/" style="text-decoration:none; color:black;">Haskell Links Library</a>
-  </h1>
+  </marquee></h1>
 </section>
 
 <section id="about">
