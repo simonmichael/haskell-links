@@ -131,6 +131,8 @@ function index() {
       <a href="?q=cabal">cabal</a>,
       <a href="?q=stack">stack</a>,
       <a href="?q=paste">paste</a>,
+      <a href="?q=irc">irc</a>,
+      <a href="?q=matrix">matrix</a>,
       <a href="?q=game">game</a>
     </div>
 
