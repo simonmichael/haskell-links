@@ -161,8 +161,8 @@ function index() {
       <a href="https://discourse.haskell.org">Discourse</a> |
       <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
       <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
-      <a href="https://www.haskell.org/irc/">IRC channels</a> |
-      <a href="https://view.matrix.org/?query=haskell">Matrix rooms</a> |
+      <a href="https://www.haskell.org/irc/">IRC chat</a> |
+      <a href="https://view.matrix.org/?query=haskell">Matrix chat</a> |
       <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
       <a href="https://haskell.foundation/podcast">HF podcast</a>
       <br>
