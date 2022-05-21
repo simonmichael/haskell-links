@@ -1,11 +1,18 @@
 <?php
-// * App PHP support code. Inlined into main page.
+// * App PHP support code. Included by main page.
 
 // ** DB
 
 function readLinks() {
-    $links = readLinksFrom('lambdabot');
-    return $links;
+  // If the input arrays have the same string keys, then the later
+  // value for that key will overwrite the previous one. If, however,
+  // the arrays contain numeric keys, the later value will not
+  // overwrite the original value, but will be appended.
+  $links = array_merge(
+    readLinksFrom('lambdabot'),
+    readLinksFrom('haskell-links'),
+    );
+  return $links;
 }
 
 $datadir = '../data';
