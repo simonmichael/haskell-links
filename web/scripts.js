@@ -120,7 +120,7 @@ $(document).ready( function () {
     paging: false,
     // pageLength: -1,
     // lengthMenu: [100,200,500,'All'],
-    // colReorder: true,
+    colReorder: true,
     // rowGroup: {
     //   dataSrc: 'tags',
     // },
