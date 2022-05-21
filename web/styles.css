@@ -134,4 +134,10 @@ td.tags {
 }
 .tag {
   white-space: nowrap;
+  /* border: thin solid blue; */
+  color:darkgreen;
+  background-color: #cdc;
+  opacity: .5;
+  border-radius: .3em;
+  padding:.1em;
 }

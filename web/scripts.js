@@ -89,11 +89,12 @@ $(document).ready( function () {
         //   _: '[, ].data',
         //   sp: '[].data',
         // },
-        render: function(data, type, row) { 
-          if (type === 'sp')
-            return data.split(', ').map((s) => '<tt class=tag>'+s+'</tt>');
+        render: function(data, type, row) {
+          var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
+          if (type==='sp')
+            return taglist;
           else
-            return '<tt class=tag>'+data+'</tt>';
+            return taglist.join(' ');
         },
         searchPanes: {
           orthogonal: 'sp'
