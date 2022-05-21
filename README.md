@@ -94,8 +94,9 @@ SEO is checked with google search console.
 - [x] start gathering links
 - [x] set up a simple web view
 - [x] set up a simple chat ui
-- [x] 2022-05-16 announced version 1
-- [x] ui/link updates
+- [x] 2022-05-16 version 1 announced
+- [x] v1.1, ui/link updates
+- [x] 2022-05-20 v1.2, new data scheme and repo, column filters enabled by default, gray background
 
 ## Discuss / contribute
 
