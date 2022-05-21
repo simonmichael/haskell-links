@@ -108,7 +108,7 @@ div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-pane
   font-style:italic;
 }
 table#links {
-  table-layout: fixed;
+  /* table-layout: fixed; */
   width: 100%;
   max-width: 100%;
   padding-top: .5em;
