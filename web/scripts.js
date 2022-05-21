@@ -62,7 +62,7 @@ $(document).ready( function () {
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
     data: <?php echo json_encode($links) ?>,
-    // order: [[0,'asc']],  // the default
+    order: [[3,'asc'], [0,'asc']],  // initially sort by (first) tag then url
     columns: [
       {
         className: 'url',
