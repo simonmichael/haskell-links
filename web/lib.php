@@ -26,7 +26,7 @@ function readLinksFrom($source) {
 function findUrlById($id) {
   global $links;
   foreach ($links as $l) {
-    if ($l[0] === $id) return $l[1];
+    if ($l[1] === $id) return $l[0];
   } 
   return null;
 }
