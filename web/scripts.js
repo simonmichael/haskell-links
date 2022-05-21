@@ -42,6 +42,10 @@ function setUrlFromSearch() {
   window.location = url;
 }
 
+function searchFocus() {
+  $('input[type=search]').focus();
+}
+
 $(document).ready( function () {
 
   // show/hide about as before
@@ -153,6 +157,6 @@ $(document).ready( function () {
 
   if (params.q) table.search(params.q).draw();  // search for the q parameter if any
 
-  $('input[type=search]').focus();  // await input
+  searchFocus();  // await input
 
 });
