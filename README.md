@@ -106,6 +106,7 @@ More detail: [app changes](https://github.com/simonmichael/haskell-links/commits
 - Chat `sm` in #haskell, via
   <a href="https://web.libera.chat/#haskell">Libera</a> or
   <a href="https://matrix.to/#/#haskell:libera.chat">Matrix</a>.
+  Discourse also works well, eg [here](https://discourse.haskell.org/t/ann-haskell-links-org-searchable-links-database).
 - PRs fixing bugs are especially welcome.
 - More link sources should be imported / interoperated with. (?)
 - Enhance lambdabot or use another bot ?
