@@ -61,16 +61,16 @@ $(document).ready( function () {
   // set up data table, https://datatables.net
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
-    data: <?php echo json_encode($links) ?>,
     order: [[3,'asc'], [0,'asc']],  // initially sort by (first) tag then url
     columns: [
       {
         className: 'url',
         render: function(data, type, row) { 
+          // data is a hyperlink for nojs; unhyperlink it for non-display uses
           if (type === 'display')
-            return '<a href="'+data+'">'+data+'</a>';
-          else  // sort, filter, type, sp
             return data;
+          else  // sort, filter, type, sp
+            return data.match(/href="(.*?)"/)[1];
         },
         searchPanes: {
           orthogonal: 'sp',
@@ -90,11 +90,15 @@ $(document).ready( function () {
         //   sp: '[].data',
         // },
         render: function(data, type, row) {
-          var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
-          if (type==='sp')
-            return taglist;
+          // var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
+          // data is a space-separated list of <tt>-wrapped tags for nojs.
+          if (type==='sp') {
+            // For the search pane, AKA column filter, extract the list of tag values
+            return Array.from(data.matchAll(/>(.*?)</g), m => {return m[0]});
+          }
           else
-            return taglist.join(' ');
+            // The htmlised form is ok for all other uses
+            return data.split('/(, *| +)/').join(' ');
         },
         searchPanes: {
           orthogonal: 'sp'

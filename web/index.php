@@ -9,6 +9,7 @@ $links = readLinks();
 // ** Router
 
 $uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
+$q = getdef($_GET['q']);
 
 switch ($uri) {
   case '' :
@@ -47,7 +48,7 @@ function notfound() {
 // ** Index page
 
 function index() {
-  global $links;
+  global $links, $q;
 ?>
 
 <!DOCTYPE html>
@@ -206,7 +207,18 @@ function index() {
 
 <section id="search">
   <div class="section row" id="table">
-    <table id="links" class="u-full-width u-max-full-width">
+    <noscript>
+      <!-- mimic DataTables html to preserve styling -->
+      <div class="dataTables_wrapper">
+      <form>
+      <div id="links_filter" class="dataTables_filter">
+        <label>Search:
+          <input type="search" name="q" value="<?php global $q; echo $q ? htmlspecialchars($q) : '' ?>" placeholder="" aria-controls="links">
+          <button id="search-btn">search</button>
+        </label>
+      </div>
+    </noscript>
+    <table id="links" class="u-full-width u-max-full-width dataTable">
         <thead>
           <tr>
           <th>URL</th>
@@ -215,12 +227,41 @@ function index() {
           <th>Tags</th>
         </tr>
       </thead>
+      <tbody class="nojs">
+<?php
+// global $num_matched;
+$num_matched = 0;
+$class = 'even';
+foreach ($links as $r) {
+  if (!queryMatchesRecord($q, $r)) continue;
+  $num_matched++;
+  $class = $class==='odd' ? 'even' : 'odd';
+  echo "<tr class='$class'>
+          <td class='url'><a href='{$r[0]}'>{$r[0]}</a></td>
+          <td class='id'>{$r[1]}</td>
+          <td class='desc'>{$r[2]}</td>
+          <td class='tags'>"
+          . '<tt class=tag>' . join('</tt> <tt class=tag>', preg_split('/, */', $r[3])) . '</tt>' . "
+        </tr>
+        ";
+}
+?>
+      </tbody>
     </table>
+    <noscript>
+      </form>
+      <div class="info-bottom">
+        <div class="dataTables_info" id="links_info" role="status" aria-live="polite">
+          <?php
+            // global $num_matched, $links
+            $num_total = count($links);
+            echo "Showing 1 to $num_matched of $num_total entries";
+          ?>
+        </div>
+      </div>
+      </div>
+    </noscript>
   </div>
-
-  <noscript style="font-style:italic;">
-    Sorry, the link search currently requires javascript.
-  </noscript>
 </section>
 
 </div>
