@@ -10,7 +10,7 @@ function readLinks() {
   // overwrite the original value, but will be appended.
   $links = array_merge(
     readLinksFrom('lambdabot'),
-    readLinksFrom('haskell-links'),
+    readLinksFrom('haskell-links')
     );
   return $links;
 }
