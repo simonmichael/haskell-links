@@ -94,7 +94,7 @@ $(document).ready( function () {
           // data is a space-separated list of <tt>-wrapped tags for nojs.
           if (type==='sp') {
             // For the search pane, AKA column filter, extract the list of tag values
-            return Array.from(data.matchAll(/>(.*?)</g), m => {return m[0]});
+            return Array.from(data.matchAll(/>(.*?)<\/tt>/g), m => {return m[1]});
           }
           else
             // The htmlised form is ok for all other uses
