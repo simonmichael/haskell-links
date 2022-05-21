@@ -114,7 +114,7 @@ function index() {
         <a href="https://github.com/simonmichael/haskell-links">source</a>,
         <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
         <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-        <a href="https://github.com/simonmichael/haskell-links/commits/main">changes</a>,
+        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
         would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">help</a> ?
     </div>
 
