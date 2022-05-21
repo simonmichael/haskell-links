@@ -61,6 +61,7 @@ function index() {
   <title>Haskell Links Library</title>
   <!-- <meta name="description" content=""> -->
   <!-- <meta name="author" content=""> -->
+  <?php if (isset($_GET['q'])) print '<meta name="robots" content="noindex">' . PHP_EOL; ?>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
