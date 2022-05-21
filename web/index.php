@@ -167,6 +167,7 @@ function index() {
       <a href="https://view.matrix.org/?query=haskell">Matrix chat</a> |
       <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
       <a href="https://haskell.foundation/podcast">HF podcast</a>
+      <a href="https://twitter.com/HaskellOrg">Twitter</a> |
       <br>
       &nbsp;
       <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
