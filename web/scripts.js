@@ -87,8 +87,8 @@ $(document).ready( function () {
       zeroRecords: "No matching links",
     },
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
-    //dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
-    dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
+    // dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
+    dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
     searchPanes: {
       collapse: false,
       clear: true,
@@ -118,12 +118,22 @@ $(document).ready( function () {
     }
   });
 
-  if (params['advanced']) {
-    // insert column filters toggle button
-    $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
-    // move filter count after it
-    $('#column_filters').append($('.dtsp-title'));
-  }
+  // if (params['advanced']) {
+
+  // insert column filters toggle button
+  $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
+  // move filter count after it
+  $('#column_filters').append($('.dtsp-title'));
+
+  // insert column filters toggle button, and merge the active filters count with it
+  // XXX needs to be updated when search pane selections change
+  // var filters_msg = $('.dtsp-title');
+  // var numfilters = filters_msg.text().match(/[0-9]+$/)[0];
+  // var filters_button_txt = 'column filters' + (numfilters==='0' ? '' : (' (' + numfilters + ')'))
+  // filters_msg.remove();
+  // $('<div id="column_filters"><button onclick="searchPanesToggle()">'+filters_button_txt+'</button></div>').insertAfter(search);
+
+  // }
 
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
