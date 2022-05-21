@@ -84,7 +84,7 @@ All records have one tag indicating their source, such as `lambdabot`
 
 The web app runs at https://haskell-links.org, a custom domain for now.
 
-SEO is checked with google search console.
+SEO is checked with [google search console](https://search.google.com/search-console?resource_id=sc-domain%3Ahaskell-links.org).
 
 ## Timeline
 
