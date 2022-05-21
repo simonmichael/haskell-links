@@ -48,8 +48,12 @@ function searchFocus() {
 
 $(document).ready( function () {
 
-  // show/hide about as before
-  // XXX do this early, trying to minimise popping (about is visible by default, for no-js users)
+  // show/hide things as before
+  // Things must be visible initially so no-js users can see them,
+  // unfortunately there is noticeable popping at page load for js users,
+  // while js hides things which should be hidden. 
+  // Try to do that as early as possible.
+  $('#searchtips').hide();
   var aboutvisible = localStorage.getItem('about.visible') != 'false';
   aboutLinkUpdate(aboutvisible);
   var aboutcontent = $('#aboutcontent');
@@ -90,8 +94,12 @@ $(document).ready( function () {
         //   sp: '[].data',
         // },
         render: function(data, type, row) {
+          // data was comma-separated tag names
           // var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
-          // data is a space-separated list of <tt>-wrapped tags for nojs.
+          // if (type==='sp')
+          //   return taglist;
+
+          // data is a space-separated list of <tt>-wrapped tags (for no-js).
           if (type==='sp') {
             // For the search pane, AKA column filter, extract the list of tag values
             return Array.from(data.matchAll(/>(.*?)<\/tt>/g), m => {return m[1]});

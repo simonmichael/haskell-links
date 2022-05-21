@@ -112,6 +112,7 @@ function index() {
     <div>
       - App
         <a href="https://github.com/simonmichael/haskell-links">source</a>,
+        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
         <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
         <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
         <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
@@ -121,7 +122,8 @@ function index() {
     <div>
       - Search <a href="https://haskell.org">Haskell</a> links
         from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>
-        and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>, below.
+        and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>,
+        below.
       <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
       <!-- Shift-click column headings for multi-sort. -->
       Example searches:
@@ -136,7 +138,19 @@ function index() {
       <a href="?q=paste">paste</a>,
       <a href="?q=irc">irc</a>,
       <a href="?q=matrix">matrix</a>,
-      <a href="?q=game">game</a>
+      <a href="?q=game">game</a>.
+      <a id="searchtipslink" href="#" onclick="$('#searchtips').slideToggle('fast'); return false;">More search tips...</a>
+      <div id="searchtips">
+        Search terms
+        can match any column, 
+        can be in any order,
+        and are ANDed.
+        Enclose multiword phrases in double quotes.
+        Add column filters to refine your search.
+        Shift-click column headings for multisort.
+        Add/update lambdabot's links with LB's <a href="https://wiki.haskell.org/IRC_channel#lambdabot"><tt>@where</tt> command</a>.
+        <!-- hll's links <a href="https://github.com/simonmichael/haskell-links-data/blob/main/hll.tsv">with git</a>. -->
+      </div>
     </div>
 
     <div>
