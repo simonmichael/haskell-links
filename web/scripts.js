@@ -58,10 +58,8 @@ $(document).ready( function () {
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
     data: <?php echo json_encode($links) ?>,
+    // order: [[0,'asc']],  // the default
     columns: [
-      {
-        className: 'id',
-      },
       {
         className: 'url',
         render: function(data, type, row) { 
@@ -75,18 +73,20 @@ $(document).ready( function () {
         }
       },
       {
+        className: 'id',
+      },
+      {
         className: 'desc',
       },
       {
         className: 'tags',
       },
     ],
+    fixedHeader: true,
     language: {
       zeroRecords: "No matching links",
     },
-    fixedHeader: true,
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
-    order: [[1,'asc']],
     //dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
     dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
     searchPanes: {

@@ -4,11 +4,19 @@
 // ** DB
 
 function readLinks() {
+    $links = readLinksFrom('lambdabot');
+    return $links;
+}
+
+$datadir = '../data';
+
+function readLinksFrom($source) {
+  global $datadir;
   $recs = [];
-  if (($h = fopen("../links.csv", "r")) !== FALSE) {
-    fgetcsv($h);
-    while (($r = fgetcsv($h)) !== FALSE) {
-      $recs[] = [$r[1], $r[0], $r[3], $r[2]];
+  if (($h = fopen("$datadir/$source.tsv", "r")) !== FALSE) {
+    fgetcsv($h, null, "\t"); // skip header
+    while (($r = fgetcsv($h, null, "\t")) !== FALSE) {
+      $recs[] = $r;
     }
     fclose($h);
   }

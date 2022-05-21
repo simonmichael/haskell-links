@@ -209,8 +209,8 @@ function index() {
     <table id="links" class="u-full-width u-max-full-width">
         <thead>
           <tr>
-          <th>ID</th>
           <th>URL</th>
+          <th>ID</th>
           <th>Description</th>
           <th>Tags</th>
         </tr>
