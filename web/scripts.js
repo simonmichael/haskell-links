@@ -10,7 +10,7 @@ var animationSpeed = 'fast';
 function aboutToggle() {
   var about = $('#aboutcontent');
   var visible = !about.is(":visible");
-  localStorage.setItem('haskell-links.about.visible', visible);
+  localStorage.setItem('about.visible', visible);
   aboutLinkUpdate(visible);
   about.slideToggle(animationSpeed);
 }
@@ -28,7 +28,7 @@ function searchPanesToggle() {
   var searchpanes = $('.dtsp-panesContainer');
   var visible = searchpanes.is(":visible");
   searchpanes.slideToggle(animationSpeed);
-  localStorage.setItem('haskell-links.searchpanes.visible', !visible);
+  localStorage.setItem('searchpanes.visible', !visible);
 }
 
 function setUrlFromSearch() {
@@ -50,7 +50,7 @@ $(document).ready( function () {
 
   // show/hide about as before
   // XXX do this early, trying to minimise popping (about is visible by default, for no-js users)
-  var aboutvisible = localStorage.getItem('haskell-links.about.visible') != 'false';
+  var aboutvisible = localStorage.getItem('about.visible') != 'false';
   aboutLinkUpdate(aboutvisible);
   var aboutcontent = $('#aboutcontent');
   if (aboutvisible)
@@ -144,7 +144,7 @@ $(document).ready( function () {
 
   // show/hide column filters (searchpanes) as before
   var searchpanes = $('.dtsp-panesContainer');
-  var searchpanesvisible = localStorage.getItem('haskell-links.searchpanes.visible') == 'true';
+  var searchpanesvisible = localStorage.getItem('searchpanes.visible') == 'true';
   if (searchpanesvisible)
     searchpanes.show();
   else
