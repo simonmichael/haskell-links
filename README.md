@@ -88,15 +88,16 @@ SEO is checked with google search console.
 
 ## Timeline
 
-- [x] 2022-05-10 project start
-- [x] gather some link sources
-- [x] develop some import scripts/procedures
-- [x] start gathering links
-- [x] set up a simple web view
-- [x] set up a simple chat ui
-- [x] 2022-05-16 version 1 announced
-- [x] v1.1, ui/link updates
-- [x] 2022-05-20 v1.2, new data scheme and repo, column filters enabled by default, gray background
+- 2022-05-10 project start
+- gather some link sources
+- develop some import scripts/procedures
+- start gathering links
+- set up a simple web view
+- set up a simple chat ui
+- 2022-05-16 version 1 announced
+- v1.1, ui/link updates
+- 2022-05-20 v1.2, new data scheme and repo, column filters enabled by default, gray background
+- 2022-05-21 works without javascript; supports multiple data sources, multiple tags, movable columns
 
 ## Discuss / contribute
 
