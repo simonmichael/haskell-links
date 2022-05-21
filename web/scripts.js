@@ -84,6 +84,20 @@ $(document).ready( function () {
       },
       {
         className: 'tags',
+        // can't seem to get this form working
+        // render: {
+        //   _: '[, ].data',
+        //   sp: '[].data',
+        // },
+        render: function(data, type, row) { 
+          if (type === 'sp')
+            return data.split(', ').map((s) => '<tt class=tag>'+s+'</tt>');
+          else
+            return '<tt class=tag>'+data+'</tt>';
+        },
+        searchPanes: {
+          orthogonal: 'sp'
+        }
       },
     ],
     fixedHeader: true,

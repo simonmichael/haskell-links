@@ -132,3 +132,6 @@ td.tags {
   font-size:small;
   /* font-family:monospace; */
 }
+.tag {
+  white-space: nowrap;
+}
