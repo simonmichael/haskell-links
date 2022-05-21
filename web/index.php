@@ -120,7 +120,8 @@ function index() {
 
     <div>
       - Search <a href="https://haskell.org">Haskell</a> links
-        collected by <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a> users, below.
+        from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>
+        and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>, below.
       <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
       <!-- Shift-click column headings for multi-sort. -->
       Example searches:
