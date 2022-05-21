@@ -66,6 +66,9 @@ a {
 .info-top {
   text-align:center;
 }
+div.dtsp-searchPanes {
+  font-size:small;
+}
 .dtsp-panesContainer {
   display: none;
 }
