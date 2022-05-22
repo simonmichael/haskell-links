@@ -1,11 +1,15 @@
 /* App-specific CSS. Inlined into main page, php interpolation supported. */
 
 /* undo some skeleton css */
+body {
+  line-height: revert;
+  font-size: medium;
+}
 pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fieldset { margin-bottom: revert; }
 a { color: revert; }
 a:hover { color: revert; }
 button, label { margin-bottom:revert; }
-body { line-height: revert; }
+
 h1 {
   font-size:3rem;
   font-weight:bold;
