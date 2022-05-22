@@ -126,7 +126,7 @@ function index() {
         below.
       <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
       <!-- Shift-click column headings for multi-sort. -->
-      Example searches:
+      Example searches:<br>
       <a href="?q=book">book</a>,
       <a href="?q=paper">paper</a>,
       <a href="?q=learn">learn</a>,
@@ -155,7 +155,7 @@ function index() {
 
     <div>
       - Jump to any link by typing <tt>haskell-links.org/ID</tt>.
-        Examples:
+        Examples:<br>
         <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
         <a href="https://haskell-links.org/books">/books</a>,
         <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
@@ -211,7 +211,7 @@ function index() {
       <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a>
       <br>
       &nbsp;
-      <a href="https://github.com/simonmichael/haskell-links#related-projects--link-sources">More...</a>
+      <a href="https://github.com/simonmichael/haskell-links#related-projects--potential-link-sources">More links...</a>
     </div>
 
   </div>
