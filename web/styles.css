@@ -22,19 +22,19 @@ h1 {
 }
 
 /* page elements */
-
-body {
-  font-family: sans-serif;
-
+html {
   /* a haskell.org purple: */
-  background: rgb(255,255,255);
-  /* background: linear-gradient(white 0, rgba(64,29,95,.5) 40em); */
   background: linear-gradient(
      white
     ,rgb(213,204,220) 6em
     ,rgb(213,204,220) 30em
     ,rgb(173	154	185)
     );
+  min-height: 100%;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 a {
