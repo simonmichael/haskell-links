@@ -116,7 +116,7 @@ More detail: [app changes](https://github.com/simonmichael/haskell-links/commits
 - How are tags stored/edited ?
 - How are votes tracked/stored/edited ?
 
-## Related projects / link sources
+## Related projects / potential link sources
 
 ### Official-ish
 
@@ -176,3 +176,4 @@ More detail: [app changes](https://github.com/simonmichael/haskell-links/commits
 - https://www.fosskers.ca/en/blog/base                        GHC/base/etc. compatibility
 - https://gitlab.haskell.org/ghc/ghc/-/wikis/commentary/libraries/version-history  GHC/boot library versions
 - https://github.com/search/advanced                          search for haskell repos on github
+- https://news.ycombinator.com/item?id=31459103               2022 discussion of tagging
