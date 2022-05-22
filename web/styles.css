@@ -22,10 +22,12 @@ h1 {
 }
 
 body {
-  background-color:#e0e0e0;
   font-family: sans-serif;
-  /* font-size:small; */
-  /* padding: 1em 0; */
+
+  /* a haskell.org purple: */
+  background: rgb(255,255,255);
+  background: linear-gradient(white 0, rgba(64,29,95,.5) 40em);
+
 }
 a {
   text-decoration: none;
@@ -44,6 +46,7 @@ a {
 
 #heading {
   padding: 1em;
+  text-align:center;
 }
 #about {
   /* font-size:small; */
