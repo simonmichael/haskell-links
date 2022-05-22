@@ -1,6 +1,7 @@
 /* App-specific CSS. Inlined into main page, php interpolation supported. */
 
-/* undo some skeleton css */
+/* undo/modify some skeleton css */
+
 body {
   line-height: revert;
   font-size: medium;
@@ -16,40 +17,36 @@ h1 {
   margin-bottom:0;
 }
 
-/* modify some datatables css */
-.dtsp-disabledButton {
-  color: #aaa !important;
+.container {
+  padding:0;
 }
+
+/* page elements */
 
 body {
   font-family: sans-serif;
 
   /* a haskell.org purple: */
   background: rgb(255,255,255);
-  background: linear-gradient(white 0, rgba(64,29,95,.5) 40em);
-
+  /* background: linear-gradient(white 0, rgba(64,29,95,.5) 40em); */
+  background: linear-gradient(
+    white 0
+    ,rgba(64,29,95,.2) 20em
+    ,rgba(64,29,95,.4) 100%
+    );
 }
+
 a {
   text-decoration: none;
-}
-
-.dataTables_wrapper .dataTables_filter {
-  float:left;
-  text-align:left;
-}
-.odd td {
-  background-color:#f8f8f8;
-}
-.even {
-  background-color:white !important;
 }
 
 #heading {
   padding: 1em;
   text-align:center;
 }
+
 #about {
-  /* font-size:small; */
+  font-size:large;
   margin-left:2em;
   margin-right:1em;
   margin-bottom:1em;
@@ -65,36 +62,15 @@ a {
   white-space: nowrap;
 }
 
-.dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
-  margin-left: 1em;
-  margin-right: 1em;
-  
-}
-.info-top {
-  text-align:center;
-}
-div.dtsp-searchPanes {
-  font-size:small;
-}
-.dtsp-panesContainer {
-  display: none;
-}
-.dtsp-title {
-  display: inline-block;
-  font-weight: normal;
-  font-size: small;
-}
-div.dtsp-panesContainer button.dtsp-clearAll, div.dtsp-panesContainer button.dtsp-collapseAll, div.dtsp-panesContainer button.dtsp-showAll {
-  padding-top:0;
-}
-/* div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton, */
-div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-paneInputButton {
-  background-color:white;
+.dataTables_wrapper .dataTables_filter {
+  float:left;
+  text-align:left;
 }
 .dataTables_wrapper .dataTables_info {
   float:right;
   font-size:small;
 }
+
 #links_filter input[type=search] {
   margin-left:4px;
   width: 15em;
@@ -103,17 +79,40 @@ div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-pane
   font-weight:bold;
   /* font-style:italic; */
 }
+.dataTables_filter, .dataTables_info, .dt-buttons, .dtsp-title {
+  margin-left: 1em;
+  margin-right: 1em;  
+}
+.info-top {
+  text-align:center;
+}
+.dtsp-title {
+  display: inline-block;
+  font-weight: normal;
+  font-size: small;
+}
+
 #column_filters {
   display:inline-block;
   white-space:nowrap;
 }
-#links_filterX > label::after {
-  content: "(for a permalink, press enter)";
-  margin-left:1em;
+div.dtsp-searchPanes {
   font-size:small;
-  font-weight:normal;
-  font-style:italic;
 }
+.dtsp-disabledButton {
+  color: #aaa !important;
+}
+.dtsp-panesContainer {
+  display: none;
+}
+div.dtsp-panesContainer button.dtsp-clearAll, div.dtsp-panesContainer button.dtsp-collapseAll, div.dtsp-panesContainer button.dtsp-showAll {
+  padding-top:0;
+}
+/* div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane button.dtsp-paneButton, */
+div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane input.dtsp-paneInputButton {
+  background-color:white;
+}
+
 table#links {
   /* table-layout: fixed; */
   width: 100%;
@@ -123,30 +122,42 @@ table#links {
 th {
   text-align: left;
 }
-td.id {
-  font-size:small;
+/* td {
+  border:none;
+} */
+tr.odd td {
+  /* background-color:#f0f0f0; */
+  background-color:rgba(64,29,95,.1)
+}
+tr.even td {
+  /* background-color:white; */
 }
 td.url {
-  max-width:20em;
   overflow-x:hidden;
-  white-space:nowrap;
+  /* white-space:nowrap; */
+  word-break:break-all;
   text-overflow: ellipsis;
   font-size:small;
 }
-/* td.desc {
-} */
-/* td.tags {
+td.id {
+  width:15%;
   font-size:small;
-} */
-td.source {
+  word-break:break-all;
+}
+td.desc {
+  word-break:break-all;
   font-size:small;
 }
-.tag {
+td.source {
+  font-size:small;
+  text-align:right;
+}
+
+/* .tag {
   white-space: nowrap;
-  /* border: thin solid blue; */
   color:darkgreen;
   background-color: #cdc;
   opacity: .5;
   border-radius: .3em;
   padding:.1em;
-}
+} */
