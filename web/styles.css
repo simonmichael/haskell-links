@@ -128,9 +128,11 @@ td.url {
 }
 /* td.desc {
 } */
-td.tags {
+/* td.tags {
   font-size:small;
-  /* font-family:monospace; */
+} */
+td.source {
+  font-size:small;
 }
 .tag {
   white-space: nowrap;

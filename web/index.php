@@ -240,7 +240,7 @@ function index() {
           <th>URL</th>
           <th>ID</th>
           <th>Description</th>
-          <th>Tags</th>
+          <th>Source</th>
         </tr>
       </thead>
       <tbody class="nojs">
@@ -256,10 +256,11 @@ foreach ($links as $r) {
           <td class='url'><a href='{$r[0]}'>{$r[0]}</a></td>
           <td class='id'>{$r[1]}</td>
           <td class='desc'>{$r[2]}</td>
-          <td class='tags'>"
-          . '<tt class=tag>' . join('</tt> <tt class=tag>', preg_split('/, */', $r[3])) . '</tt>' . "
+          <td class='source'>{$r[3]}</td>
         </tr>
         ";
+        // <td class='tags'>"
+        // . '<tt class=tag>' . join('</tt> <tt class=tag>', preg_split('/, */', $r[3])) . '</tt>' . "</td>
 }
 ?>
       </tbody>

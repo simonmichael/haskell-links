@@ -34,7 +34,7 @@ function label($label,$s) { return ($label?"$label: ":"").$s; }
  *
  * @param mixed    $obj         value to be logged. ActiveRecord objects are converted to hash form.
  * @param string   $label       label to prefix the value with.
- * @param string   $logfn       callable to use for logging. By default prints to stdout wrapped inside <pre> tags.
+ * @param string   $logfn       callable to use for logging. By default prints to stdout wrapped inside <pre>.
  * @return mixed                the same value that was logged
  */
 function d(

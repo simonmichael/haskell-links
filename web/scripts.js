@@ -65,7 +65,7 @@ $(document).ready( function () {
   // set up data table, https://datatables.net
   var table = $('table#links').DataTable({
     // https://datatables.net/manual/options
-    order: [[3,'asc'], [0,'asc']],  // initially sort by (first) tag then url
+    order: [[3,'asc'], [0,'asc']],  // initially sort by (first) source then url
     columns: [
       {
         className: 'url',
@@ -87,31 +87,34 @@ $(document).ready( function () {
         className: 'desc',
       },
       {
-        className: 'tags',
-        // can't seem to get this form working
-        // render: {
-        //   _: '[, ].data',
-        //   sp: '[].data',
-        // },
-        render: function(data, type, row) {
-          // data was comma-separated tag names
-          // var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
-          // if (type==='sp')
-          //   return taglist;
-
-          // data is a space-separated list of <tt>-wrapped tags (for no-js).
-          if (type==='sp') {
-            // For the search pane, AKA column filter, extract the list of tag values
-            return Array.from(data.matchAll(/>(.*?)<\/tt>/g), m => {return m[1]});
-          }
-          else
-            // The htmlised form is ok for all other uses
-            return data.split('/(, *| +)/').join(' ');
-        },
-        searchPanes: {
-          orthogonal: 'sp'
-        }
+        className: 'source',
       },
+      // {
+      //   className: 'tags',
+      //   // can't seem to get this form working
+      //   // render: {
+      //   //   _: '[, ].data',
+      //   //   sp: '[].data',
+      //   // },
+      //   render: function(data, type, row) {
+      //     // data was comma-separated tag names
+      //     // var taglist = data.split(',').map((s) => '<tt class=tag>'+s.trim()+'</tt>');
+      //     // if (type==='sp')
+      //     //   return taglist;
+
+      //     // data is a space-separated list of <tt>-wrapped tags (for no-js).
+      //     if (type==='sp') {
+      //       // For the search pane, AKA column filter, extract the list of tag values
+      //       return Array.from(data.matchAll(/>(.*?)<\/tt>/g), m => {return m[1]});
+      //     }
+      //     else
+      //       // The htmlised form is ok for all other uses
+      //       return data.split('/(, *| +)/').join(' ');
+      //   },
+      //   searchPanes: {
+      //     orthogonal: 'sp'
+      //   }
+      // },
     ],
     fixedHeader: true,
     language: {
@@ -135,7 +138,7 @@ $(document).ready( function () {
     // lengthMenu: [100,200,500,'All'],
     colReorder: true,
     // rowGroup: {
-    //   dataSrc: 'tags',
+    //   dataSrc: 'source',
     // },
     // stateSave: true,
   });
