@@ -97,7 +97,7 @@ SEO is checked with [google search console](https://search.google.com/search-con
 - 2022-05-16 version 1 announced
 - v1.1, ui/link updates
 - 2022-05-20 v1.2, new data scheme and repo, column filters enabled by default, gray background
-- 2022-05-21 works without javascript; supports multiple data sources, multiple tags, movable columns
+- 2022-05-21 v1.3, works without javascript; supports multiple data sources, multiple tags, movable columns
 
 More detail: [app changes](https://github.com/simonmichael/haskell-links/commits/main), [data changes](https://github.com/simonmichael/haskell-links-data/commits/main)
 
