@@ -69,8 +69,9 @@ function readLinks() {
   // the arrays contain numeric keys, the later value will not
   // overwrite the original value, but will be appended.
   $links = array_merge(
-    readLinksFrom('lambdabot'),
-    readLinksFrom('hll')
+     readLinksFrom('hll')
+    ,readLinksFrom('lambdabot')
+    //,readLinksFrom('hackage')
     );
   return $links;
 }

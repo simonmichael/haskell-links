@@ -70,7 +70,7 @@ $(document).ready( function () {
       {
         className: 'url',
         render: function(data, type, row) { 
-          // data is a hyperlink for nojs; unhyperlink it for non-display uses
+          // data is a hyperlink; unhyperlink it for non-display uses
           if (type === 'display')
             return data;
           else  // sort, filter, type, sp
@@ -96,7 +96,7 @@ $(document).ready( function () {
     },
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
     // dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
-    dom: '<"info-top"i>fB<"#searchpanes"P>rtpl<"info-bottom"i>',
+    dom: '<"#inputs"fB><"#searchpanes"P><"#pagecontrols"lpi>rt<"#pagecontrols"lpi>',
     searchPanes: {
       collapse: false,
       clear: true,
@@ -107,9 +107,9 @@ $(document).ready( function () {
       // 'searchPanes',
       // 'copy',
     ],
-    paging: false,
-    // pageLength: -1,
-    // lengthMenu: [100,200,500,'All'],
+    // paging: false,
+    lengthMenu: [[25, 100, 500, -1], [25, 100, 500, 'All']],
+    // pageLength: 100,
     colReorder: true,
     // rowGroup: {
     //   dataSrc: 'source',

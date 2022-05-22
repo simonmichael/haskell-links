@@ -237,12 +237,12 @@ function index() {
     <table id="links" class="u-full-width u-max-full-width dataTable">
         <thead>
           <tr>
-          <th>URL</th>
-          <th>ID</th>
-          <th>Description</th>
-          <th>Source</th>
-        </tr>
-      </thead>
+            <th width="30%">URL</th>
+            <th width="10%">ID</th>
+            <th width="50%">Description</th>
+            <th width="10%" style="text-align:right;">Source</th>
+          </tr>
+        </thead>
       <tbody class="nojs">
 <?php
 // global $num_matched;
