@@ -139,7 +139,7 @@ function index() {
       <a href="?q=irc">irc</a>,
       <a href="?q=matrix">matrix</a>,
       <a href="?q=game">game</a>.
-      <a id="searchtipslink" href="#" onclick="$('#searchtips').slideToggle('fast'); return false;">More search tips...</a>
+      More <a id="searchtipslink" href="#" onclick="$('#searchtips').slideToggle('fast'); return false;">search tips...</a>
       <div id="searchtips">
         Search terms
         can match any column, 
