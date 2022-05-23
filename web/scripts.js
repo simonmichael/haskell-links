@@ -28,11 +28,17 @@ function aboutLinkUpdate(visible) {
   aboutlink.attr('href','#');  // also make it look like a hyperlink when js is enabled
 }
 
-function searchPanesToggle() {
+function columnFiltersToggle() {
   var searchpanes = $('.dtsp-panesContainer');
-  var visible = searchpanes.is(":visible");
+  var visible = !searchpanes.is(":visible");
+  localStorage.setItem('columnfilters.visible', visible);
+  columnFiltersButtonUpdate(visible)
   searchpanes.slideToggle(animationSpeed);
-  localStorage.setItem('searchpanes.visible', !visible);
+}
+
+function columnFiltersButtonUpdate(visible) {
+  var button = $('#column_filters > button');
+  button.text(button.text().replace( /(▶|▼)/, visible ? '▼' : '▶'));
 }
 
 function setUrlFromSearch() {
@@ -180,7 +186,7 @@ $(document).ready( function () {
   });
 
   // insert column filters toggle button
-  $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
+  $('<div id="column_filters"><button onclick="columnFiltersToggle()">column filters ▶</button></div>').insertAfter(search);
   // move filter count after it
   $('#column_filters').append($('.dtsp-title'));
 
@@ -190,14 +196,14 @@ $(document).ready( function () {
   // var numfilters = filters_msg.text().match(/[0-9]+$/)[0];
   // var filters_button_txt = 'column filters' + (numfilters==='0' ? '' : (' (' + numfilters + ')'))
   // filters_msg.remove();
-  // $('<div id="column_filters"><button onclick="searchPanesToggle()">'+filters_button_txt+'</button></div>').insertAfter(search);
+  // $('<div id="column_filters"><button onclick="columnFiltersToggle()">'+filters_button_txt+'</button></div>').insertAfter(search);
 
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
 
-  // show/hide column filters (searchpanes) as before
+  // show/hide column filters as before
   var searchpanes = $('.dtsp-panesContainer');
-  var searchpanesvisible = localStorage.getItem('searchpanes.visible') == 'true';
+  var searchpanesvisible = localStorage.getItem('columnfilters.visible') == 'true';
   if (searchpanesvisible)
     searchpanes.show();
   else
