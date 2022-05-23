@@ -18,7 +18,10 @@ function aboutToggle() {
 function aboutLinkUpdate(visible) {
   var aboutlink = $('#aboutlink');
   aboutlink.text(aboutlink.text()
-    .replace( /(►|▼)/, visible ? '▼' : '►')
+    // .replace( /(▸|▾)/, visible ? '▾' : '▸')
+    // .replace( /(◂|▾)/, visible ? '▾' : '◂')
+    .replace( /(▶|▼)/, visible ? '▼' : '▶')
+    // .replace( /(◀|▼)/, visible ? '▼' : '◀')
     .replace( /(\.\.\.)?$/, visible ? '' : '...')
     );
   aboutlink.attr('href','#');  // also make it look like a hyperlink when js is enabled

@@ -109,18 +109,8 @@ function index() {
 </section>
 
 <section id="about">
-  <a id="aboutlink" onclick="aboutToggle(); searchFocus(); return false;">&#x25BC; About</a>
+  <a id="aboutlink" onclick="aboutToggle(); searchFocus(); return false;">▼ About</a>
   <div id="aboutcontent">
-
-    <div>
-      - App
-        <a href="https://github.com/simonmichael/haskell-links">source</a>,
-        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
-        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
-        would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
-    </div>
 
     <div>
       - Search <a href="https://haskell.org">Haskell</a> links
@@ -164,6 +154,16 @@ function index() {
         <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
         <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
         <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
+    </div>
+
+    <div>
+      - App
+        <a href="https://github.com/simonmichael/haskell-links">source</a>,
+        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
+        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
+        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
+        would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
     </div>
 
     <div>
