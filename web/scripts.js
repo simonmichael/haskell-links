@@ -28,6 +28,7 @@ function aboutLinkUpdate(visible) {
   aboutlink.attr('href','#');  // also make it look like a hyperlink when js is enabled
 }
 
+// Toggle the visual open/closed state of the column filters button.
 function columnFiltersToggle() {
   var searchpanes = $('.dtsp-panesContainer');
   var visible = !searchpanes.is(":visible");
@@ -36,9 +37,21 @@ function columnFiltersToggle() {
   searchpanes.slideToggle(animationSpeed);
 }
 
+// Update the visual state of the column filters button based on:
+// - the desired column filters visibility state provided
+// - the number of currently active filters.
 function columnFiltersButtonUpdate(visible) {
-  var button = $('#column_filters > button');
-  button.text(button.text().replace( /(▶|▼)/, visible ? '▼' : '▶'));
+  var num_filters = searchPaneTables().rows({selected: true}).data().toArray().length;
+  $('#column_filters > button').text(
+    'column filters '
+    + (num_filters ? ` (${num_filters})` : '')
+    + (visible ? ' ▼' : ' ▶')
+    );
+}
+
+// Get a DataTable object representing all the column filters search panes.
+function searchPaneTables() {
+  return $('.dtsp-searchPanes .dataTables_scrollBody table.dataTable').DataTable();
 }
 
 function setUrlFromSearch() {
@@ -176,38 +189,36 @@ $(document).ready( function () {
 
   showHidePageList(pagelength);
 
+  // On pressing enter in the search field, update url and reload the page.
   var search = $('#links_filter input[type=search]');
-  // update url when enter is pressed
   $(search).on('keypress', function(e) {
     if (e.which == 13) {
-      setUrlFromSearch();  // update location on enter
+      setUrlFromSearch();
       return false;
     }
   });
 
-  // insert column filters toggle button
-  $('<div id="column_filters"><button onclick="columnFiltersToggle()">column filters ▶</button></div>').insertAfter(search);
-  // move filter count after it
-  $('#column_filters').append($('.dtsp-title'));
+  // show/hide column filters as before
+  var columnfiltersvisible = localStorage.getItem('columnfilters.visible') == 'true';
+  if (columnfiltersvisible)
+    $('.dtsp-panesContainer').show();
+  else
+    $('.dtsp-panesContainer').hide();
 
-  // insert column filters toggle button, and merge the active filters count with it
-  // XXX needs to be updated when search pane selections change
-  // var filters_msg = $('.dtsp-title');
-  // var numfilters = filters_msg.text().match(/[0-9]+$/)[0];
-  // var filters_button_txt = 'column filters' + (numfilters==='0' ? '' : (' (' + numfilters + ')'))
-  // filters_msg.remove();
-  // $('<div id="column_filters"><button onclick="columnFiltersToggle()">'+filters_button_txt+'</button></div>').insertAfter(search);
+  // insert column filters toggle button, and show the filter count within it,
+  // replacing the usual info text element.
+  $('.dtsp-title').remove();
+  $('<div id="column_filters"><button onclick="columnFiltersToggle()"></button></div>').insertAfter(search);
+  columnFiltersButtonUpdate(columnfiltersvisible);
+
+  // install an event handler to update the filter count
+  searchPaneTables().on('select deselect', function (e, dt, type, indexes) {
+    var columnfiltersvisible = $('.dtsp-panesContainer').is(":visible");
+    columnFiltersButtonUpdate(columnfiltersvisible);
+  });
 
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
-
-  // show/hide column filters as before
-  var searchpanes = $('.dtsp-panesContainer');
-  var searchpanesvisible = localStorage.getItem('columnfilters.visible') == 'true';
-  if (searchpanesvisible)
-    searchpanes.show();
-  else
-    searchpanes.hide();
 
   // problematic, also triggers on column sort
   // table.on('search.dt', function (e) {
