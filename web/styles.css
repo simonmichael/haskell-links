@@ -10,6 +10,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form, input, textarea, select, fi
 a { color: revert; }
 a:hover { color: revert; }
 button, label { margin-bottom:revert; }
+ul { list-style:revert ;}
 
 h1 {
   font-size:3rem;
@@ -47,15 +48,16 @@ a {
 }
 
 #about {
-  font-size:large;
   margin-left:2em;
   margin-right:1em;
   margin-bottom:1em;
 }
 #aboutlink {
+  font-size:large;
+  font-weight: bold;
   margin-left: -1em;
 }
-#aboutcontent > div {
+#aboutcontent {
   margin-top:.5em;
   line-height: 1.5em;
 }

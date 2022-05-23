@@ -109,11 +109,10 @@ function index() {
 </section>
 
 <section id="about">
-  <a id="aboutlink" onclick="aboutToggle(); searchFocus(); return false;">▼ About</a>
+  <a id="aboutlink" onclick="aboutToggle(); searchFocus(); return false;">About ▾</a>
   <div id="aboutcontent">
-
-    <div>
-      - Search <a href="https://haskell.org">Haskell</a> links
+    <ul>
+    <li> Search <a href="https://haskell.org">Haskell</a> links
         from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>
         and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>,
         below.
@@ -144,32 +143,25 @@ function index() {
         Add/update lambdabot's links with LB's <a href="https://wiki.haskell.org/IRC_channel#lambdabot"><tt>@where</tt> command</a>.
         <!-- hll's links <a href="https://github.com/simonmichael/haskell-links-data/blob/main/hll.tsv">with git</a>. -->
       </div>
-    </div>
 
-    <div>
-      - Jump to any link by typing <tt>haskell-links.org/ID</tt>.
+    <li> Jump to any link by typing <tt>haskell-links.org/ID</tt>.
         Examples:<br>
         <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
         <a href="https://haskell-links.org/books">/books</a>,
         <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
         <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
         <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
-    </div>
 
-    <div>
-      - App
+    <li> App
         <a href="https://github.com/simonmichael/haskell-links">source</a>,
         <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
         <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
         <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
         <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
         would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
-    </div>
 
-    <div>
-      - Find more Haskell search tools & resources here:
+    <li> Find more Haskell search tools & resources here:
       <br>
-      &nbsp;
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
       <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
       <a href="https://wiki.haskell.org">Wiki</a>
@@ -178,7 +170,6 @@ function index() {
       <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
       <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a>
       <br>
-      &nbsp;
       <a href="https://haskell.pl-a.net">Discussion feeds</a> |
       <a href="https://discourse.haskell.org">Discourse</a> |
       <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
@@ -189,7 +180,6 @@ function index() {
       <a href="https://haskell.foundation/podcast">HF podcast</a> |
       <a href="https://twitter.com/HaskellOrg">Twitter</a>
       <br>
-      &nbsp;
       <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
       <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
       <a href="https://packdeps.haskellers.com">Hackage deps</a> |
@@ -202,7 +192,6 @@ function index() {
       <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
       <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a>
       <br>
-      &nbsp;
       <a href="https://www.haskell.org/ghc">GHC</a> |
       <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
       <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
@@ -213,10 +202,9 @@ function index() {
       <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
       <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a>
       <br>
-      &nbsp;
       <a href="https://github.com/simonmichael/haskell-links#related-projects--potential-link-sources">More links...</a>
-    </div>
 
+  </ul>
   </div>
 </section>
 
