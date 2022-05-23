@@ -11,6 +11,9 @@ $links = readLinks();
 $uri = preg_replace('/\?.*/', '', $_SERVER['REQUEST_URI']);
 $q = getdef($_GET['q']);
 
+// no paging for no-js users, currently
+// $pagelength = getdef($_GET['len']);
+
 switch ($uri) {
   case '' :
   case '/' :

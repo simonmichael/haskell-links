@@ -33,20 +33,66 @@ function searchPanesToggle() {
 
 function setUrlFromSearch() {
   var search = $('#links_filter input[type=search]');
-  var url = new URL(window.location.href);
   var currentsearchterm = search.val();
-  if (currentsearchterm)
-    url.searchParams.set('q', currentsearchterm);
-  else
-    url.searchParams.delete('q');
-  window.location = url;
+  newurl = currentsearchterm ? setUrlParam('q', currentsearchterm) : deleteUrlParam('q');
+  window.location = newurl;
+}
+
+// Set a query parameter in the current URL, returning a new modified URL object.
+function setUrlParam(name, val) {
+  var newurl = new URL(window.location.href);
+  newurl.searchParams.set(name, val);
+  return newurl;
+}
+
+// Delete a query parameter from the current URL if present, returning a new modified URL object.
+function deleteUrlParam(name) {
+  var newurl = new URL(window.location.href);
+  newurl.searchParams.delete(name);
+  return newurl;
 }
 
 function searchFocus() {
   $('input[type=search]').focus();
 }
 
+// Try to parse a localstorage value as an integer, or return null if it does not exist.
+function localStorageGetInt(name) {
+  val = localStorage.getItem(name);
+  return val ? parseInt(val) : null;
+}
+
+// paging config
+// page length is set by a len query parameter, recalled from storage, or a default
+var reqpagelength = params.len ? parseInt(params.len) : null;
+var storedpagelength = localStorageGetInt('pagelength');
+var defpagelength = 50;
+var pagelength = reqpagelength ? reqpagelength : (storedpagelength || defpagelength);
+// build the page lengths list, including any query-specified page length to reduce confusion
+var pagelengths = [25, 50, 100, 500];
+if (reqpagelength) pagelengths = pagelengths.concat([reqpagelength]).sort(function(a,b) { return a - b; });
+var lengthmenu = [pagelengths.concat([-1]), pagelengths.concat('All')]
+
+// Show the list of pages only when page length is not All.
+function showHidePageList(pagelength) {
+  var pagenumbers = $('.dataTables_paginate');
+  if (pagelength != -1)
+    pagenumbers.show();
+  else
+    pagenumbers.hide();
+}
+
 $(document).ready( function () {
+
+  // On changing the page length using the selector..
+  $('#links').on( 'length.dt', function ( e, settings, len ) {
+    // remember the new page length
+    localStorage.setItem('pagelength',len);
+    // show the page list only if page length is not All
+    showHidePageList(len);
+    // and remove any len query parameter
+    if (params.len) window.location = deleteUrlParam('len');
+  });
 
   // show/hide things as before
   // Things must be visible initially so no-js users can see them,
@@ -62,9 +108,13 @@ $(document).ready( function () {
   else
     aboutcontent.hide();
   
-  // set up data table, https://datatables.net
+  // set up the data table. https://datatables.net, https://datatables.net/manual/options
+  var pagecontrols = '<"#pagecontrols"lpi>';
   var table = $('table#links').DataTable({
-    // https://datatables.net/manual/options
+    dom: `<"#inputs"fB><"#searchpanes"P>${pagecontrols}rt${pagecontrols}`,
+    paging: true, // always show page length selector
+    pageLength: pagelength,
+    lengthMenu: lengthmenu,
     order: [[3,'asc'], [0,'asc']],  // initially sort by (first) source then url
     columns: [
       {
@@ -95,8 +145,7 @@ $(document).ready( function () {
       zeroRecords: "No matching links",
     },
     bAutoWidth: true,  // true adjusts column widths, false avoids table width change when empty
-    // dom: '<"info-top"i>fB' + (params['advanced'] ? '<"#searchpanes"P>' : '') + 'rtpl<"info-bottom"i>',
-    dom: '<"#inputs"fB><"#searchpanes"P><"#pagecontrols"lpi>rt<"#pagecontrols"lpi>',
+    colReorder: true,
     searchPanes: {
       collapse: false,
       clear: true,
@@ -107,15 +156,13 @@ $(document).ready( function () {
       // 'searchPanes',
       // 'copy',
     ],
-    // paging: false,
-    lengthMenu: [[25, 100, 500, -1], [25, 100, 500, 'All']],
-    // pageLength: 100,
-    colReorder: true,
     // rowGroup: {
     //   dataSrc: 'source',
     // },
     // stateSave: true,
   });
+
+  showHidePageList(pagelength);
 
   var search = $('#links_filter input[type=search]');
   // update url when enter is pressed
@@ -125,8 +172,6 @@ $(document).ready( function () {
       return false;
     }
   });
-
-  // if (params['advanced']) {
 
   // insert column filters toggle button
   $('<div id="column_filters"><button onclick="searchPanesToggle()">column filters</button></div>').insertAfter(search);
@@ -140,8 +185,6 @@ $(document).ready( function () {
   // var filters_button_txt = 'column filters' + (numfilters==='0' ? '' : (' (' + numfilters + ')'))
   // filters_msg.remove();
   // $('<div id="column_filters"><button onclick="searchPanesToggle()">'+filters_button_txt+'</button></div>').insertAfter(search);
-
-  // }
 
   // insert "search" button that also updates url, just for clarity
   $('<button id="search-btn" onclick="setUrlFromSearch()">save search</button>').insertAfter(search);
@@ -159,7 +202,7 @@ $(document).ready( function () {
   //   if (!search.val()) updateLocationFromSearch();   // update location on clearing the search
   // });
 
-  if (params.q) table.search(params.q).draw();  // search for the q parameter if any
+  if (params.q) table.search(params.q).draw();  // if there's a q parameter, search for that
 
   searchFocus();  // await input
 
