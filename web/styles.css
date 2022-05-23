@@ -26,10 +26,9 @@ h1 {
 html {
   /* a haskell.org purple: */
   background: linear-gradient(
-     white
-    ,rgb(213,204,220) 6em
-    ,rgb(213,204,220) 30em
-    ,rgb(173	154	185)
+     white 4em
+    ,rgb(213,204,220) 8em
+    ,rgb(194, 174, 205)
     );
   min-height: 100%;
 }
