@@ -144,7 +144,7 @@ table#links {
   width: 100%;
   max-width: 100% !important;
   padding-top: .5em;
-  font-size:small;
+  /* font-size:small; */
   overflow-wrap: break-word;
   /* word-break:break-all; */
   /* overflow-x:hidden; */
