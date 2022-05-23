@@ -93,7 +93,9 @@ $(document).ready( function () {
     localStorage.setItem('pagelength',len);
     // show the page list only if page length is not All
     showHidePageList(len);
-    // and remove any len query parameter
+    // unfocus the select to prevent it annoyingly popping up again when you press up/down to scroll
+    $('select[name=links_length]').blur();
+    // if there was a ?len query parameter, remove it (reloads the page)
     if (params.len) window.location = deleteUrlParam('len');
   });
 
