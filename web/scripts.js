@@ -90,7 +90,8 @@ function nubSort(array) {
   return Array.from(new Set(array)).sort(function(a,b) { return a - b; });
 }
 
-// paging config
+// paging config.. oh my lord
+
 // page length is set by a len query parameter, recalled from storage, or a default
 var reqpagelength = params.len ? parseInt(params.len) : null;
 if (reqpagelength) localStorage.setItem('pagelength',reqpagelength);  // if a query parameter, remember it
@@ -98,14 +99,14 @@ var storedpagelength = localStorageGetInt('pagelength');
 var defpagelength = 50;
 var pagelength = reqpagelength ? reqpagelength : (storedpagelength || defpagelength);
 
-// build the page lengths list. 
+// build the page lengths list
 // to reduce confusion... include any custom page length from the query, or previously stored
 var pagelengths = [25, 50, 100, 500];
-if (reqpagelength)  // add new page length specified with ?len
-  pagelengths.push(reqpagelength);
-else if (storedpagelength && !pagelengths.includes(storedpagelength))  // or custom page length stored previously
-  pagelengths.push(storedpagelength);
-pagelengths = nubSort(pagelengths);  // remove duplicates
+if (reqpagelength)
+  pagelengths.push(reqpagelength);     // add new page length specified with ?len
+else if (storedpagelength && storedpagelength != -1 && !pagelengths.includes(storedpagelength))
+  pagelengths.push(storedpagelength);  // or custom page length stored previously
+pagelengths = nubSort(pagelengths);    // remove duplicates
 var lengthmenu = [pagelengths.concat([-1]), pagelengths.concat('All')]  // add All at the end
 
 // Show the list of pages only when page length is not All.
