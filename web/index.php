@@ -122,6 +122,7 @@ function index() {
       <a href="?q=book">book</a>,
       <a href="?q=paper">paper</a>,
       <a href="?q=learn">learn</a>,
+      <a href="?q=faq">faq</a>,
       <a href="?q=tutorial">tutorial</a>,
       <a href="?q=-guide">-guide</a>,
       <a href="?q=ghc">ghc</a>,
