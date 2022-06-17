@@ -25,11 +25,13 @@ h1 {
 /* page elements */
 html {
   /* a haskell.org purple: */
-  background: linear-gradient(
+  /* background: linear-gradient(
      white 4em
     ,rgb(213,204,220) 8em
     ,rgb(194, 174, 205)
-    );
+    ); */
+  /* tomsmeding: lighter, whole page */
+  background: linear-gradient( rgb(234,229,237) 2em ,rgb(213,204,220) 10em ,rgb(194, 174, 205) );
   min-height: 100%;
 }
 
