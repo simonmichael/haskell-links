@@ -141,7 +141,8 @@ function index() {
         Enclose multiword phrases in double quotes.
         Add column filters to refine your search.
         Shift-click column headings for multisort.
-        Add/update lambdabot's links with LB's <a href="https://wiki.haskell.org/IRC_channel#lambdabot"><tt>@where</tt> command</a>.
+        Add/update lambdabot's links with LB's <a href="https://wiki.haskell.org/IRC_channel#lambdabot"><tt>@where</tt> command</a>,
+				site updates within 5 minutes.
         <!-- hll's links <a href="https://github.com/simonmichael/haskell-links-data/blob/main/hll.tsv">with git</a>. -->
       </div>
 
