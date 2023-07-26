@@ -189,7 +189,7 @@ function index() {
       <a href="https://docs.haskellstack.org/en/stable/GUIDE">Stack user guide</a> |
       <a href="https://www.stackage.org/lts">Stackage LTS</a> |
       <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
-      <a href="https://github.com/search/advanced">Github</a> |
+      <a href="https://github.com/topics/haskell">Github</a> |
       <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
       <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
       <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a>
