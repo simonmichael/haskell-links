@@ -169,7 +169,7 @@ function index() {
       (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
       <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
       <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-      <a href="http://dev.stephendiehl.com/hask">What I Wish I Knew When Learning Haskell</a>
+      <a href="https://www.stephendiehl.com/posts/docs.html">What I Wish I Knew When Learning Haskell</a>
       <br>
       <a href="https://haskell.pl-a.net">Discussion feeds</a> |
       <a href="https://discourse.haskell.org">Discourse</a> |
