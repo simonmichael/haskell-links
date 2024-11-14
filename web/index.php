@@ -154,14 +154,6 @@ function index() {
         <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
         <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
 
-    <li> App
-        <a href="https://github.com/simonmichael/haskell-links">source</a>,
-        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
-        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>,
-        would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
-
     <li> Find more Haskell search tools & resources here:
       <br>
       <a href="https://www.haskell.org/documentation">Official docs list</a> |
@@ -205,6 +197,14 @@ function index() {
       <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a>
       <br>
       <a href="https://github.com/simonmichael/haskell-links#related-projects--potential-link-sources">More links...</a>
+
+    <li> This site's
+        <a href="https://github.com/simonmichael/haskell-links">source</a>,
+        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
+        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
+        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
+        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>.
+        Would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
 
   </ul>
   </div>
