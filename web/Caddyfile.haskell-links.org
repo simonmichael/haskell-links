@@ -1,23 +1,23 @@
 haskell-links.org {
-        log {
-                output file /var/log/caddy/haskell-links_access.log
+	log {
+		output file /var/log/caddy/haskell-links_access.log
 		format transform "{common_log}"
-        }
-        # proxy *.php to php-fpm
-        php_fastcgi unix//run/php/php-fpm.sock
-        # serve other things as static files
-        file_server
-        # prioritise index.php
-        try_files {path}/index.php index.php {path}
+	}
+	# proxy *.php to php-fpm
+	php_fastcgi unix//run/php/php-fpm.sock
+	# serve other things as static files
+	file_server
+	# prioritise index.php
+	try_files {path}/index.php index.php {path}
 
-        # handle this path with a separate app instance for now.
-        # handle_path reputedly strips the prefix, but php still sees it (and the app will use it).
-        # redir /hackage /hackage/ 308
-        # handle_path /hackage* { 
-        #  root * /home/simon/src/haskell-links/hackage/web
-        # }
+	# handle this path with a separate app instance for now.
+	# handle_path reputedly strips the prefix, but php still sees it (and the app will use it).
+	# redir /hackage /hackage/ 308
+	# handle_path /hackage* { 
+	#  root * /home/simon/src/haskell-links/hackage/web
+	# }
 
-        handle_path /* {
-                root * /opt/haskell-links/web
-        }
+	handle_path /* {
+		root * /opt/haskell-links/web
+	}
 }
