@@ -96,12 +96,12 @@ function nubSort(array) {
 var reqpagelength = params.len ? parseInt(params.len) : null;
 if (reqpagelength) localStorage.setItem('pagelength',reqpagelength);  // if a query parameter, remember it
 var storedpagelength = localStorageGetInt('pagelength');
-var defpagelength = 50;
+var defpagelength = 10;
 var pagelength = reqpagelength ? reqpagelength : (storedpagelength || defpagelength);
 
 // build the page lengths list
 // to reduce confusion... include any custom page length from the query, or previously stored
-var pagelengths = [25, 50, 100, 500];
+var pagelengths = [10, 50, 100, 500];
 if (reqpagelength)
   pagelengths.push(reqpagelength);     // add new page length specified with ?len
 else if (storedpagelength && storedpagelength != -1 && !pagelengths.includes(storedpagelength))
