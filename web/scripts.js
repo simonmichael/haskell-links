@@ -110,13 +110,13 @@ pagelengths = nubSort(pagelengths);    // remove duplicates
 var lengthmenu = [pagelengths.concat([-1]), pagelengths.concat('All')]  // add All at the end
 
 // Show the list of pages only when page length is not All.
-function showHidePageList(pagelength) {
-  var pagenumbers = $('.dataTables_paginate');
-  if (pagelength != -1)
-    pagenumbers.show();
-  else
-    pagenumbers.hide();
-}
+// function showHidePageList(pagelength) {
+//   var pagenumbers = $('.dataTables_paginate');
+//   if (pagelength != -1)
+//     pagenumbers.show();
+//   else
+//     pagenumbers.hide();
+// }
 
 $(document).ready( function () {
 
@@ -125,7 +125,7 @@ $(document).ready( function () {
     // remember the new page length
     localStorage.setItem('pagelength',len);
     // show the page list only if page length is not All
-    showHidePageList(len);
+    // showHidePageList(len);
     // unfocus the select to prevent it annoyingly popping up again when you press up/down to scroll
     $('select[name=links_length]').blur();
     // if there was a ?len query parameter, remove it (reloads the page)
@@ -137,14 +137,14 @@ $(document).ready( function () {
   // unfortunately there is noticeable popping at page load for js users,
   // while js hides things which should be hidden. 
   // Try to do that as early as possible.
-  $('#searchtips').hide();
-  var aboutvisible = localStorage.getItem('about.visible') != 'false';
-  aboutLinkUpdate(aboutvisible);
-  var aboutcontent = $('#aboutcontent');
-  if (aboutvisible)
-    aboutcontent.show();
-  else
-    aboutcontent.hide();
+  // $('#searchtips').hide();
+  // var aboutvisible = localStorage.getItem('about.visible') != 'false';
+  // aboutLinkUpdate(aboutvisible);
+  // var aboutcontent = $('#aboutcontent');
+  // if (aboutvisible)
+  //   aboutcontent.show();
+  // else
+  //   aboutcontent.hide();
   
   // set up the data table. https://datatables.net, https://datatables.net/manual/options
   var pagecontrols = '<"#pagecontrols"lpi>';
@@ -200,7 +200,7 @@ $(document).ready( function () {
     // stateSave: true,
   });
 
-  showHidePageList(pagelength);
+  // showHidePageList(pagelength);
 
   // On pressing enter in the search field, update url and reload the page.
   var search = $('#links_filter input[type=search]');
@@ -212,17 +212,17 @@ $(document).ready( function () {
   });
 
   // show/hide column filters as before
-  var columnfiltersvisible = localStorage.getItem('columnfilters.visible') == 'true';
-  if (columnfiltersvisible)
-    $('.dtsp-panesContainer').show();
-  else
-    $('.dtsp-panesContainer').hide();
+  // var columnfiltersvisible = localStorage.getItem('columnfilters.visible') == 'true';
+  // if (columnfiltersvisible)
+  //   $('.dtsp-panesContainer').show();
+  // else
+  //   $('.dtsp-panesContainer').hide();
 
-  // insert column filters toggle button, and show the filter count within it,
-  // replacing the usual info text element.
-  $('.dtsp-title').remove();
-  $('<div id="column_filters"><button onclick="columnFiltersToggle()"></button></div>').insertAfter(search);
-  columnFiltersButtonUpdate(columnfiltersvisible);
+  // // insert column filters toggle button, and show the filter count within it,
+  // // replacing the usual info text element.
+  // $('.dtsp-title').remove();
+  // $('<div id="column_filters"><button onclick="columnFiltersToggle()"></button></div>').insertAfter(search);
+  // columnFiltersButtonUpdate(columnfiltersvisible);
 
   // install an event handler to update the filter count
   searchPaneTables().on('select deselect', function (e, dt, type, indexes) {

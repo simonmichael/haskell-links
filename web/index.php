@@ -104,69 +104,60 @@ function index() {
 <section id="heading">
   <h1>
     <img src="HaskellLogoGrey.png" style="height:1em; position:relative; top:3px;" />
-    <a href="/" style="text-decoration:none; color:black;">Haskell Links Library</a>
+    <a href="/" style="text-decoration:none; color:black;">Haskell Links</a>
   </h1>
 </section>
 
 <section id="about">
-  <a id="aboutlink" onclick="aboutToggle(); searchFocus(); return false;">About ▾</a>
-  <div id="aboutcontent">
-    <ul>
-    <li> Search <a href="https://haskell.org">Haskell</a> links
-        from <a href="https://github.com/simonmichael/lambdabot-where">lambdabot</a>
-        and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>,
-        below.
-      <!-- (managed in <a href="https://web.libera.chat/#haskell">#haskell</a> with <tt>@where</tt>) -->
-      <!-- Shift-click column headings for multi-sort. -->
-      Example searches:<br>
-      <a href="?q=book">book</a>,
-      <a href="?q=paper">paper</a>,
-      <a href="?q=learn">learn</a>,
-      <a href="?q=faq">faq</a>,
-      <a href="?q=tutorial">tutorial</a>,
-      <a href="?q=-guide">-guide</a>,
-      <a href="?q=ghc">ghc</a>,
-      <a href="?q=cabal">cabal</a>,
-      <a href="?q=stack">stack</a>,
-      <a href="?q=paste">paste</a>,
-      <a href="?q=irc">irc</a>,
-      <a href="?q=matrix">matrix</a>,
-      <a href="?q=game">game</a>.
-      More <a id="searchtipslink" href="#" onclick="$('#searchtips').slideToggle('fast'); return false;">search tips...</a>
-      <div id="searchtips">
-        Search terms
-        can match any column, 
-        can be in any order,
-        and are ANDed.
-        Enclose multiword phrases in double quotes.
-        Add column filters to refine your search.
-        Shift-click column headings for multisort.
-        Add/update lambdabot's links with LB's <a href="https://wiki.haskell.org/IRC_channel#lambdabot"><tt>@where</tt> command</a>,
-				site updates within 5 minutes.
-        <!-- hll's links <a href="https://github.com/simonmichael/haskell-links-data/blob/main/hll.tsv">with git</a>. -->
-      </div>
 
-    <li> Jump to any link by typing <tt>haskell-links.org/ID</tt>.
-        Examples:<br>
-        <a href="https://haskell-links.org/doc">haskell-links.org/doc</a>,
-        <a href="https://haskell-links.org/books">/books</a>,
-        <a href="https://haskell-links.org/ghc-guide">/ghc-guide</a>,
-        <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
-        <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
+<p>
+Search <a href="https://haskell.org">Haskell</a>-related links.
+Multiple terms are ANDed; enclose phrases in double quotes.
+Examples:
+<a href="?q=book">book</a>,
+<a href="?q=paper">paper</a>,
+<a href="?q=learn">learn</a>,
+<a href="?q=faq">faq</a>,
+<a href="?q=tutorial">tutorial</a>,
+<a href="?q=-guide">-guide</a>,
+<a href="?q=ghc">ghc</a>,
+<a href="?q=cabal">cabal</a>,
+<a href="?q=stack">stack</a>,
+<a href="?q=paste">paste</a>,
+<a href="?q=irc">irc</a>,
+<a href="?q=matrix">matrix</a>,
+<a href="?q=game">game</a>.
 
-    <li> Find more Haskell resources here:
-      <a href="https://joyful.com/Haskell+map">https://joyful.com/Haskell+map</a>
+<p>
+Or, jump to any link by typing <tt>haskell-links.org/ID</tt>.
+Examples:
+<a href="https://haskell-links.org/books">haskell-links.org/books</a>,
+<a href="https://haskell-links.org/ghc-guide">haskell-links.org/ghc-guide</a>,
+<a href="https://haskell-links.org/cabal-guide">haskell-links.org/cabal-guide</a>,
+<a href="https://haskell-links.org/stack-guide">haskell-links.org/stack-guide</a>.
 
-    <li> This site's
-        <a href="https://github.com/simonmichael/haskell-links">source</a>,
-        <a href="https://github.com/simonmichael/haskell-links-data">data</a>,
-        <a href="https://github.com/simonmichael/haskell-links#readme">goals</a>,
-        <a href="https://github.com/simonmichael/haskell-links#data">design</a>,
-        <a href="https://github.com/simonmichael/haskell-links#timeline">changes</a>.
-        Would you like to <a href="https://github.com/simonmichael/haskell-links#discuss--contribute">discuss/help</a> ?
+<p>
+You can update links in the <a href="https://web.libera.chat/#haskell">#haskell IRC channel</a> (ask how, there).
+<a href="https://github.com/simonmichael/lambdabot-where">Changes</a> will appear here within 5 minutes.
 
-  </ul>
-  </div>
+<p>
+Find more Haskell resources here: <a href="https://joyful.com/Haskell+map">https://joyful.com/Haskell+map</a>
+
+<p>
+About this site:
+<a href="https://github.com/simonmichael/haskell-links">main repo</a>,
+<a href="https://github.com/simonmichael/haskell-links-data">data repo</a>,
+<a href="https://github.com/simonmichael/haskell-links#timeline">timeline</a>,
+<a href="https://github.com/simonmichael/haskell-links#discuss--contribute">contribute</a>
+
+<!-- old
+and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>
+Shift-click column headings for multi-sort.
+Add column filters to refine your search.
+Shift-click column headings for multisort.
+hll's links <a href="https://github.com/simonmichael/haskell-links-data/blob/main/hll.tsv">with git</a>.
+-->
+
 </section>
 
 <!-- Data table
