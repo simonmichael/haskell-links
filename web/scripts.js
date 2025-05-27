@@ -153,7 +153,8 @@ $(document).ready( function () {
     paging: true, // always show page length selector
     pageLength: pagelength,
     lengthMenu: lengthmenu,
-    order: [[3,'asc'], [0,'asc']],  // initially sort by (first) source then url
+    // order: [[3,'asc'], [0,'asc']],  // initially sort by (first) source then url
+    order: [[1,'asc']],  // initially sort ID
     columns: [
       {
         className: 'url',
