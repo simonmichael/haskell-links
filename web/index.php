@@ -128,7 +128,6 @@ Examples:
 <a href="?q=matrix">matrix</a>,
 <a href="?q=game">game</a>.
 
-<p>
 Or, jump to any link by typing <tt>haskell-links.org/ID</tt>.
 Examples:
 <a href="https://haskell-links.org/books">haskell-links.org/books</a>,
@@ -136,19 +135,17 @@ Examples:
 <a href="https://haskell-links.org/cabal-guide">haskell-links.org/cabal-guide</a>,
 <a href="https://haskell-links.org/stack-guide">haskell-links.org/stack-guide</a>.
 
-<p>
-You can update links in the <a href="https://web.libera.chat/#haskell">#haskell IRC channel</a> (ask how, there).
-<a href="https://github.com/simonmichael/lambdabot-where">Changes</a> will appear here within 5 minutes.
+You can update links in the <a href="https://web.libera.chat/#haskell">#haskell IRC channel</a> (ask how, there);
+<a href="https://github.com/simonmichael/lambdabot-where">changes</a> should appear here within 5 minutes.
 
-<p>
-Find more Haskell resources here: <a href="https://joyful.com/Haskell+map">https://joyful.com/Haskell+map</a>
-
-<p>
-About this site:
+More about this site:
 <a href="https://github.com/simonmichael/haskell-links">main repo</a>,
 <a href="https://github.com/simonmichael/haskell-links-data">data repo</a>,
 <a href="https://github.com/simonmichael/haskell-links#timeline">timeline</a>,
-<a href="https://github.com/simonmichael/haskell-links#discuss--contribute">contribute</a>
+<a href="https://github.com/simonmichael/haskell-links#discuss--contribute">contribute</a>.
+
+Find more Haskell resources here: <b><a href="https://joyful.com/Haskell+map">Haskell map</a></b>.
+
 
 <!-- old
 and <a href="https://github.com/simonmichael/haskell-links-data">elsewhere</a>
