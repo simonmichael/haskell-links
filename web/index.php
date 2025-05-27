@@ -111,8 +111,8 @@ function index() {
 <section id="about">
 
 <p>
-Search <a href="https://haskell.org">Haskell</a>-related links.
-Multiple terms are ANDed; enclose phrases in double quotes.
+Search links saved by the #haskell IRC channel.
+Multiple terms will be ANDed; enclose phrases in double quotes.
 Examples:
 <a href="?q=book">book</a>,
 <a href="?q=paper">paper</a>,
@@ -126,17 +126,18 @@ Examples:
 <a href="?q=paste">paste</a>,
 <a href="?q=irc">irc</a>,
 <a href="?q=matrix">matrix</a>,
-<a href="?q=game">game</a>.
+<a href="?q=game">game</a>,
+<a href="?q=status">status</a>.
 
-Or, jump to any link by typing <tt>haskell-links.org/ID</tt>.
+Or, jump to any link by visiting <tt>haskell-links.org/ID</tt>.
 Examples:
 <a href="https://haskell-links.org/books">haskell-links.org/books</a>,
 <a href="https://haskell-links.org/ghc-guide">haskell-links.org/ghc-guide</a>,
 <a href="https://haskell-links.org/cabal-guide">haskell-links.org/cabal-guide</a>,
 <a href="https://haskell-links.org/stack-guide">haskell-links.org/stack-guide</a>.
 
-You can update links in the <a href="https://web.libera.chat/#haskell">#haskell IRC channel</a> (ask how, there);
-<a href="https://github.com/simonmichael/lambdabot-where">changes</a> should appear here within 5 minutes.
+You can update links in <a href="https://web.libera.chat/#haskell">#haskell</a> (ask how, there);
+<a href="https://github.com/simonmichael/lambdabot-where">changes</a> will appear here within 5 minutes.
 
 More about this site:
 <a href="https://github.com/simonmichael/haskell-links">main repo</a>,
