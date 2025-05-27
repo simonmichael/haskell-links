@@ -196,7 +196,7 @@ foreach ($links as $r) {
   echo "<tr class='$class'>
           <td class='url'><a href='{$r[0]}'>{$r[0]}</a></td>
           <td class='id'>{$r[1]}</td>
-          <td class='desc'>{$r[2]}</td>
+          <td class='desc'>" . autolinkUrls($r[2]) . "</td>
           <td class='source'>{$r[3]}</td>
         </tr>
         ";
@@ -229,3 +229,55 @@ foreach ($links as $r) {
 <?php
 }
 
+/**
+ * Replace URLs in a string with HTML hyperlinks.
+ */
+function autolinkUrls($text) {
+    $pattern = '~
+        (?:
+            # Match URLs explicitly enclosed in angle brackets:
+            < ( (?:https?|ftp):\/\/[^\s>]+ ) >
+            |
+            # Match URLs not enclosed in angle brackets:
+            (                                   # Start capturing group 2
+                (?:https?|ftp):\/\/[^\s<>"\']+  # Protocol-based (http, https, ftp)
+                |                               # OR
+                www\.[^\s<>"\']+                 # www. based
+                |                               # OR
+                # Bare domain (e.g., example.com) with optional path/query/fragment
+                [a-zA-Z0-9.\-]+(?:\.[a-zA-Z]{2,6})+ # Domain part (e.g., example.com, co.uk)
+                (?:/[^\s<>"\']*)* # Optional path (e.g., /path/to/page)
+                (?:\?[^\s<>"\']*)* # Optional query string (e.g., ?key=value)
+                (?:\#[^\s<>"\']*)* # Optional fragment (e.g., #section)
+            )
+        )
+    ~ix'; // x: extended (allows whitespace and comments in regex), i: case-insensitive
+
+    return preg_replace_callback($pattern, function($matches) {
+        $url = '';
+        if (isset($matches[1]) && $matches[1] !== '') {
+            // URL was found inside angle brackets (e.g., <https://example.com>)
+            $url = $matches[1];
+        } elseif (isset($matches[2]) && $matches[2] !== '') {
+            // URL was found without angle brackets
+            $url = $matches[2];
+        } else {
+            // This case should ideally not be reached with a well-formed regex,
+            // but as a fallback, return the full match to avoid breaking text.
+            return $matches[0];
+        }
+
+        // Add 'http://' if the URL doesn't have a protocol (e.g., for www.example.com or example.com)
+        if (!preg_match('~^https?://|ftp://~i', $url)) {
+            $url = 'http://' . $url;
+        }
+
+        // IMPORTANT: HTML-escape the URL for the href attribute to prevent XSS
+        $escapedUrl = htmlspecialchars($url, ENT_QUOTES | ENT_HTML5, 'UTF-8', false);
+        // HTML-escape the displayed text to prevent XSS in the link text itself
+        $displayText = htmlspecialchars($url, ENT_QUOTES | ENT_HTML5, 'UTF-8', false);
+
+        return '<a href="' . $escapedUrl . '">' . $displayText . '</a>';
+
+    }, $text);
+}
