@@ -154,49 +154,8 @@ function index() {
         <a href="https://haskell-links.org/cabal-guide">/cabal-guide</a>,
         <a href="https://haskell-links.org/stack-guide">/stack-guide</a>
 
-    <li> Find more Haskell search tools & resources here:
-      <br>
-      <a href="https://www.haskell.org/documentation">Official docs list</a> |
-      <a href="https://www.extrema.is/articles/haskell-books">Books</a> |
-      <a href="https://wiki.haskell.org">Wiki</a>
-      (<a href="https://wiki.haskell.org/Special:RecentChanges">changes</a>, 
-      <a href="https://wiki.haskell.org/index.php?title=Special:AllPages">pages</a>) |
-      <a href="https://github.com/Gabriella439/post-rfc/blob/main/sotu.md#state-of-the-haskell-ecosystem">State of the Haskell ecosystem</a> |
-      <a href="https://gotchamana.github.io/wiwinwlh/">What I Wish I Knew When Learning Haskell</a>
-      <br>
-      <a href="https://haskell.pl-a.net">Discussion feeds</a> |
-      <a href="https://discourse.haskell.org">Discourse</a> |
-      <a href="https://www.reddit.com/r/haskell/new">Reddit</a> |
-      <a href="https://www.haskell.org/mailing-lists/">Mail lists</a> |
-      <a href="https://www.haskell.org/irc/">IRC chat</a> |
-      <a href="https://view.matrix.org/?query=haskell">Matrix chat</a> |
-      <a href="https://stackoverflow.com/questions/tagged/haskell">Stack Overflow</a> |
-      <a href="https://haskell.foundation/podcast">HF podcast</a> |
-      <a href="https://twitter.com/HaskellOrg">Twitter</a>
-      <br>
-      <a href="https://cabal.readthedocs.io">Cabal user guide</a> |
-      <a href="https://hackage.haskell.org/packages/browse">Hackage</a> |
-      <a href="https://packdeps.haskellers.com">Hackage deps</a> |
-      <a href="https://hoogle.haskell.org">Hoogle</a> |
-      <a href="https://docs.haskellstack.org/en/stable/GUIDE">Stack user guide</a> |
-      <a href="https://www.stackage.org/lts">Stackage LTS</a> |
-      <a href="https://www.stackage.org/nightly">Stackage Nightly</a> |
-      <a href="https://github.com/topics/haskell">Github</a> |
-      <a href="https://gitlab.com/explore/projects/topics/haskell">Gitlab</a> |
-      <a href="https://www.libhunt.com/l/haskell">Popular projects</a> |
-      <a href="https://www.libhunt.com/l/haskell/posts">Project mentions</a>
-      <br>
-      <a href="https://www.haskell.org/ghc">GHC</a> |
-      <a href="https://downloads.haskell.org/ghc/latest/docs/html/users_guide">GHC user guide</a> |
-      <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/home">GHC dev wiki</a>
-      (<a href="https://gitlab.haskell.org/ghc/ghc-wiki-mirror/-/commits/master">changes</a>,
-      <a href="https://gitlab.haskell.org/ghc/ghc/-/wikis/index">pages</a>) |
-      <a href="https://gitlab.haskell.org/dashboard/projects?sort=stars_desc">GHC & core libs projects</a> |
-      <a href="https://github.com/ghc-proposals/ghc-proposals#readme">GHC proposals</a> |
-      <a href="https://github.com/haskell/core-libraries-committee#readme">Core libs proposals</a> |
-      <a href="https://github.com/haskellfoundation/tech-proposals#readme">HF tech proposals</a>
-      <br>
-      <a href="https://github.com/simonmichael/haskell-links#related-projects--potential-link-sources">More links...</a>
+    <li> Find more Haskell resources here:
+      <a href="https://joyful.com/Haskell+map">https://joyful.com/Haskell+map</a>
 
     <li> This site's
         <a href="https://github.com/simonmichael/haskell-links">source</a>,
